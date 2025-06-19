@@ -1,0 +1,203 @@
+body {
+	background-color: #151410;
+	color: #ffffff;
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-bar {
+	position: relative;
+	width: 100%;
+	height: 87px;
+	background-color: #151410;
+	border-bottom: 2px solid #f4e0d3;
+}
+
+.logo-lancer {
+	position: absolute;
+	top: 8px;
+	left: 80px;
+	width: auto;
+	height: 64px;
+	max-width: 120px;
+	object-fit: contain;
+}
+
+.buttons-button {
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 32px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 2px 16px;
+	height: 38px;
+	border-radius: 6px;
+	border: 2px solid #ebd3c0;
+	background-color: transparent;
+	display: flex;
+}
+
+.nav-bar .navbar {
+	display: flex;
+	gap: 16px;
+}
+
+.text-wrapper {
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: #f9f5ff;
+	letter-spacing: 0;
+	white-space: nowrap;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.text-wrapper:hover {
+	color: #e8bba1;
+}
+
+.frame {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 30px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.img {
+	width: 32px;
+	height: 32px;
+}
+
+.navbar-nav .nav-link {
+	padding: 8px 12px;
+}
+
+/* ===== MARK: HERO SECTION ===== */
+#hero-section {
+	background-color: #151410;
+	min-height: 100vh;
+	padding: 60px 20px;
+}
+
+.hero-text {
+	max-width: 600px;
+}
+
+.title {
+	font-family: "Playfair Display", serif;
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.highlight {
+	color: #e8bba1;
+}
+
+.tagline {
+	font-family: "Inter", sans-serif;
+	font-size: 0.9rem;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.description {
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	line-height: 1.7;
+	margin-top: 20px;
+}
+
+.italic {
+	font-family: "EB Garamond", serif;
+	font-style: italic;
+	font-size: 1.05rem;
+}
+
+.custom-btn {
+	background-color: #f3c8a8;
+	color: #000;
+	border: none;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	padding: 10px 24px;
+	transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+	background-color: #e4b18d;
+}
+
+.custom-btn-outline {
+	border: 2px solid #fff;
+	color: #fff;
+	background: none;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	padding: 10px 24px;
+	transition: all 0.3s ease;
+}
+
+.custom-btn-outline:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.icon-schedule,
+.icon-email {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+.hero-img-left,
+.hero-img-right {
+	max-width: 250px;
+	height: auto;
+}
+
+/* Email row */
+.email {
+	font-family: "Inter", sans-serif;
+	font-size: 0.95rem;
+}
+
+/* ===== ANIMATION CLASSES ===== */
+.animate {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.8s ease-out;
+}
+
+.animate.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+	.hero-img-left,
+	.hero-img-right {
+		display: none !important;
+	}
+
+	.title {
+		font-size: 2rem;
+	}
+
+	.description {
+		font-size: 0.95rem;
+	}
+
+	.navbar-nav {
+		text-align: center;
+	}
+}
