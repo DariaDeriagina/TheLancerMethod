@@ -30,17 +30,40 @@ body {
 }
 
 /* MAIN */
-.tagline {
-	font-size: 14px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	margin-bottom: 20px;
-	color: #f4e0d3;
+
+.corner-img {
+	position: absolute;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.left-img {
+	top: 60px;
+	left: 0;
+	width: 100px;
+}
+
+.right-img {
+	bottom: 346px;
+	right: 0;
+	width: 40px;
+}
+
+.typing-text-container {
+	margin-top: 12px;
+	font-family: "Playfair Display", serif;
+	font-size: 15px;
+	font-weight: 200;
+	color: #ffffff;
+	height: 24px;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .avatar {
-	width: 120px;
-	height: 120px;
+	margin-top: 36px;
+	width: 140px;
+	height: 140px;
 	border-radius: 50%;
 	object-fit: cover;
 	margin-bottom: 16px;
@@ -67,7 +90,7 @@ p.subtitle {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
+	gap: 12px; /* расстояние между текстом и иконкой */
 
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
@@ -75,14 +98,17 @@ p.subtitle {
 	text-transform: uppercase;
 	letter-spacing: 0.2px;
 	text-decoration: none;
+
 	color: #2f1c18;
 	background-color: #f4dcc7;
 	border: 4px solid #8c3e13;
 	border-radius: 6px;
-	padding: 12px 24px;
+
+	padding: 18px 24px; /* ← как ты показала на скрине */
 	width: 100%;
 	max-width: 400px;
-	margin: 16px auto;
+	margin: 8px auto;
+
 	transition: all 0.3s ease;
 	cursor: pointer;
 }
@@ -95,6 +121,7 @@ p.subtitle {
 .btn-icon-img {
 	width: 20px;
 	height: 20px;
+	margin-left: 4px; /* можно, если нужно чуть сдвинуть ближе/дальше */
 }
 
 .btn-icon {
@@ -122,16 +149,32 @@ p.subtitle {
 	letter-spacing: 0.1px;
 	color: #ffffff;
 }
+.button-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0px;
+	max-width: 400px;
+	margin: 0 auto 32px;
+}
 
 /* CONTACT */
 .email {
-	margin-top: 24px;
+	margin-top: 16px;
 	font-size: 14px;
 	color: #e2cbbd;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 6px;
+}
+
+.email a {
+	color: #e2cbbd;
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
 }
 
 .email img {
