@@ -1,3 +1,4 @@
+/* RESET */
 * {
 	margin: 0;
 	padding: 0;
@@ -14,13 +15,15 @@ body {
 
 /* HEADER */
 .header-top {
-	text-align: left;
-	padding: 0px 16px;
-	max-width: 200px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 4px 12px;
+	max-width: 100%;
 }
 
 .logo-left {
-	max-width: 100px;
+	max-width: 70px;
 	height: auto;
 }
 
@@ -30,8 +33,7 @@ body {
 	margin: 0 0 16px 0;
 }
 
-/* MAIN */
-
+/* DECOR IMAGES */
 .corner-img {
 	position: absolute;
 	z-index: -1;
@@ -50,6 +52,7 @@ body {
 	width: 40px;
 }
 
+/* TYPING TEXT (OPTIONAL) */
 .typing-text-container {
 	margin-top: 12px;
 	font-family: "Playfair Display", serif;
@@ -61,15 +64,18 @@ body {
 	overflow: hidden;
 }
 
+/* AVATAR */
 .avatar {
 	margin-top: 32px;
 	width: 140px;
 	height: 140px;
 	border-radius: 50%;
 	object-fit: cover;
+	object-position: center center;
 	margin-bottom: 16px;
 }
 
+/* HEADINGS */
 h1 {
 	font-family: "Playfair Display", serif;
 	font-size: 36px;
@@ -87,6 +93,14 @@ p.subtitle {
 }
 
 /* BUTTONS */
+.button-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 320px;
+	margin: 0 auto 32px;
+}
+
 .btn {
 	display: inline-flex;
 	align-items: center;
@@ -95,93 +109,64 @@ p.subtitle {
 
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 600;
 	text-transform: none;
-	letter-spacing: 0.2px;
 	text-decoration: none;
+	letter-spacing: 0.2px;
 
-	color: #2f1c18;
-	background-color: #f4dcc7;
-	border: 4px solid #8c3e13;
-	border-radius: 6px;
-
-	padding: 18px 24px; /* ← как ты показала на скрине */
+	padding: 10px 16px;
 	width: 100%;
-	max-width: 400px;
+	max-width: 320px;
 	margin: 8px auto;
 
+	border-radius: 6px;
 	transition: all 0.3s ease;
 	cursor: pointer;
 }
+.btn-consult {
+	font-size: 13px;
+	padding: 10px 16px;
+	white-space: nowrap;
+	letter-spacing: 0.4px;
+}
+
+/* Specific styles */
 .btn.uppercase {
 	text-transform: uppercase;
 }
 
-.btn:hover {
-	background-color: #eacfbf;
-	text-decoration: none;
+.btn.primary {
+	color: #2f1c18;
+	background-color: #f4dcc7;
+	border: 4px solid #8c3e13;
+	font-size: 14px;
 }
 
-.btn-icon-img {
-	width: 20px;
-	height: 20px;
-	margin-left: 4px; /* можно, если нужно чуть сдвинуть ближе/дальше */
-}
-
-.btn-icon {
-	text-transform: uppercase;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-	white-space: nowrap;
-}
-
-.btn-icon-img {
-	width: 18px;
-	height: 18px;
-}
-
-.btn-outline {
-	background: transparent;
-	color: #fff;
-	border: 4px solid #fff;
-}
-
-.btn-light {
-	font-weight: 400;
-	letter-spacing: 0.1px;
-	color: #ffffff;
-}
-.button-group {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0px;
-	max-width: 400px;
-	margin: 0 auto 32px;
+.btn.secondary {
+	color: #2f1c18;
+	background-color: #f4dcc7;
+	border: 4px solid #8c3e13;
 }
 
 .btn-outline {
 	background-color: transparent;
 	color: #ffffff;
 	border: 4px solid #ffffff;
-	font-weight: 500;
-	text-transform: none;
 	font-size: 20px;
-	padding: 18px 24px;
 }
 
-.btn-outline:hover {
-	background-color: rgba(255, 255, 255, 0.1);
+.btn:hover {
+	opacity: 0.9;
 }
 
-.btn-icon-img.icon-lg {
-	width: 22px;
-	height: 22px;
+/* ICONS */
+.btn-icon-img {
+	width: 28px;
+	height: 28px;
+	margin-left: 8px;
 }
-
-.btn-icon-img.icon-lg {
-	width: 32px;
-	height: 32px;
+.btn-social {
+	font-weight: 400;
+	font-size: 20px;
+	font-family: "Poppins", sans-serif;
 }
