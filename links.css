@@ -15,7 +15,8 @@ body {
 /* HEADER */
 .header-top {
 	text-align: left;
-	padding: 8px 0 4px 16px;
+	padding: 0px 16px;
+	max-width: 200px;
 }
 
 .logo-left {
@@ -61,7 +62,7 @@ body {
 }
 
 .avatar {
-	margin-top: 36px;
+	margin-top: 32px;
 	width: 140px;
 	height: 140px;
 	border-radius: 50%;
@@ -90,12 +91,12 @@ p.subtitle {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: 12px; /* расстояние между текстом и иконкой */
+	gap: 12px;
 
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
 	font-weight: 700;
-	text-transform: uppercase;
+	text-transform: none;
 	letter-spacing: 0.2px;
 	text-decoration: none;
 
@@ -111,6 +112,9 @@ p.subtitle {
 
 	transition: all 0.3s ease;
 	cursor: pointer;
+}
+.btn.uppercase {
+	text-transform: uppercase;
 }
 
 .btn:hover {
@@ -158,44 +162,26 @@ p.subtitle {
 	margin: 0 auto 32px;
 }
 
-/* CONTACT */
-.email {
-	margin-top: 16px;
-	font-size: 14px;
-	color: #e2cbbd;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 6px;
-}
-
-.email a {
-	color: #e2cbbd;
-	text-decoration: none;
-	font-family: "Poppins", sans-serif;
-	font-weight: 400;
-	font-size: 14px;
-}
-
-.email img {
-	width: 32px;
-	height: 32px;
-	vertical-align: middle;
-}
-
-/* SOCIAL ICONS */
-.socials {
-	margin-top: 16px;
-}
-
-.socials a {
-	margin: 0 8px;
-	display: inline-block;
-	color: #e2cbbd;
+.btn-outline {
+	background-color: transparent;
+	color: #ffffff;
+	border: 4px solid #ffffff;
+	font-weight: 500;
+	text-transform: none;
 	font-size: 20px;
+	padding: 18px 24px;
 }
 
-.socials img {
+.btn-outline:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-icon-img.icon-lg {
+	width: 22px;
+	height: 22px;
+}
+
+.btn-icon-img.icon-lg {
 	width: 32px;
 	height: 32px;
 }
