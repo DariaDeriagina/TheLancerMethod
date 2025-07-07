@@ -539,6 +539,9 @@ p {
 		width: 14px;
 		height: 14px;
 	}
+	.btn.btn.secondary {
+		font-size: 13.5px;
+	}
 
 	.hero-email {
 		flex-direction: column;
@@ -560,8 +563,8 @@ p {
 	}
 
 	.hero-socials img {
-		width: 28px;
-		height: 28px;
+		width: 40px;
+		height: 40px;
 	}
 
 	.left-image,
