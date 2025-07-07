@@ -458,13 +458,14 @@ p {
 		flex-direction: column;
 		align-items: center;
 		position: absolute;
-		top: 87px;
-		left: 18px;
-		right: 18px;
+		top: 75px; /* было 87px */
+		left: 32px; /* было 18px */
+		right: 32px; /* было 18px */
 		background-color: var(--main-bg);
 		z-index: 999;
 		padding: 16px 0;
 		border-top: 2px solid var(--accent);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 	}
 
 	.menu-container .menu {
