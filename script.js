@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (typingElement && index < text.length) {
 			typingElement.innerHTML += text.charAt(index);
 			index++;
-			setTimeout(type, 100); // скорость печати
+			setTimeout(type, 100);
 		}
 	}
 
