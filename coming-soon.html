@@ -4,10 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Coming Soon</title>
+
 		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap"
 			rel="stylesheet"
 		/>
+
 		<style>
 			body {
 				background-color: #1c1c1c;
@@ -19,29 +21,87 @@
 			.logo {
 				max-width: 280px;
 				margin-bottom: 40px;
-				transition: opacity 0.3s ease;
+				animation: fadeIn 1.5s ease-in-out, pulse 3s infinite;
 			}
 
-			.logo:hover {
-				opacity: 0.8;
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: scale(0.95);
+				}
+				to {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+
+			@keyframes pulse {
+				0%,
+				100% {
+					transform: scale(1);
+				}
+				50% {
+					transform: scale(1.03);
+				}
 			}
 
 			h1 {
-				font-family: "Playfair Display", serif;
-				font-weight: 400;
+				font-family: "Cinzel Decorative", serif;
+				font-size: 24px;
+				font-weight: 700;
 				color: #ebd3c0;
 				margin-top: 30vh;
+				text-shadow: 0 0 10px rgba(235, 211, 192, 0.4),
+					0 0 20px rgba(235, 211, 192, 0.3);
+				animation: glowFade 3s ease-in-out infinite alternate;
+			}
+
+			@keyframes glowFade {
+				from {
+					text-shadow: 0 0 5px rgba(235, 211, 192, 0.3),
+						0 0 10px rgba(235, 211, 192, 0.2);
+				}
+				to {
+					text-shadow: 0 0 15px rgba(235, 211, 192, 0.6),
+						0 0 25px rgba(235, 211, 192, 0.4);
+				}
+			}
+			.subline {
+				font-size: 18px;
+				color: #ebd3c0;
+				font-style: italic;
+				line-height: 1.4;
+				font-weight: 200;
+				max-width: 500px;
+				margin: 20px auto 0;
+				opacity: 0;
+				animation: fadeUp 2s ease-in-out 1.5s forwards;
+			}
+
+			@keyframes fadeUp {
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<a href="links.html">
 			<img
-				src="./images/links/logoLancerBig.png"
+				src="./images/links/logoLancer.png"
 				alt="Lancer Method Logo"
 				class="logo"
 			/>
 		</a>
-		<h1>Coming soon</h1>
+		<h1>The website is coming.</h1>
+		<!-- <p class="subline">
+			A space where clarity meets momentum.<br />Soon, your vision will have a
+			framework.
+		</p> -->
 	</body>
 </html>

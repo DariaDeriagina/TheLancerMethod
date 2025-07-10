@@ -52,8 +52,8 @@
 
 				<!-- Navigation (desktop & mobile toggled) -->
 				<div class="menu-container" id="menuContainer">
-					<a href="#">HOME</a>
-					<a href="#">METHOD</a>
+					<a href="#home">HOME</a>
+					<a href="#method">METHOD</a>
 					<a href="#">ABOUT ME</a>
 					<a href="#">SERVICES</a>
 					<a href="#">TESTIMONIALS</a>
@@ -94,14 +94,17 @@
 		</header>
 
 		<!-- MARK: Hero Section -->
-		<section class="hero-section">
-			<div class="hero-bg">
-				<img src="images/mainImages/MainBG.jpg" alt="Background Decoration" />
-			</div>
-			<div class="hero-layout">
-				<div class="left-image">
+		<section  id="home" class="hero-section">
+		
+			<div class="left-image">
 					<img src="images/mainImages/LeftSidePic.png" alt="Sticky Notes" />
 				</div>
+					<div class="right-image">
+					<img src="images/mainImages/RightSidePic.png" alt="Stairs" />
+				</div>
+			<div class="hero-layout">
+				
+				
 
 				<div class="hero-text">
 					<div class="typing-text-container">
@@ -128,7 +131,10 @@
 					</p>
 
 					<div class="hero-buttons">
-						<a href="#" class="btn primary">
+						<a
+							href="https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true"
+							class="btn primary"
+						>
 							BOOK YOUR FREE CONSULTATION
 							<img src="images/mainImages/Schedule.png" alt="Schedule Icon" />
 						</a>
@@ -153,10 +159,90 @@
 					</div>
 				</div>
 
-				<div class="right-image">
-					<img src="images/mainImages/RightSidePic.png" alt="Stairs" />
+			
+				
+			</div>
+		</section>
+		<!-- MARK: Method Section -->
+		<section class="method-section" id="method">
+			<hr class="top-divider" />
+
+			<div class="method-header-center">
+				<div class="method-header-inner">
+					<img
+						src="images/methodImages/logoLancer.png"
+						class="method-logo-inline"
+						alt="The Lancer Method Logo"
+					/>
+					<div class="method-title-block">
+						<h2 class="method-title">What Is The Lancer Method?</h2>
+						<p class="gradient-text">INSPIRE · PLAN · EXECUTE</p>
+					</div>
 				</div>
 			</div>
+
+			<div class="method-content">
+				<p class="paragraph">
+					<strong class="gradient-strong">The Lancer Method</strong> is a
+					strategic, intuitive, and execution-first approach that helps you
+					ignite, shape, and build what’s next—even if you’re still clarifying
+					what that looks like.
+				</p>
+				<p class="paragraph">
+					It adapts to your starting point—whether you are exploring a bold new
+					idea, relaunching your business, or pivoting into something more
+					aligned.
+				</p>
+
+				<div class="highlight-text">
+					<p>This isn’t coaching.</p>
+					<p>It’s not surface-level consulting.</p>
+					<p>
+						<strong
+							>It’s sleeves-up, done-with-you strategy that actually
+							moves.</strong
+						>
+					</p>
+				</div>
+
+				<ul class="method-list">
+					<li>
+						<img src="images/methodImages/LoopMethod.png" alt="Loop Icon" />
+						It’s part creative strategy, part intuitive insight, part tactical
+						execution—with the kind of momentum most people only wish they had
+						behind them.
+					</li>
+					<li>
+						<img src="images/methodImages/LoopMethod.png" alt="Loop Icon" />
+						We start exactly where you are—idea-stuck, mid-pivot, or
+						launch-ready—and we build forward, together.
+					</li>
+					<li>
+						<img src="images/methodImages/LoopMethod.png" alt="Loop Icon" />
+						This isn’t just about what to do.
+					</li>
+					<li>
+						<img src="images/methodImages/LoopMethod.png" alt="Loop Icon" />
+						It’s how to actually do it—and keep doing it—until it’s done.
+					</li>
+				</ul>
+
+				<p class="quote">“You don’t need more advice. You need movement.”</p>
+
+			<div class="method-buttons">
+  <a
+    class="btn-consultation method-btn method-btn-primary"
+    href="https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true"
+  >
+    BOOK YOUR FREE CONSULTATION
+    <img src="images/mainImages/Schedule.png" alt="Schedule Icon" />
+  </a>
+
+  <a href="#" class="method-btn method-btn-secondary">
+    How The Lancer Method Works →
+  </a>
+</div>
+
 		</section>
 
 		<script src="script.js"></script>
