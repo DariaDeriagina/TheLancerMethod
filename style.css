@@ -1200,6 +1200,17 @@ section#about .about-card {
 		background-image: none !important;
 		background-color: #f9efe8 !important;
 	}
+
+	.about-card {
+		max-height: fit-content;
+	}
+	.highlight-stat {
+		font-size: 22px;
+		margin-bottom: 0px;
+	}
+	.about-cta-buttons {
+		text-align: center;
+	}
 }
 
 /* ─────────────────────────────── */
