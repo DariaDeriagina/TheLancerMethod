@@ -24,3 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	type();
 });
+//=======About Me section
+const toggleBtn = document.getElementById("toggleAbout");
+const shortBlock = document.getElementById("aboutShort");
+const fullBlock = document.getElementById("aboutFull");
+
+toggleBtn.addEventListener("click", () => {
+	fullBlock.classList.toggle("hidden");
+	if (fullBlock.classList.contains("hidden")) {
+		toggleBtn.innerText = "READ MORE ↓";
+		window.scrollTo({ top: shortBlock.offsetTop - 100, behavior: "smooth" });
+	} else {
+		toggleBtn.innerText = "SHOW LESS ↑";
+	}
+});
