@@ -10,6 +10,10 @@
 	--email-color: #f4e0d3;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -70,7 +74,9 @@ a {
 	font-family: var(--font-ui);
 	font-size: 16px;
 	font-weight: 500;
+	position: relative;
 }
+
 .menu-container a:hover {
 	color: var(--accent);
 	transition: 0.3s ease;
@@ -1032,7 +1038,22 @@ p {
 	height: auto;
 }
 
-/* Toggle button styling */
+/* Read MORE BUTTON */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1.05);
+		opacity: 0.75;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
 .read-more-btn {
 	display: block;
 	margin: 20px auto;
@@ -1043,9 +1064,13 @@ p {
 	color: var(--border-dark);
 	cursor: pointer;
 	transition: all 0.3s ease;
+	animation: pulse 2.8s infinite;
 }
+
 .read-more-btn:hover {
 	text-decoration: underline;
+	color: #a84d1f;
+	transform: scale(1.04);
 }
 
 /* Hide full text by default */
@@ -1211,6 +1236,19 @@ section#about .about-card {
 	.about-cta-buttons {
 		text-align: center;
 	}
+}
+
+/* ─────────────────────────────── */
+/* About and Method the Animation On Scroll */
+/* ─────────────────────────────── */
+.fade-up {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.8s ease-out;
+}
+.fade-up.visible {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /* ─────────────────────────────── */

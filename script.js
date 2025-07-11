@@ -38,3 +38,20 @@ toggleBtn.addEventListener("click", () => {
 		toggleBtn.innerText = "SHOW LESS ↑";
 	}
 });
+// Fade-up animation for sections
+document.addEventListener("DOMContentLoaded", () => {
+	const fadeEls = document.querySelectorAll(".fade-up");
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("visible");
+				}
+			});
+		},
+		{ threshold: 0.2 }
+	);
+
+	fadeEls.forEach((el) => observer.observe(el));
+});

@@ -64,7 +64,7 @@
 			sizes="512x512"
 			href="images/favicon/web-app-manifest-512x512.png"
 		/>
-		<!-- Google Analytics -->
+		<!-- MARK: Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQ46P6ZSXY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -75,8 +75,8 @@
 
 	</head>
 	<body>
-		<!-- Header -->
-		<header class="navbar">
+		<!-- MARK:  Header -->
+		<header class="navbar" role="banner" aria-label="Main Navigation">
 			<div class="navbar-inner">
 				<!-- Logo -->
 				<div class="navbar-left">
@@ -127,7 +127,7 @@
 		</header>
 
 		<!-- MARK: Hero Section -->
-		<section  id="home" class="hero-section">
+		<section  id="home" class="hero-section" role="region" aria-label="Hero Section">
 		
 			<div class="left-image">
 					<img src="images/mainImages/LeftSidePic.png" alt="Sticky Notes" />
@@ -139,12 +139,12 @@
 				
 				
 
-				<div class="hero-text">
+				<div class="hero-text fade-up">
 					<div class="typing-text-container">
 						<p class="tagline"><span id="typing"></span></p>
 					</div>
 
-					<h1 class="hero-headline">
+					<h1 class="hero-headline fade-up">
 						<span class="no-wrap">
 							From <span class="highlight">Ideas</span> to
 							<span class="highlight">Execution</span> —
@@ -152,7 +152,7 @@
 						real <span class="highlight">Progress</span> starts here.
 					</h1>
 
-					<p class="description">
+					<p class="description fade-up">
 						<a href="#method" class="method-link">The Lancer Method</a> helps
 						you build what matters with clarity, structure, and a tactical
 						partnership that stays with you from start to finish.
@@ -163,10 +163,14 @@
 						move forward.
 					</p>
 
-					<div class="hero-buttons">
+					<div class="hero-buttons fade-up">
 						<a
 							href="https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true"
 							class="btn primary" alt="Schedule a consultation"
+							 onclick="gtag('event', 'book_consultation_click', {
+    'event_category': 'Engagement',
+    'event_label': 'Hero Consultation Button'
+  })"
 						>
 							BOOK YOUR FREE CONSULTATION
 							<img src="images/mainImages/Schedule.png" alt="Schedule Icon" />
@@ -197,7 +201,7 @@
 			</div>
 		</section>
 		<!-- MARK: Method Section -->
-		<section class="method-section" id="method">
+		<section class="method-section" id="method" role="region" aria-label="Method Section">
 			<hr class="top-divider" />
 
 			<div class="method-header-center">
@@ -214,7 +218,7 @@
 				</div>
 			</div>
 
-			<div class="method-content">
+			<div class="method-content fade-up">
 				<p class="paragraph">
 					<strong class="gradient-strong">The Lancer Method</strong> is a
 					strategic, intuitive, and execution-first approach that helps you
@@ -262,7 +266,7 @@
 
 				<p class="quote">“You don’t need more advice. You need movement.”</p>
 
-			<div class="method-buttons">
+			<div class="method-buttons fade-up">
   <a
     class="btn-consultation method-btn method-btn-primary"
     href="https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true"
@@ -280,7 +284,7 @@
 <!-- ============================= -->
 <!-- MARK: ABOUT SECTION                 -->
 <!-- ============================= -->
-<section id="about" class="about-section" aria-label="About Me Section">
+<section id="about" class="about-section"  role="region" aria-label="About Me Section">
   <!-- Inner wrapper for two columns -->
   <div class="about-inner">
     <!-- Left column: image + quote -->
@@ -407,7 +411,7 @@
   <div class="about-cta-container">
     <div class="about-cards">
       <!-- Card 1 -->
-      <div class="about-card">
+      <div class="about-card fade-up">
         <h3>
           <span class="highlight-stat">2500+ HOURS</span><br />
           Strategic Execution
@@ -417,7 +421,7 @@
         </p>
       </div>
       <!-- Card 2 -->
-      <div class="about-card">
+      <div class="about-card fade-up">
         <h3>
           <span class="highlight-stat">100+ ROADMAPS</span><br />
           Pitches & Launch Plans
@@ -428,7 +432,7 @@
         </p>
       </div>
       <!-- Card 3 -->
-      <div class="about-card">
+      <div class="about-card fade-up">
         <h3>
           <span class="highlight-stat">ACROSS 12+ INDUSTRIES</span><br />
           And Counting
@@ -439,7 +443,7 @@
         </p>
       </div>
     </div>
-    <div class="about-cta-buttons">
+    <div class="about-cta-buttons fade-up">
       <a
         href="https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true"
         class="cta-btn primary"
