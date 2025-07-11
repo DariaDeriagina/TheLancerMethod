@@ -904,9 +904,9 @@ p {
 		color: #222;
 	}
 }
-/* ===== MARK: ABOUT SECTION ===== */
+
 /* ======================================= */
-/* ABOUT SECTION STYLES                  */
+/* MARK: ABOUT SECTION STYLES                  */
 /* ======================================= */
 
 /* Section wrapper: background image + color */
@@ -945,12 +945,14 @@ p {
 .about-image {
 	width: 100%;
 	max-width: 480px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 	margin-bottom: 20px;
 }
 
 .about-content {
 	flex: 1 1 0;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Pull-quote styling */
@@ -969,31 +971,26 @@ p {
 	margin-top: 4px;
 }
 
-/* Right column: content */
-.about-content {
-	flex: 1 1 0; /* fill remaining space */
-}
-
 /* Main title styling */
-.about-title {
+.about-section .about-title {
+	font-weight: 500;
+}
+.about-content .about-title {
+	font-family: var(--font-title);
 	text-align: center;
-	font-size: 48px;
+	font-size: 64px;
 	line-height: 1.2;
 	margin-bottom: 20px;
-}
-.about-title .hello {
-	font-weight: 400;
-}
-.about-title .im-dena {
-	font-weight: 700;
+	text-align: left;
 }
 
 /* Subtitle styling */
 .about-subtitle {
-	text-align: center;
+	text-align: left;
 	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 20px;
+	letter-spacing: 0.5px;
 }
 
 /* Paragraph styling */
@@ -1002,15 +999,17 @@ p {
 	line-height: 1.6;
 	max-width: 760px;
 	margin: 0 auto 20px;
-	text-align: center;
+	text-align: left;
+	letter-spacing: 0.5px;
 }
 
 /* Section titles within content */
 .about-section-title {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 600;
-	text-align: center;
-	margin: 40px auto 10px;
+	text-align: left;
+	letter-spacing: 0.5px;
+	margin-bottom: 12px;
 }
 
 /* List styling */
@@ -1074,7 +1073,6 @@ p {
 	flex: 1 1 280px;
 	background: radial-gradient(circle at center, #f9f4f0 10%, #d9bfae 90%);
 	padding: 24px;
-	border-radius: 12px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 	text-align: center;
 	transition: transform 0.3s ease;
@@ -1095,11 +1093,22 @@ p {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	margin-bottom: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	display: block;
 }
 .about-card p {
 	font-size: 15px;
 	line-height: 1.6;
+}
+section#about .about-card h3 {
+	font-size: 24px;
+	font-weight: 400; /* switch to thin */
+	color: #000; /* force black */
+	line-height: 0.8;
+}
+section#about .about-card {
+	padding-top: 32px; /* default is 24px – bump it up a bit */
 }
 
 /* CTA buttons layout */
@@ -1114,7 +1123,6 @@ p {
 	font-size: 16px;
 	font-weight: 600;
 	padding: 16px 32px;
-	border-radius: 6px;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
@@ -1137,7 +1145,7 @@ p {
 	color: #1c1c1c;
 }
 
-/* Responsive adjustments */
+/* MARK: ABOUT Responsive adjustments */
 @media (max-width: 900px) {
 	.about-inner {
 		flex-direction: column;
@@ -1186,4 +1194,21 @@ p {
 		width: 100%;
 		max-width: 320px;
 	}
+}
+@media (max-width: 768px) {
+	.about-section {
+		background-image: none !important;
+		background-color: #f9efe8 !important;
+	}
+}
+
+/* ─────────────────────────────── */
+/* Force About title into Playfair 600 */
+/* ─────────────────────────────── */
+section#about h2.about-title {
+	font-family: var(
+		--font-title
+	) !important; /* var(--font-title) is Playfair Display */
+	font-weight: 400 !important;
+	font-size: 64px !important;
 }
