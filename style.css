@@ -1660,15 +1660,15 @@ section#about h2.about-title {
 /* ===== MARK: Testimonials MOBILE STYLES ===== */
 @media (max-width: 1024px) {
 	.testimonials-slider {
-		flex-wrap: nowrap;
+		display: flex;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch; /* 👈 enables native swipe on iPhone */
 	}
 
 	.testimonial-card {
-		flex: 0 0 85%;
-		scroll-snap-align: center;
-		flex: 0 0 calc(100% / 2 - 16px);
+		scroll-snap-align: start;
+		flex: 0 0 100%;
 	}
 
 	.slider-controls {
