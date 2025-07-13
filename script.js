@@ -121,30 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	window.addEventListener("resize", updateCardWidth);
 	updateCardWidth(); // Run on load
 
-	// === Start Slider from Middle Card on Desktop Only When Section Enters View ===
-	const testimonialsSection = document.querySelector(".testimonials-section");
-	if (window.innerWidth > 1024 && testimonialsSection && cards.length >= 3) {
-		const sectionObserver = new IntersectionObserver(
-			(entries, observer) => {
-				if (entries[0].isIntersecting) {
-					// First immediate center
-					currentIndex = 1;
-					updateSlider();
-
-					// Second center after layout settles (for iOS Safari)
-					setTimeout(() => {
-						currentIndex = 1;
-						updateSlider();
-					}, 300);
-
-					observer.unobserve(testimonialsSection);
-				}
-			},
-			{ threshold: 0.3 }
-		);
-		sectionObserver.observe(testimonialsSection);
-	}
-
 	// === Expand/Collapse for Testimonial "Read More" Links ===
 	document.querySelectorAll(".testimonial-card .read-more").forEach((link) => {
 		link.addEventListener("click", function (e) {
