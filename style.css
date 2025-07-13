@@ -1500,3 +1500,400 @@ section#about h2.about-title {
 		margin-bottom: 8px;
 	}
 }
+/* ===== MARK: TESTIMONIALS SECTION ===== */
+.testimonials-section {
+	background-color: #f9efe8;
+	text-align: center;
+	padding: 80px 20px;
+}
+
+.testimonials-section h2 {
+	font-family: "Playfair Display", serif;
+	font-size: 36px;
+	font-weight: 600;
+	color: #2a1e1c;
+	margin-bottom: 10px;
+}
+
+.testimonials-section .subtext {
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	color: #5f4d47;
+	margin-bottom: 40px;
+}
+
+.slider-wrapper {
+	background-color: #2a1e1c;
+	padding: 80px 0;
+	position: relative;
+	overflow: visible;
+	z-index: 0;
+}
+
+.slider-wrapper::after {
+	bottom: 0;
+	background: linear-gradient(to top, rgba(249, 239, 232, 0.6), transparent);
+}
+
+/* MARK: Testimonials Outer Container */
+.testimonials-outer {
+	background-color: #2a1f1a;
+	padding: 40px 20px;
+	border-radius: 10px;
+	overflow: hidden; /* 👈 Скрываем всё, что выходит за пределы */
+	position: relative;
+}
+
+/* MARK: Slider Track */
+.testimonials-slider {
+	display: flex;
+	gap: 32px;
+	transition: transform 0.4s ease;
+	will-change: transform;
+}
+
+/* MARK: Individual Card */
+.testimonial-card {
+	background-color: #f9efe8;
+	padding: 24px;
+	margin-right: 32px;
+	flex: 0 0 calc((100% - 64px) / 3); /* 👈 3 карточки в ряду, учли gap */
+	max-width: 100%;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+	flex: 0 0 80%;
+	max-width: 400px; /* чтобы не улетало на гигантских экранах */
+	margin: 0 auto 32px; /* центрируем + отступ снизу */
+	border: 2px solid #000;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+.testimonial-card {
+	transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+	transform: translateY(-4px);
+}
+
+.testimonial-card p.quote {
+	font-weight: 600;
+	font-size: 16px;
+	font-style: italic;
+	margin-bottom: 12px;
+}
+
+.testimonial-card p.text {
+	font-size: 14px;
+	font-style: italic;
+	margin-bottom: 20px;
+	color: #000;
+}
+
+.testimonial-card .author {
+	font-weight: 700;
+	margin-top: 10px;
+	color: #000;
+}
+
+.testimonial-card .role {
+	font-size: 14px;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+.testimonial-card .read-more {
+	font-size: 14px;
+	color: #444;
+	text-decoration: none;
+}
+
+.slider-controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0;
+	padding: 12px 20px;
+	margin: 48px auto;
+	background-color: #fcf6f3;
+
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	width: fit-content;
+}
+
+/* Базовые кнопки */
+.arrow-btn {
+	all: unset;
+	cursor: pointer;
+	font-size: 20px;
+	color: #3b2f2f;
+	padding: 12px 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active button */
+.arrow-btn.active {
+	background-color: #3b2f2f;
+	color: #fff;
+	margin: 4px; /* чтобы казалась "внутри" родителя */
+}
+
+.cta-button {
+	margin-top: 40px;
+	padding: 14px 32px;
+	font-weight: 600;
+	font-size: 16px;
+	border: 2px solid #954c20;
+	background: linear-gradient(to right, #b87752, #fdfbec);
+	background-size: 200% auto;
+	color: #2a1e1c;
+	transition: 0.4s ease;
+}
+
+.cta-button:hover {
+	background-position: right center;
+	color: #1c0e05;
+}
+
+/* ===== MARK: Testimonials MOBILE STYLES ===== */
+@media (max-width: 1024px) {
+	.testimonials-slider {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+	}
+
+	.testimonial-card {
+		flex: 0 0 85%;
+		scroll-snap-align: center;
+		flex: 0 0 calc(100% / 2 - 16px);
+	}
+
+	.slider-controls {
+		margin-top: 20px;
+	}
+}
+/* MARK: Responsive - Mobile shows only 1 card */
+@media (max-width: 768px) {
+	.testimonial-card {
+		flex: 0 0 100%;
+		margin-right: 20px;
+		scroll-snap-align: start;
+	}
+
+	.testimonials-slider {
+		scroll-snap-type: x mandatory;
+		overflow-x: auto;
+	}
+
+	.slider-controls {
+		display: none;
+	}
+}
+
+/** MARK: Contact Section**/
+.book-section {
+	background: url("images/contactImages/BookACallBackground.jpg") no-repeat
+		center center;
+	background-size: cover;
+	padding: 100px 20px;
+	font-family: var(--font-ui);
+}
+
+.book-container {
+	display: flex;
+	max-width: 1280px;
+	margin: 0 auto;
+	gap: 60px;
+	align-items: flex-start;
+}
+
+/* Left Side */
+.left-column {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	position: relative;
+}
+
+.book-image {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 50%;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.quote-bubble {
+	background: #f1e7df;
+	color: #3b2f2f;
+	font-style: italic;
+	font-weight: 500;
+	border-radius: 40px;
+	padding: 20px 30px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	position: relative;
+	max-width: 280px;
+	font-size: 16px;
+}
+
+.top-left::after {
+	content: "";
+	position: absolute;
+	left: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-right: 20px solid #f1e7df;
+}
+
+.bottom-left::after {
+	content: "";
+	position: absolute;
+	right: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 20px solid #f1e7df;
+}
+
+/* Right Side */
+.right-column {
+	flex: 2;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.small-heading {
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: #3b2f2f;
+	margin-bottom: 10px;
+}
+
+.right-column h2 {
+	font-size: 32px;
+	color: #3b2f2f;
+	margin-bottom: 10px;
+}
+
+.right-column .form-subtext {
+	font-size: 16px;
+	margin-bottom: 30px;
+	color: black;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form textarea {
+	width: 100%;
+	padding: 12px 16px;
+	border: 1px solid #d5a48c;
+	margin-bottom: 20px;
+	font-size: 16px;
+	border-radius: 6px;
+}
+
+.input-row {
+	display: flex;
+	gap: 20px;
+}
+
+.booking-form textarea {
+	height: 100px;
+	resize: vertical;
+}
+
+fieldset {
+	border: none;
+	margin-bottom: 20px;
+}
+
+legend {
+	font-weight: 600;
+	margin-bottom: 10px;
+	color: #3b2f2f;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 15px;
+	cursor: pointer;
+}
+form label {
+	color: #1c1c1c; /* Или #3B2F2F — чтобы был читаемый тёмный цвет */
+	font-size: 16px;
+	font-weight: 400;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin-right: 10px;
+	color: #000;
+}
+
+.booking-form button {
+	background: #3b2f2f;
+	color: #fff;
+	border: none;
+	padding: 16px 28px;
+	border-radius: 8px;
+	font-size: 16px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: background 0.3s ease;
+}
+
+.booking-form button:hover {
+	background: #2d2424;
+}
+/* ===== MARK: Hide Mobile Visuals on Desktop ===== */
+.mobile-visuals {
+	display: none;
+}
+/* ===== MARK: Contact Section Mobile Layout Fix ===== */
+@media (max-width: 768px) {
+	.book-container {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	/* Hide desktop version of photo+quotes on mobile */
+	.book-container > .left-column:not(.mobile-visuals) {
+		display: none;
+	}
+
+	/* Show mobile visuals inside right-column */
+	.mobile-visuals {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+		margin: 32px 0;
+	}
+
+	.right-column {
+		order: 1;
+		padding: 20px;
+	}
+
+	.small-heading,
+	.right-column h2,
+	.form-subtext {
+		text-align: center;
+	}
+
+	.input-row {
+		flex-direction: column;
+		gap: 16px;
+	}
+}
