@@ -84,19 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		visibleCards = getVisibleCardCount();
 		const cardRect = cards[0].getBoundingClientRect();
 		const style = window.getComputedStyle(cards[0]);
-		let marginRight = parseInt(style.marginRight);
-		if (isNaN(marginRight)) marginRight = 0;
+		let gap = parseInt(style.marginRight || style.gap || 20); // fallback
+		cardWidth = cardRect.width + gap;
 
-		cardWidth = cardRect.width + marginRight;
 		maxIndex = Math.max(0, totalCards - visibleCards);
 		updateSlider();
-	}
-
-	function updateSlider() {
-		currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
-		const translateX = -(cardWidth * currentIndex);
-		slider.style.transform = `translateX(${translateX}px)`;
-		updateButtonState();
 	}
 
 	function updateButtonState() {
@@ -132,4 +124,19 @@ document.addEventListener("DOMContentLoaded", () => {
 				: "Show Less ↑";
 		});
 	});
+
+	function updateSlider() {
+		currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+		const translateX = -(cardWidth * currentIndex);
+
+		// Temporarily disable scroll snap (fixes issues on iOS Chrome)
+		slider.style.scrollSnapType = "none";
+		slider.style.transform = `translateX(${translateX}px)`;
+
+		setTimeout(() => {
+			slider.style.scrollSnapType = "x mandatory"; // re-enable after animation
+		}, 300);
+
+		updateButtonState();
+	}
 });
