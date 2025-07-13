@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	if (typingElement) type();
 
-	// === About Me Section Toggle ===
+	// === About Me Toggle ===
 	const toggleBtn = document.getElementById("toggleAbout");
 	const shortBlock = document.getElementById("aboutShort");
 	const fullBlock = document.getElementById("aboutFull");
@@ -44,9 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	// === Fade-Up Animation on Scroll ===
+	// === Fade-Up Scroll Animation ===
 	const fadeEls = document.querySelectorAll(".fade-up");
-
 	if (fadeEls.length > 0) {
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -58,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			},
 			{ threshold: 0.2 }
 		);
-
 		fadeEls.forEach((el) => observer.observe(el));
 	}
 
@@ -84,16 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function updateCardWidth() {
 		visibleCards = getVisibleCardCount();
-
 		const cardRect = cards[0].getBoundingClientRect();
 		const style = window.getComputedStyle(cards[0]);
-
 		let marginRight = parseInt(style.marginRight);
 		if (isNaN(marginRight)) marginRight = 0;
 
 		cardWidth = cardRect.width + marginRight;
 		maxIndex = Math.max(0, totalCards - visibleCards);
-
 		updateSlider();
 	}
 
@@ -124,17 +119,25 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	window.addEventListener("resize", updateCardWidth);
+	updateCardWidth(); // Run on load
 
-	// Initial setup
-	updateCardWidth();
-
-	// === Start slider from middle card on desktop ===
-	if (window.innerWidth > 1024 && cards.length >= 3) {
-		currentIndex = 1; // So that the middle (2nd) card shows first
-		updateSlider();
+	// === Start Slider from Middle Card on Desktop Only When Section Enters View ===
+	const testimonialsSection = document.querySelector(".testimonials-section");
+	if (window.innerWidth > 1024 && testimonialsSection && cards.length >= 3) {
+		const sectionObserver = new IntersectionObserver(
+			(entries, observer) => {
+				if (entries[0].isIntersecting) {
+					currentIndex = 1; // Show middle card
+					updateSlider();
+					observer.unobserve(testimonialsSection);
+				}
+			},
+			{ threshold: 0.3 }
+		);
+		sectionObserver.observe(testimonialsSection);
 	}
 
-	// === Expand/Collapse Testimonial Read More ===
+	// === Expand/Collapse for Testimonial "Read More" Links ===
 	document.querySelectorAll(".testimonial-card .read-more").forEach((link) => {
 		link.addEventListener("click", function (e) {
 			e.preventDefault();
@@ -146,14 +149,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	// === Swipe Support for Slider (Mobile) ===
+	// === Swipe Support (Mobile) ===
 	let touchStartX = 0;
 	let touchEndX = 0;
 
 	slider.addEventListener("touchstart", (e) => {
 		touchStartX = e.changedTouches[0].screenX;
 	});
-
 	slider.addEventListener("touchend", (e) => {
 		touchEndX = e.changedTouches[0].screenX;
 		handleSwipe();
@@ -161,7 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function handleSwipe() {
 		const swipeThreshold = 50;
-
 		if (touchEndX < touchStartX - swipeThreshold && currentIndex < maxIndex) {
 			currentIndex++;
 			updateSlider();
