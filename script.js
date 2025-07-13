@@ -132,28 +132,4 @@ document.addEventListener("DOMContentLoaded", () => {
 				: "Show Less ↑";
 		});
 	});
-
-	// === Swipe Support (Mobile) ===
-	let touchStartX = 0;
-	let touchEndX = 0;
-
-	slider.addEventListener("touchstart", (e) => {
-		touchStartX = e.changedTouches[0].screenX;
-	});
-	slider.addEventListener("touchend", (e) => {
-		touchEndX = e.changedTouches[0].screenX;
-		handleSwipe();
-	});
-
-	function handleSwipe() {
-		const swipeThreshold = 50;
-		if (touchEndX < touchStartX - swipeThreshold && currentIndex < maxIndex) {
-			currentIndex++;
-			updateSlider();
-		}
-		if (touchEndX > touchStartX + swipeThreshold && currentIndex > 0) {
-			currentIndex--;
-			updateSlider();
-		}
-	}
 });
