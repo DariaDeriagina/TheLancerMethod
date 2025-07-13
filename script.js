@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-	// === Burger Menu ===
+	// === Burger Menu Toggle ===
 	const burger = document.getElementById("burgerMenu");
 	const menuContainer = document.getElementById("menuContainer");
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	if (typingElement) type();
 
-	// === About Me Toggle ===
+	// === About Me Section Toggle ===
 	const toggleBtn = document.getElementById("toggleAbout");
 	const shortBlock = document.getElementById("aboutShort");
 	const fullBlock = document.getElementById("aboutFull");
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	// === Fade-Up Animation ===
+	// === Fade-Up Animation on Scroll ===
 	const fadeEls = document.querySelectorAll(".fade-up");
 
 	if (fadeEls.length > 0) {
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	let currentIndex = 0;
 	let cardWidth = 0;
 	let visibleCards = 1;
-	let totalCards = cards.length;
+	const totalCards = cards.length;
 	let maxIndex = 0;
 
 	function getVisibleCardCount() {
@@ -89,10 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		const style = window.getComputedStyle(cards[0]);
 
 		let marginRight = parseInt(style.marginRight);
-		if (isNaN(marginRight)) marginRight = 0; // Mobile fix
+		if (isNaN(marginRight)) marginRight = 0;
 
 		cardWidth = cardRect.width + marginRight;
-
 		maxIndex = Math.max(0, totalCards - visibleCards);
 
 		updateSlider();
@@ -126,9 +125,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	window.addEventListener("resize", updateCardWidth);
 
-	// Initial
+	// Initial setup
 	updateCardWidth();
-	// Expand/collapse extra testimonial text
+
+	// === Start slider from middle card on desktop ===
+	if (window.innerWidth > 1024 && cards.length >= 3) {
+		currentIndex = 1; // So that the middle (2nd) card shows first
+		updateSlider();
+	}
+
+	// === Expand/Collapse Testimonial Read More ===
 	document.querySelectorAll(".testimonial-card .read-more").forEach((link) => {
 		link.addEventListener("click", function (e) {
 			e.preventDefault();
@@ -140,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	// === Swipe Support for Testimonials Slider ===
+	// === Swipe Support for Slider (Mobile) ===
 	let touchStartX = 0;
 	let touchEndX = 0;
 
@@ -154,15 +160,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	function handleSwipe() {
-		const swipeThreshold = 50; // px
+		const swipeThreshold = 50;
 
 		if (touchEndX < touchStartX - swipeThreshold && currentIndex < maxIndex) {
-			// свайп влево
 			currentIndex++;
 			updateSlider();
 		}
 		if (touchEndX > touchStartX + swipeThreshold && currentIndex > 0) {
-			// свайп вправо
 			currentIndex--;
 			updateSlider();
 		}
