@@ -127,8 +127,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		const sectionObserver = new IntersectionObserver(
 			(entries, observer) => {
 				if (entries[0].isIntersecting) {
-					currentIndex = 1; // Show middle card
+					// First immediate center
+					currentIndex = 1;
 					updateSlider();
+
+					// Second center after layout settles (for iOS Safari)
+					setTimeout(() => {
+						currentIndex = 1;
+						updateSlider();
+					}, 300);
+
 					observer.unobserve(testimonialsSection);
 				}
 			},
