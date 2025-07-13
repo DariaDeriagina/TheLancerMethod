@@ -128,6 +128,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Initial
 	updateCardWidth();
+	// Expand/collapse extra testimonial text
+	document.querySelectorAll(".testimonial-card .read-more").forEach((link) => {
+		link.addEventListener("click", function (e) {
+			e.preventDefault();
+			const moreText = this.parentElement.querySelector(".more-text");
+			moreText.classList.toggle("hidden");
+			this.textContent = moreText.classList.contains("hidden")
+				? "Read More →"
+				: "Show Less ↑";
+		});
+	});
 
 	// === Swipe Support for Testimonials Slider ===
 	let touchStartX = 0;

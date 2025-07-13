@@ -1437,11 +1437,18 @@ section#about h2.about-title {
 }
 
 /** Animation effect for service**/
-.services-grid .service-card:nth-child(1) { transition-delay: 0.1s; }
-.services-grid .service-card:nth-child(2) { transition-delay: 0.2s; }
-.services-grid .service-card:nth-child(3) { transition-delay: 0.3s; }
-.services-cta { transition-delay: 0.4s; }
-
+.services-grid .service-card:nth-child(1) {
+	transition-delay: 0.1s;
+}
+.services-grid .service-card:nth-child(2) {
+	transition-delay: 0.2s;
+}
+.services-grid .service-card:nth-child(3) {
+	transition-delay: 0.3s;
+}
+.services-cta {
+	transition-delay: 0.4s;
+}
 
 /* ===== MARK: MEDIA SERVICES QUERIES: MOBILE STYLING ===== */
 @media (max-width: 768px) {
@@ -1509,19 +1516,17 @@ section#about h2.about-title {
 }
 /* ===== MARK: TESTIMONIALS SECTION ===== */
 .testimonials-section {
-	background-color: #f9efe8;
+	background-color: #f4e0d3;
 	text-align: center;
 	padding: 80px 20px;
 }
-
 .testimonials-section h2 {
 	font-family: "Playfair Display", serif;
-	font-size: 36px;
-	font-weight: 600;
+	font-size: 48px;
+	font-weight: 400;
 	color: #2a1e1c;
 	margin-bottom: 10px;
 }
-
 .testimonials-section .subtext {
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
@@ -1529,105 +1534,100 @@ section#about h2.about-title {
 	margin-bottom: 40px;
 }
 
+/* make the “Read More” a bold, right-aligned block */
+.testimonial-card .read-more {
+	display: block;
+	text-align: right;
+	font-weight: 700;
+	margin-top: 8px;
+	white-space: nowrap;
+	font-size: 14px;
+	color: #444;
+	text-decoration: none;
+}
+
+/* wrapper hides overflow and adds right padding for the last card */
 .slider-wrapper {
 	background-color: #2a1e1c;
-	padding: 80px 0;
+
+	padding-right: 32px; /* room for last card + gap */
 	position: relative;
-	overflow: visible;
+	overflow: hidden;
 	z-index: 0;
 }
-
-.slider-wrapper::after {
-	bottom: 0;
-	background: linear-gradient(to top, rgba(249, 239, 232, 0.6), transparent);
+.slider-wrapper {
+	padding: 80px 10px 80px 10px;
 }
 
-/* MARK: Testimonials Outer Container */
-.testimonials-outer {
-	background-color: #2a1f1a;
-	padding: 40px 20px;
-	border-radius: 10px;
-	overflow: hidden; /* 👈 Скрываем всё, что выходит за пределы */
-	position: relative;
+/* hide the extra text by default */
+.more-text.hidden {
+	display: none;
 }
 
-/* MARK: Slider Track */
+/* the track: flex-gap handles spacing visually */
 .testimonials-slider {
 	display: flex;
-	gap: 32px;
+	gap: 10px;
 	transition: transform 0.4s ease;
 	will-change: transform;
 }
 
-/* MARK: Individual Card */
+/* each card: remove centering margins, add horizontal spacing */
 .testimonial-card {
 	background-color: #f9efe8;
 	padding: 24px;
-	margin-right: 32px;
 	flex: 0 0 calc((100% - 64px) / 3);
-	max-width: 100%;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-	flex: 0 0 80%;
 	max-width: 400px;
-	margin: 0 auto 32px;
 	border: 2px solid #000;
 	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 	position: relative;
-}
-.testimonial-card {
 	transition: transform 0.3s ease;
+	margin-right: 32px; /* for JS to calculate scroll distance */
 }
-
 .testimonial-card:hover {
 	transform: translateY(-4px);
 }
 
+/* remove trailing margin on the very last card */
+.testimonial-card:last-child {
+	margin-right: 0;
+}
+
+/* typography inside each card */
 .testimonial-card p.quote {
 	font-weight: 600;
 	font-size: 16px;
 	font-style: italic;
 	margin-bottom: 12px;
 }
-
 .testimonial-card p.text {
 	font-size: 14px;
 	font-style: italic;
 	margin-bottom: 20px;
 	color: #000;
 }
-
 .testimonial-card .author {
 	font-weight: 700;
 	margin-top: 10px;
 	color: #000;
 }
-
 .testimonial-card .role {
 	font-size: 14px;
 	color: #000;
 	margin-bottom: 10px;
 }
 
-.testimonial-card .read-more {
-	font-size: 14px;
-	color: #444;
-	text-decoration: none;
-}
-
+/* slider controls & CTA */
 .slider-controls {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 0;
 	padding: 12px 20px;
-	margin: 48px auto;
+	margin: 48px auto 0;
 	background-color: #fcf6f3;
-
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 	width: fit-content;
 }
-
-/* Базовые кнопки */
 .arrow-btn {
 	all: unset;
 	cursor: pointer;
@@ -1639,8 +1639,6 @@ section#about h2.about-title {
 	justify-content: center;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* Active button */
 .arrow-btn.active {
 	background-color: #3b2f2f;
 	color: #fff;
@@ -1658,60 +1656,54 @@ section#about h2.about-title {
 	color: #2a1e1c;
 	transition: 0.4s ease;
 }
-
 .cta-button:hover {
 	background-position: right center;
 	color: #1c0e05;
 }
+/* On mid-to-large desktop viewports (e.g. 1280px–1680px wide) */
+@media (min-width: 1280px) and (max-width: 1680px) {
+	.slider-wrapper {
+		/* double the padding so the last card + gap no longer gets clipped */
+		padding-right: 64px;
+	}
+}
 
-/* ===== MARK: Testimonials MOBILE STYLES ===== */
+/* ===== MARK: TESTIMONIALS MOBILE STYLES ===== */
 @media (max-width: 1024px) {
 	.testimonials-slider {
-		display: flex;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
-		-webkit-overflow-scrolling: touch; /
+		-webkit-overflow-scrolling: touch;
 	}
-
 	.testimonial-card {
 		scroll-snap-align: start;
 		flex: 0 0 100%;
+		margin-right: 0; /* handled by gap on mobile */
 	}
-
 	.slider-controls {
 		margin-top: 20px;
 	}
 }
-/* MARK: Responsive - Mobile shows only 1 card */
+
 @media (max-width: 768px) {
-  .testimonials-slider {
-    display: flex;
-    gap: 20px;                   /* use gap instead of margins */
-    overflow-x: auto;            /* allow horizontal scroll */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;  /* momentum scroll on iOS */
-    touch-action: pan-x;         /* ensure horizontal pan on touch devices */
-    padding: 20px 0;             /* expand hit area above/below cards */
-  }
-
-  .testimonial-card {
-    flex: 0 0 100%;              /* one card per swipe */
-    scroll-snap-align: start;
-    /* remove any manual margin-right here */
-  }
-
-	  /* zero out the right margin on the very last card */
-  .testimonial-card:last-child {
-    margin-right: 0;
-  }
-
-  /* hide arrows on mobile */
-  .slider-controls {
-    display: none;
-  }
+	.testimonials-slider {
+		gap: 20px;
+		padding: 20px 0;
+		touch-action: pan-x;
+	}
+	.slider-controls {
+		display: none;
+	}
+	.slider-wrapper {
+		padding: 80px 0 0 0;
+	}
+	.testimonial-card {
+		margin-right: 0;
+	}
+	.cta-button {
+		margin-bottom: 40px;
+	}
 }
-
-
 
 /** MARK: Contact Section**/
 .book-section {
