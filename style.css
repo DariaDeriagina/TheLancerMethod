@@ -1547,30 +1547,32 @@ section#about h2.about-title {
 }
 
 /* wrapper hides overflow and adds right padding for the last card */
+
 .slider-wrapper {
 	background-color: #2a1e1c;
-	padding-right: 32px;
 	position: relative;
-	overflow: hidden;
+	overflow: visible; /* key fix */
 	z-index: 0;
-	margin-left: 40px;
-	margin-right: 40px;
+	padding: 80px 20px;
 }
-.slider-wrapper {
-	padding: 80px 10px 80px 10px;
+
+.slider-viewport {
+	overflow-x: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.testimonials-slider {
+	display: flex;
+	transition: transform 0.3s ease;
+	will-change: transform;
+	touch-action: pan-y;
+	-webkit-overflow-scrolling: touch;
 }
 
 /* hide the extra text by default */
 .more-text.hidden {
 	display: none;
-}
-
-/* the track: flex-gap handles spacing visually */
-.testimonials-slider {
-	display: flex;
-	gap: 0px;
-	transition: transform 0.4s ease;
-	will-change: transform;
 }
 
 /* each card: remove centering margins, add horizontal spacing */
@@ -1662,17 +1664,6 @@ section#about h2.about-title {
 	color: #1c0e05;
 }
 
-.testimonial-card {
-	flex: 0 0 85%; /* << less than 100% helps with final card visibility */
-	scroll-snap-align: start;
-}
-
-/* Fix hidden scroll issue */
-.slider-wrapper {
-	position: relative;
-	overflow: visible; /* key fix */
-}
-
 /* On mid-to-large desktop viewports (e.g. 1280px–1680px wide) */
 @media (min-width: 1280px) and (max-width: 1680px) {
 	.slider-wrapper {
@@ -1688,10 +1679,10 @@ section#about h2.about-title {
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
 	}
+
 	.testimonial-card {
+		flex: 0 0 85%; /* << less than 100% helps with final card visibility */
 		scroll-snap-align: start;
-		flex: 0 0 100%;
-		margin-right: 0; /* handled by gap on mobile */
 	}
 	.slider-controls {
 		margin-top: 20px;
