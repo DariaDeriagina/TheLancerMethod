@@ -819,7 +819,11 @@ p {
 		line-height: 1.4;
 		margin-top: 0;
 		margin-bottom: 20px;
-		text-align: left;
+		text-align: center;
+	}
+
+	#method .method-content .highlight-text p {
+		margin: 4px 0;
 	}
 
 	.method-section strong {
@@ -858,7 +862,7 @@ p {
 		font-size: 12px;
 		text-align: center;
 		margin: 20px auto;
-		max-width: 90%;
+		max-width: 100%;
 		color: #222;
 	}
 
@@ -872,7 +876,7 @@ p {
 
 	.btn-consultation {
 		background: linear-gradient(to right, #c97b53, #e5c7aa);
-		border: 2px solid #8b4a2b;
+		border: 4px solid #8b4a2b;
 		color: #2a2a2a;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -888,11 +892,10 @@ p {
 		background: linear-gradient(to right, #d8865f, #f1d9bd);
 	}
 
-	.btn-secondary {
-		font-size: 15px;
+	.method-buttons .method-btn-secondary {
+		display: block;
+		width: 100%;
 		text-align: center;
-		text-decoration: underline;
-		color: #222;
 	}
 }
 
