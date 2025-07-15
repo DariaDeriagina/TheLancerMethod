@@ -631,30 +631,70 @@
   <button class="cta-button fade-up">VIEW CASE STUDIES</button>
 </section>
 
-<!--MARK:  CONTACT  Section -->
+
+<!-- MARK: CONTACT Section -->
 <section id="contact" class="book-section" aria-label="Book a Consultation">
   <div class="book-container">
     <!-- Left Side: Image + Quotes -->
     <div class="left-column">
-      <img src="images/contactImages/ContactDena.jpg" alt="Dena Lancer" class="book-image" />
-      <div class="quote-bubble top-left">“Why book a free 30-min consultation?”</div>
-      <div class="quote-bubble bottom-left">“Because sometimes all you need is the right plan, a supportive mind, and a next step that makes sense.”</div>
+      <img
+        src="images/contactImages/ContactDena.jpg"
+        alt="Dena Lancer"
+        class="book-image"
+      />
+      <div class="quote-bubble top-left">
+        “Why book a free 30‑min consultation?”
+      </div>
+      <div class="quote-bubble bottom-left">
+        “Because sometimes all you need is the right plan, a supportive mind, and a next step that makes sense.”
+      </div>
     </div>
 
     <!-- Right Side: Form -->
     <div class="right-column">
       <p class="small-heading">Ready To Take Action?</p>
-      <h2>Book A <strong class="booking-title__free">FREE</strong> Consultation</h2>
-      <p class="form-subtext">This is your first step toward clarity, structure, and real progress. <br />Pick a time that works for you — I’ll be there to help.</p>
+      <h2>
+        Book A <strong class="booking-title__free">FREE</strong> Consultation
+      </h2>
+      <p class="form-subtext">
+        This is your first step toward clarity, structure, and real progress.<br />
+        Pick a time that works for you — I’ll be there to help.
+      </p>
 
-			  <!-- MARK: Mobile Visuals (Only shown on mobile) -->
-  <div class="left-column mobile-visuals">
-    <img src="images/contactImages/ContactDena.jpg" alt="Dena Lancer" class="book-image" />
-    <div class="quote-bubble top-left">“Why book a free 30-min consultation?”</div>
-    <div class="quote-bubble bottom-left">“Because sometimes all you need is the right plan, a supportive mind, and a next step that makes sense.”</div>
-  </div>
+      <!-- MARK: Mobile Visuals (Only shown on mobile) -->
+      <div class="left-column mobile-visuals">
+        <img
+          src="images/contactImages/ContactDena.jpg"
+          alt="Dena Lancer"
+          class="book-image"
+        />
+        <div class="quote-bubble top-left">
+          “Why book a free 30‑min consultation?”
+        </div>
+        <div class="quote-bubble bottom-left">
+          “Because sometimes all you need is the right plan, a supportive mind, and a next step that makes sense.”
+        </div>
+      </div>
 
-    <form id="bookingForm" class="booking-form">
+      <form
+        id="bookingForm"
+        class="booking-form"
+        action="https://formspree.io/f/xpwlzral"
+        method="POST"
+      >
+        <!-- Email subject -->
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Consultation Request"
+        />
+        <!-- Redirect to booking page after submit -->
+        <input
+          type="hidden"
+          name="_next"
+          value="https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true"
+        />
+
         <div class="input-row">
           <input
             name="firstName"
@@ -679,36 +719,127 @@
 
         <fieldset>
           <legend>Do you have a business or idea in mind?</legend>
-          <label><input type="radio" name="business" /> Yes – I have a clear idea or existing business</label>
-          <label><input type="radio" name="business" /> I’m exploring a few ideas</label>
-          <label><input type="radio" name="business" /> I have a skill or passion but no idea yet</label>
-          <label><input type="radio" name="business" /> I’m starting from scratch and open to guidance</label>
+          <label>
+            <input
+              name="business"
+              type="radio"
+              value="Existing business"
+            />
+            Yes – I have a clear idea or existing business
+          </label>
+          <label>
+            <input
+              name="business"
+              type="radio"
+              value="Exploring ideas"
+            />
+            I’m exploring a few ideas
+          </label>
+          <label>
+            <input
+              name="business"
+              type="radio"
+              value="Skill or passion"
+            />
+            I have a skill or passion but no idea yet
+          </label>
+          <label>
+            <input
+              name="business"
+              type="radio"
+              value="Starting from scratch"
+            />
+            I’m starting from scratch and open to guidance
+          </label>
         </fieldset>
 
         <fieldset>
           <legend>What kind of support are you looking for? (Choose all that apply)</legend>
-          <label><input type="checkbox" /> Clarity on what to pursue</label>
-          <label><input type="checkbox" /> A business plan or structured roadmap</label>
-          <label><input type="checkbox" /> Help packaging or presenting my offer</label>
-          <label><input type="checkbox" /> Growth or scaling strategy</label>
-          <label><input type="checkbox" /> Accountability and execution support</label>
-          <label><input type="checkbox" /> Just need someone to think it through with me</label>
+          <label>
+            <input name="support[]" type="checkbox" value="Clarity" />
+            Clarity on what to pursue
+          </label>
+          <label>
+            <input
+              name="support[]"
+              type="checkbox"
+              value="Roadmap"
+            />
+            A business plan or structured roadmap
+          </label>
+          <label>
+            <input
+              name="support[]"
+              type="checkbox"
+              value="Packaging"
+            />
+            Help packaging or presenting my offer
+          </label>
+          <label>
+            <input
+              name="support[]"
+              type="checkbox"
+              value="Scaling"
+            />
+            Growth or scaling strategy
+          </label>
+          <label>
+            <input
+              name="support[]"
+              type="checkbox"
+              value="Accountability"
+            />
+            Accountability and execution support
+          </label>
+          <label>
+            <input
+              name="support[]"
+              type="checkbox"
+              value="Thinking partner"
+            />
+            Just need someone to think it through with me
+          </label>
         </fieldset>
 
         <fieldset>
           <legend>How ready are you to move forward?</legend>
-          <label><input type="radio" name="readiness" /> I’m ready to dive in</label>
-          <label><input type="radio" name="readiness" /> I’m curious and exploring</label>
-          <label><input type="radio" name="readiness" /> I need more clarity before deciding</label>
+          <label>
+            <input
+              name="readiness"
+              type="radio"
+              value="Ready to dive in"
+            />
+            I’m ready to dive in
+          </label>
+          <label>
+            <input
+              name="readiness"
+              type="radio"
+              value="Curious"
+            />
+            I’m curious and exploring
+          </label>
+          <label>
+            <input
+              name="readiness"
+              type="radio"
+              value="Need more clarity"
+            />
+            I need more clarity before deciding
+          </label>
         </fieldset>
 
-        <textarea placeholder="Anything else you’d like me to know before we speak? (Optional)"></textarea>
+        <textarea
+          name="additionalInfo"
+          placeholder="Anything else you’d like me to know before we speak? (Optional)"
+        ></textarea>
 
         <button type="submit">Book Your FREE Consultation</button>
       </form>
     </div>
   </div>
 </section>
+
 
 <!-- ===== MARK: Footer Section ===== -->
 <footer class="footer-section">
