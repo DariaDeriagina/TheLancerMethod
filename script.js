@@ -157,3 +157,40 @@ document.addEventListener("DOMContentLoaded", () => {
 		updateButtonState();
 	}
 });
+
+//For CONTACT Section
+document.addEventListener("DOMContentLoaded", () => {
+	const form = document.getElementById("bookingForm");
+
+	form.addEventListener("submit", (e) => {
+		e.preventDefault();
+
+		// Gather all form fields into a FormData object
+		const data = new FormData(form);
+
+		// Build the body of the email from each field
+		const bodyLines = [];
+		for (let [key, val] of data.entries()) {
+			bodyLines.push(`${key}: ${val}`);
+		}
+
+		// Construct the mailto: URL
+		const mailto = [
+			"mailto:deriagina.daria@icloud.com",
+			"?subject=New Consultation Request",
+			"&body=" + encodeURIComponent(bodyLines.join("\n")),
+		].join("");
+
+		// Notify the user that their info has been "sent"
+		alert("Your information has been sent!");
+
+		// Open the user’s email client with the composed message
+		window.location.href = mailto;
+
+		// After a brief delay, redirect to the Outlook booking page
+		setTimeout(() => {
+			window.location.href =
+				"https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true";
+		}, 500);
+	});
+});

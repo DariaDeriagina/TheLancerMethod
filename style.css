@@ -1484,7 +1484,7 @@ section#about h2.about-title {
 	}
 
 	.service-card p {
-		font-size: 14px;
+		font-size: 16px;
 		margin: 10px 0 16px;
 	}
 	.service-icon {
@@ -1767,6 +1767,19 @@ section#about h2.about-title {
 	max-width: 280px;
 	font-size: 16px;
 }
+.quote-bubble.top-left {
+	background-color: #fcf6f3;
+}
+.quote-bubble.bottom-left {
+	background-color: #f8eae1;
+}
+
+.quote-bubble.top-left .quote-bubble.top-left::after {
+	border-right: 20px solid #fcf6f3;
+}
+.quote-bubble.bottom-left::after {
+	border-left: 20px solid #f8eae1;
+}
 
 .top-left::after {
 	content: "";
@@ -1799,21 +1812,31 @@ section#about h2.about-title {
 }
 
 .small-heading {
-	text-transform: uppercase;
-	font-size: 14px;
-	letter-spacing: 1px;
+	text-transform: capitalize;
+	font-size: 24px;
+	font-family: Playfair Display, serif;
+	letter-spacing: 0em;
 	color: #3b2f2f;
 	margin-bottom: 10px;
 }
 
 .right-column h2 {
-	font-size: 32px;
+	font-size: 48px;
+	font-weight: 200;
+	font-family: Playfair Display, serif;
 	color: #3b2f2f;
 	margin-bottom: 10px;
+	text-align: center;
+}
+.booking-title__free {
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 .right-column .form-subtext {
-	font-size: 16px;
+	font-family: var(--font-ui);
+	font-size: 20px;
+	font-weight: 400;
 	margin-bottom: 30px;
 	color: black;
 }

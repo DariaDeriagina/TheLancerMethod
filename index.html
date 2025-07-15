@@ -644,7 +644,7 @@
     <!-- Right Side: Form -->
     <div class="right-column">
       <p class="small-heading">Ready To Take Action?</p>
-      <h2>Book A <strong>Free</strong> Consultation</h2>
+      <h2>Book A <strong class="booking-title__free">FREE</strong> Consultation</h2>
       <p class="form-subtext">This is your first step toward clarity, structure, and real progress. <br />Pick a time that works for you — I’ll be there to help.</p>
 
 			  <!-- MARK: Mobile Visuals (Only shown on mobile) -->
@@ -654,12 +654,28 @@
     <div class="quote-bubble bottom-left">“Because sometimes all you need is the right plan, a supportive mind, and a next step that makes sense.”</div>
   </div>
 
-      <form class="booking-form">
+    <form id="bookingForm" class="booking-form">
         <div class="input-row">
-          <input type="text" placeholder="First name" required />
-          <input type="text" placeholder="Last name" required />
+          <input
+            name="firstName"
+            type="text"
+            placeholder="First name"
+            required
+          />
+          <input
+            name="lastName"
+            type="text"
+            placeholder="Last name"
+            required
+          />
         </div>
-        <input type="email" placeholder="you@email.com" required />
+
+        <input
+          name="email"
+          type="email"
+          placeholder="you@email.com"
+          required
+        />
 
         <fieldset>
           <legend>Do you have a business or idea in mind?</legend>
