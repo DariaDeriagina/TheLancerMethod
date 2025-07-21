@@ -916,11 +916,7 @@ p {
 
 /* Section wrapper: background image + color */
 .about-section {
-	background-color: #f9efe8;
-	background-image: url("images/aboutImages/AboutMeBackground.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: left top;
+	background-color: #151410;
 	padding: 80px 40px;
 	width: 100%;
 	min-height: 100vh;
@@ -928,7 +924,7 @@ p {
 
 /* Inherit color and font for all children */
 .about-section * {
-	color: #1c1c1c;
+	color: #fdfcfb;
 	font-family: var(--font-ui);
 }
 
@@ -958,11 +954,13 @@ p {
 	text-align: left;
 	display: flex;
 	flex-direction: column;
+	color: #fdfcfb;
 }
 
 /* Pull-quote styling */
 .about-quote {
 	font-family: "EB Garamond", serif;
+	color: #fdfcfb;
 	font-style: italic;
 	font-size: 20px;
 	text-align: right;
@@ -970,23 +968,27 @@ p {
 	max-width: 760px;
 }
 .quote-author {
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 18px;
 	display: block;
 	margin-top: 4px;
+	color: #fdfcfb;
 }
 
 /* Main title styling */
 .about-section .about-title {
 	font-weight: 500;
-}
-.about-content .about-title {
 	font-family: var(--font-title);
+	color: #fdfcfb;
+}
+
+.about-content .about-title {
 	text-align: center;
 	font-size: 64px;
 	line-height: 1.2;
 	margin-bottom: 20px;
 	text-align: left;
+	font-family: var(--font-title);
 }
 
 /* Subtitle styling */
@@ -996,6 +998,13 @@ p {
 	font-weight: 600;
 	margin-bottom: 20px;
 	letter-spacing: 0.5px;
+}
+.gradient-text {
+	background: linear-gradient(90deg, #8f5e3b 0%, #fefaf7 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+	text-transform: none;
 }
 
 /* Paragraph styling */
@@ -1055,20 +1064,24 @@ p {
 
 .read-more-btn {
 	display: block;
-	margin: 20px auto;
-	background: none;
-	border: none;
+	margin: 12px auto 0;
+	background: linear-gradient(90deg, #8f5e3b 0%, #fefaf7 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	font-weight: 600;
 	font-size: 16px;
-	color: var(--border-dark);
+	border: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	animation: pulse 2.8s infinite;
+	text-align: center;
 }
 
 .read-more-btn:hover {
 	text-decoration: underline;
-	color: #a84d1f;
+	background: linear-gradient(90deg, #6f3e23 0%, #fefaf7 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	transform: scale(1.04);
 }
 
@@ -1124,6 +1137,7 @@ p {
 .about-card p {
 	font-size: 15px;
 	line-height: 1.6;
+	color: #151410;
 }
 section#about .about-card h3 {
 	font-size: 24px;
@@ -1162,11 +1176,11 @@ section#about .about-card {
 .cta-btn.secondary {
 	background: none;
 	border: none;
-	color: var(--main-text500);
+	color: var(--main-text400);
 }
 .cta-btn.secondary:hover {
 	text-decoration: underline;
-	color: #1c1c1c;
+	color: whitesmoke;
 }
 
 /* MARK: ABOUT Responsive adjustments */
@@ -1222,7 +1236,7 @@ section#about .about-card {
 @media (max-width: 768px) {
 	.about-section {
 		background-image: none !important;
-		background-color: #f9efe8 !important;
+		background-color: #151410;
 	}
 
 	.about-card {
