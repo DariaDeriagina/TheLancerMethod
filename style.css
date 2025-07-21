@@ -165,7 +165,7 @@ a {
 	transform: translateY(-50%);
 	z-index: 0;
 	pointer-events: none;
-	opacity: 0.3;
+	opacity: 1;
 	max-width: 100vw;
 	overflow: hidden;
 }
@@ -227,9 +227,9 @@ a {
 .description {
 	font-size: 20px;
 	font-weight: 200;
-	margin: 24px auto 10px auto; /* верхний отступ — 24px */
+	margin: 24px auto 10px auto;
 	text-align: center;
-	max-width: 1014px;
+	max-width: 900px;
 }
 
 .secondary-description {
@@ -380,7 +380,7 @@ p {
 	.left-image img,
 	.right-image img {
 		width: 240px;
-		opacity: 0.35;
+		opacity: 1;
 	}
 }
 
@@ -389,7 +389,7 @@ p {
 	.left-image img,
 	.right-image img {
 		width: 200px;
-		opacity: 0.3;
+		opacity: 1;
 	}
 }
 
@@ -398,7 +398,7 @@ p {
 	.left-image img,
 	.right-image img {
 		width: 160px;
-		opacity: 0.25;
+		opacity: 1;
 	}
 }
 
@@ -407,7 +407,7 @@ p {
 	.left-image img,
 	.right-image img {
 		width: 120px;
-		opacity: 0.2;
+		opacity: 1;
 	}
 }
 
