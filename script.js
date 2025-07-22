@@ -191,4 +191,26 @@ document.addEventListener("DOMContentLoaded", () => {
 			alert("Sorry—something went wrong. Please try again later.");
 		}
 	});
+
+	// ——————————————————————————————
+	// Testimonials Fade up effect
+	// ——————————————————————————————
+
+	document.addEventListener("DOMContentLoaded", function () {
+		const fadeUps = document.querySelectorAll(".fade-up");
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("visible");
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{ threshold: 0.2 }
+		);
+
+		fadeUps.forEach((el) => observer.observe(el));
+	});
 });

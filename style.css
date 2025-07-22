@@ -1585,209 +1585,180 @@ section#about h2.about-title {
 		margin-bottom: 8px;
 	}
 }
-/* ===== MARK: TESTIMONIALS SECTION ===== */
+
+/* === MARK: Testimonials Section === */
 .testimonials-section {
-	background-color: #f4e0d3;
+	background-color: #151410;
+	padding: 80px 20px;
+	color: #fff;
+}
+
+/* Headings */
+.section-heading {
 	text-align: center;
-	padding: 80px 20px;
-}
-.testimonials-section h2 {
 	font-family: "Playfair Display", serif;
-	font-size: 48px;
 	font-weight: 400;
-	color: #2a1e1c;
-	margin-bottom: 10px;
+	font-size: 36px;
+	margin-bottom: 8px;
 }
-.testimonials-section .subtext {
-	font-family: "Poppins", sans-serif;
-	font-size: 16px;
-	color: #5f4d47;
+
+.section-subheading {
+	text-align: center;
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: 18px;
 	margin-bottom: 40px;
+	color: #f2f2f2;
 }
 
-/* make the “Read More” a bold, right-aligned block */
-.testimonial-card .read-more {
-	display: block;
-	text-align: right;
-	font-weight: 700;
-	margin-top: 8px;
-	white-space: nowrap;
-	font-size: 14px;
-	color: #444;
+/* Link style on dark bg */
+.link-style-light {
+	font-weight: 200;
+	color: #fff;
 	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: border-color 0.3s ease;
+}
+.link-style-light:hover {
+	border-color: #fff;
 }
 
-/* wrapper hides overflow and adds right padding for the last card */
+/* === Masonry Grid Layout === */
+.testimonials-masonry {
+	column-count: 3;
+	column-gap: 24px;
+}
 
-.slider-wrapper {
-	background-color: #2a1e1c;
-	position: relative;
-	overflow: visible; /* key fix */
-	z-index: 0;
+@media (max-width: 1024px) {
+	.testimonials-masonry {
+		column-count: 2;
+	}
+}
+@media (max-width: 768px) {
+	.testimonials-masonry {
+		column-count: 1;
+	}
+}
+
+/* === Testimonial Cards === */
+/* === Testimonials Section === */
+.testimonials-section {
+	background-color: #151410;
 	padding: 80px 20px;
+	color: #fff;
 }
 
-.slider-viewport {
-	overflow-x: hidden;
-	position: relative;
-	width: 100%;
+.section-heading {
+	text-align: center;
+	font-family: "Playfair Display", serif;
+	font-size: 36px;
+	margin-bottom: 8px;
 }
 
-.testimonials-slider {
-	display: flex;
-	transition: transform 0.3s ease;
-	will-change: transform;
-	touch-action: pan-y;
-	-webkit-overflow-scrolling: touch;
+.section-subheading {
+	text-align: center;
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: 18px;
+	margin-bottom: 40px;
+	color: #f2f2f2;
 }
 
-/* hide the extra text by default */
-.more-text.hidden {
-	display: none;
+.link-style-light {
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: border-color 0.3s ease;
+}
+.link-style-light:hover {
+	border-color: #fff;
 }
 
-/* each card: remove centering margins, add horizontal spacing */
+/* === Masonry Layout === */
+.testimonials-masonry {
+	column-count: 3;
+	column-gap: 24px;
+}
+
+@media (max-width: 1024px) {
+	.testimonials-masonry {
+		column-count: 2;
+	}
+}
+@media (max-width: 768px) {
+	.testimonials-masonry {
+		column-count: 1;
+	}
+}
+
+/* === Testimonial Cards === */
 .testimonial-card {
-	background-color: #f9efe8;
+	margin-bottom: 24px;
 	padding: 24px;
-	flex: 0 0 calc((100% - 64px) / 3);
-	max-width: 400px;
-	border: 2px solid #000;
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-	position: relative;
+	border-radius: 12px;
+	font-family: "IBM Plex Sans", sans-serif;
+	break-inside: avoid;
 	transition: transform 0.3s ease;
-	margin-right: 32px; /* for JS to calculate scroll distance */
+	box-shadow: 0 6px 24px rgba(255, 250, 240, 0.25);
+	text-align: right;
 }
 .testimonial-card:hover {
 	transform: translateY(-4px);
+	box-shadow: 0 12px 32px rgba(255, 250, 240, 0.4);
 }
 
-/* remove trailing margin on the very last card */
-.testimonial-card:last-child {
-	margin-right: 0;
+.testimonial-card.light {
+	background-color: #fff9f4;
+	color: #151410;
+}
+.testimonial-card.dark {
+	background-color: #f1e1d4;
+	color: #151410;
 }
 
-/* typography inside each card */
-.testimonial-card p.quote {
-	font-weight: 600;
+.testimonial-text {
 	font-size: 16px;
+	margin-bottom: 16px;
+	line-height: 1.6;
+	text-align: right;
+}
+.testimonial-author {
+	font-weight: bold;
 	font-style: italic;
-	margin-bottom: 12px;
-}
-.testimonial-card p.text {
-	font-size: 14px;
-	font-style: italic;
-	margin-bottom: 20px;
-	color: #000;
-}
-.testimonial-card .author {
-	font-weight: 700;
-	margin-top: 10px;
-	color: #000;
-}
-.testimonial-card .role {
-	font-size: 14px;
-	color: #000;
-	margin-bottom: 10px;
+	font-size: 15px;
+	color: #b87752;
+	text-align: right;
 }
 
-/* slider controls & CTA */
-.slider-controls {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 12px 20px;
-	margin: 48px auto 0;
-	background-color: #fcf6f3;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	width: fit-content;
-}
-.arrow-btn {
-	all: unset;
-	cursor: pointer;
-	font-size: 20px;
-	color: #3b2f2f;
-	padding: 12px 18px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: background-color 0.3s ease, color 0.3s ease;
-}
-.arrow-btn.active {
-	background-color: #3b2f2f;
-	color: #fff;
-	margin: 4px;
-}
-
-.cta-button {
+/* === CTA Button === */
+.cta-center {
+	text-align: center;
 	margin-top: 40px;
-	padding: 14px 32px;
-	font-weight: 600;
-	font-size: 16px;
-	border: 2px solid #954c20;
+}
+.cta-btn.primary {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 16px 32px;
 	background: linear-gradient(to right, #b87752, #fdfbec);
-	background-size: 200% auto;
-	color: #2a1e1c;
-	transition: 0.4s ease;
+	border: 4px solid #954c20;
+	color: #3b2f2f;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	display: inline-block;
 }
-.cta-button:hover {
-	background-position: right center;
-	color: #1c0e05;
-}
-
-/* On mid-to-large desktop viewports (e.g. 1280px–1680px wide) */
-@media (min-width: 1280px) and (max-width: 1680px) {
-	.slider-wrapper {
-		/* double the padding so the last card + gap no longer gets clipped */
-		padding-right: 64px;
-	}
+.cta-btn.primary:hover {
+	background: linear-gradient(to right, #c78a67, #fef4e6);
+	transform: scale(1.02);
 }
 
-/* ===== MARK: TESTIMONIALS MOBILE STYLES ===== */
-@media (max-width: 1024px) {
-	.testimonials-slider {
-		overflow-x: auto;
-		scroll-snap-type: x mandatory;
-		-webkit-overflow-scrolling: touch;
-	}
-
-	.testimonial-card {
-		flex: 0 0 85%; /* << less than 100% helps with final card visibility */
-		scroll-snap-align: start;
-	}
-	.slider-controls {
-		margin-top: 20px;
-	}
-	/* Ensure full scroll visibility on mobile */
-	.testimonials-slider {
-		-webkit-overflow-scrolling: touch;
-		scroll-snap-type: x mandatory;
-		overflow-x: auto;
-		display: flex;
-		gap: 20px;
-		padding-bottom: 20px;
-	}
+/* === Fade Up Animation === */
+.fade-up {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: all 0.6s ease-out;
 }
-
-@media (max-width: 768px) {
-	.testimonials-slider {
-		gap: 20px;
-		padding: 20px 0;
-		touch-action: pan-x;
-	}
-	.slider-controls {
-		display: flex; /* ⬅️ keep visible */
-		margin-top: 20px;
-	}
-	.slider-wrapper {
-		padding: 80px 0 0 0;
-	}
-	.testimonial-card {
-		margin-right: 0;
-	}
-	.cta-button {
-		margin-bottom: 40px;
-	}
+.fade-up.visible {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /** MARK: CONTACT Section**/
