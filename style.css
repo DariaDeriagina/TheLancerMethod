@@ -1325,7 +1325,7 @@ section#about h2.about-title {
 }
 /* ===== MARK: SERVICES SECTION ===== */
 .services-section {
-	background: linear-gradient(to bottom, #000000 20%, #c8a28b 100%);
+	background-color: #f8eae1;
 	padding: 100px 20px;
 	color: #1c1c1c;
 	font-family: var(--font-ui);
@@ -1337,12 +1337,12 @@ section#about h2.about-title {
 	font-weight: 100;
 	font-size: 48px;
 	margin-bottom: 10px;
-	color: #fcf6f3;
+	color: #1c1c1c;
 }
 
 .section-subtitle {
 	font-size: 18px;
-	color: #fcf6f3;
+	color: #1c1c1c;
 	margin-bottom: 60px;
 }
 
@@ -1355,7 +1355,7 @@ section#about h2.about-title {
 }
 
 .service-card {
-	background-color: #f9efe8;
+	background-color: #fcf6f3;
 	padding: 40px 20px;
 	max-width: 320px;
 	border: 5px solid transparent;
@@ -1461,38 +1461,19 @@ section#about h2.about-title {
 .cta-block .cta-title {
 	font-size: 20px;
 	font-weight: 500;
-	color: #f9f4f0;
+	color: #1c1c1c;
 	margin-bottom: 4px; /* ↓ closer to paragraph */
 }
 
 .cta-block p {
 	font-size: 16px;
-	color: #f9f4f0;
+	color: #1c1c1c;
 	margin: 0 0 20px; /* remove padding, set clean spacing below */
 }
 
 .cta-block .btn-solid,
 .cta-block .btn-outline {
 	margin-bottom: 32px; /* more space below button */
-}
-.btn-view-details {
-	display: inline-block;
-	font-size: 1rem;
-	font-weight: bold;
-	font-family: var(--font-ui);
-	color: #3b2f2f;
-	background-color: #ebd3c0;
-	padding: 14px 116px;
-	border: 4px solid #954c20;
-	text-decoration: none;
-	letter-spacing: 0.5px;
-	transition: all 0.3s ease;
-}
-
-.btn-view-details:hover {
-	background-color: #dfc3ae;
-	border-color: #a85e38;
-	transform: translateY(-1px);
 }
 
 /** Animation effect for service**/
@@ -1507,6 +1488,31 @@ section#about h2.about-title {
 }
 .services-cta {
 	transition-delay: 0.4s;
+}
+
+.link-style {
+	font-family: var(--font-ui); /* Используется основной UI-шрифт */
+	font-weight: 600;
+	font-size: 16px;
+	text-decoration: none;
+	border: none;
+	background: none;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.link-style.dark {
+	color: #3b2f2f;
+}
+
+.link-style.dark:hover {
+	text-decoration: underline;
+	color: #954c20;
+}
+.link-lowered {
+	margin-top: 12px;
+	display: inline-block;
 }
 
 /* ===== MARK: MEDIA SERVICES QUERIES: MOBILE STYLING ===== */
