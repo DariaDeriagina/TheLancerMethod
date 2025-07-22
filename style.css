@@ -35,6 +35,13 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+.paragraph,
+.about-paragraph,
+.method-list li,
+p {
+	font-family: var(--font-body);
+	font-weight: 400;
+}
 
 /* =====MARK:  NAVIGATION BAR ===== */
 
@@ -990,6 +997,9 @@ p {
 	text-align: left;
 	font-family: var(--font-title);
 }
+.about-title.mobile-only {
+	display: none;
+}
 
 /* Subtitle styling */
 .about-subtitle {
@@ -999,7 +1009,7 @@ p {
 	margin-bottom: 20px;
 	letter-spacing: 0.5px;
 }
-.gradient-text {
+.gradient-text-about {
 	background: linear-gradient(90deg, #8f5e3b 0%, #fefaf7 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1009,6 +1019,7 @@ p {
 
 /* Paragraph styling */
 .about-paragraph {
+	font-family: var(--font-body);
 	font-size: 16px;
 	line-height: 1.6;
 	max-width: 760px;
@@ -1034,6 +1045,7 @@ p {
 	max-width: 700px;
 }
 .about-list li {
+	font-family: var(--font-body);
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -1209,43 +1221,80 @@ section#about .about-card {
 	.about-title {
 		font-size: 36px;
 	}
-
-	/* Subtitle & section title size */
-	.about-subtitle,
-	.about-section-title {
-		font-size: 18px;
-	}
-
-	/* Paragraph size */
-	.about-paragraph {
-		font-size: 15px;
-	}
-
-	/* Cards stacked */
-	.about-cards {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	/* Full-width CTA buttons */
-	.cta-btn {
-		width: 100%;
-		max-width: 320px;
+	/* Hide title mobile on desctop */
+	.about-title.mobile-only {
+		display: none;
 	}
 }
+
 @media (max-width: 768px) {
+	/* Remove background image and set fallback background color */
 	.about-section {
 		background-image: none !important;
 		background-color: #151410;
 	}
 
+	/* Hide the desktop version of the headline */
+	.about-content .about-title {
+		display: none;
+	}
+
+	/* Show the mobile version of the headline */
+	#about .about-title.mobile-only {
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	/* Visual (image) section adjustments */
+	.about-visual {
+		order: 0;
+		display: flex;
+		justify-content: center;
+	}
+
+	.about-image {
+		max-width: 80%;
+		height: auto;
+	}
+
+	/* Stack columns vertically */
+	.about-inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	/* Resize subtitles and section titles */
+	.about-subtitle,
+	.about-section-title {
+		font-size: 18px;
+	}
+
+	/* Resize paragraph text */
+	.about-paragraph {
+		font-size: 15px;
+	}
+
+	/* Stack cards vertically and center them */
+	.about-cards {
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.about-card {
 		max-height: fit-content;
 	}
+
 	.highlight-stat {
 		font-size: 22px;
 		margin-bottom: 0px;
 	}
+
+	/* Make CTA buttons full width */
+	.cta-btn {
+		width: 100%;
+		max-width: 320px;
+	}
+
 	.about-cta-buttons {
 		text-align: center;
 	}
