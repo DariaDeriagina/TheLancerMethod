@@ -1283,7 +1283,7 @@ section#about .about-card {
 		display: block;
 		margin-bottom: 1rem;
 		text-align: center;
-		margin: 0 0 20px 20px;
+		margin: 0 auto 20px auto;
 		letter-spacing: 0.5px;
 	}
 
