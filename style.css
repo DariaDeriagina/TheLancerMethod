@@ -1257,6 +1257,8 @@ section#about .about-card {
 	/* Title font size */
 	.about-title {
 		font-size: 36px;
+		font-weight: lighter;
+		line-height: 1.2;
 	}
 	/* Hide title mobile on desctop */
 	.about-title.mobile-only {
@@ -1302,7 +1304,11 @@ section#about .about-card {
 		display: flex;
 		flex-direction: column;
 	}
-
+	.about-title {
+		font-size: 36px;
+		font-weight: lighter;
+		line-height: 1.2;
+	}
 	/* Resize subtitles and section titles */
 	.about-subtitle,
 	.about-section-title {
@@ -2037,11 +2043,18 @@ input[type="checkbox"] {
 .mobile-visuals {
 	display: none;
 }
+
+@media (max-width: 1024px) {
+	.booking-form button {
+		width: 100%;
+	}
+}
 /* ===== MARK: Contact Section Mobile Layout Fix ===== */
 @media (max-width: 768px) {
 	.book-container {
 		flex-direction: column;
-		gap: 40px;
+		width: 100%;
+		max-width: 100%;
 	}
 
 	/* Hide desktop version of photo+quotes on mobile */
@@ -2059,19 +2072,50 @@ input[type="checkbox"] {
 	}
 
 	.right-column {
-		order: 1;
+		width: 100%;
+		max-width: 100%;
 		padding: 20px;
 	}
 
+	.form-subtext {
+		width: 100%;
+
+		padding: 0 10px;
+		margin-bottom: 24px;
+	}
+
+	.right-column {
+		order: 1;
+		padding: 20px;
+	}
+	.right-column .small-heading {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.right-column h2 {
+		font-size: 26px;
+		line-height: 1.3;
+		white-space: normal;
+		text-align: center;
+		margin-bottom: 16px;
+	}
 	.small-heading,
 	.right-column h2,
 	.form-subtext {
 		text-align: center;
 	}
 
+	.form-subtext {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
 	.input-row {
 		flex-direction: column;
-		gap: 16px;
+		gap: 10px;
+	}
+	.booking-form button {
+		width: 100%;
 	}
 }
 /* ===== MARK: Footer Styles ===== */
@@ -2154,14 +2198,35 @@ input[type="checkbox"] {
 	align-items: center;
 	gap: 8px;
 }
+.footer-email-link {
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.footer-email-link:hover {
+	text-decoration: underline;
+}
 
 .footer-bottom {
 	border-top: 1px solid #aaa;
 	text-align: center;
 	margin-top: 40px;
 	padding-top: 20px;
-	font-size: 14px;
+	font-size: 10px !important;
 	color: #ccc;
+}
+
+.footer-contact img.footer-icon {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	filter: brightness(95%);
+	color: white;
+}
+.footer-bottom p {
+	font-size: 12px;
+	line-height: 1.4;
 }
 
 /* ===== MARK: Footer Mobile ===== */
@@ -2189,5 +2254,20 @@ input[type="checkbox"] {
 	.footer-contact {
 		justify-content: center;
 		text-align: center;
+	}
+	.footer-contact-block {
+		padding-left: 2px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+	.footer-contact i {
+		margin-right: 4px;
+	}
+	.footer-section .footer-contact img.footer-icon {
+		width: 16px;
+		height: 16px;
+		object-fit: contain;
+		filter: brightness(95%);
 	}
 }
