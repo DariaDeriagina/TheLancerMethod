@@ -1040,9 +1040,10 @@ p {
 
 /* Subtitle styling */
 .about-subtitle {
+	font-family: var(--font-body);
 	text-align: left;
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 500;
 	margin-bottom: 20px;
 	letter-spacing: 0.5px;
 }
@@ -1067,6 +1068,8 @@ p {
 
 /* Section titles within content */
 .about-section-title {
+	  font-family: var(--font-body); /* Inter */
+  font-weight: 500
 	font-size: 20px;
 	font-weight: 600;
 	text-align: left;
@@ -1187,6 +1190,8 @@ p {
 	font-size: 15px;
 	line-height: 1.6;
 	color: #151410;
+	font-family: var(--font-body); /* ← ADD THIS LINE */
+	font-weight: 400; /* ← OPTIONAL: to be extra consistent */
 }
 section#about .about-card h3 {
 	font-size: 24px;

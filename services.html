@@ -3,12 +3,137 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Services – The Lancer Method</title>
+		<!-- Favicon for most browsers -->
+		<link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;300;200;100;500;600;700&family=Inter:wght@200;400;500&family=Poppins:wght@500;400;300;200;100;700&display=swap"
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="images/favicon/favicon-96x96.png"
+		/>
+		<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+
+		<!-- Apple Touch Icon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="images/favicon/apple-touch-icon.png"
+		/>
+
+		<!-- PWA Support (Android) -->
+		<link rel="manifest" href="images/favicon/site.webmanifest" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="images/favicon/web-app-manifest-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href="images/favicon/web-app-manifest-512x512.png"
+		/>
+
+		<!-- Fonts + Global Styles -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@400;500&family=Poppins:wght@300;400;500;700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="services.css" />
-		<title>Services Overview</title>
 	</head>
-	<body></body>
+	<body>
+		<!-- MARK: Navigation Bar -->
+		<header class="navbar">
+			<div class="navbar-inner">
+				<div class="navbar-left">
+					<img src="images/mainImages/logoLancer.png" alt="Logo" class="logo" />
+				</div>
+				<div class="menu-container" id="menuContainer">
+					<a href="#home">HOME</a>
+					<a href="#services">SERVICES</a>
+					<a href="#add-ons">ADD-ONS</a>
+					<a href="#process">PROCESS</a>
+					<a href="#faq">FAQ</a>
+				</div>
+				<div class="navbar-right">
+					<img
+						src="images/mainImages/navBarBurger.png"
+						alt="Menu"
+						class="burger"
+						id="burgerMenu"
+					/>
+					<div class="social-icons">
+						<a href="#"
+							><img src="images/mainImages/FacebookIcon.png" alt="Facebook"
+						/></a>
+						<a href="#"
+							><img src="images/mainImages/LinkedInIcon.png" alt="LinkedIn"
+						/></a>
+						<a href="#"
+							><img src="images/mainImages/InstagramIcon.png" alt="Instagram"
+						/></a>
+						<a
+							href="https://www.tiktok.com/@thelancermethod"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src="images/mainImages/TikTokIcon.png"
+								alt="TikTok"
+								class="icon-tiktok"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- MARK: Services Overview Section -->
+		<section class="services-overview-section fade-up">
+			<h2 class="section-heading light">Services Overview</h2>
+			<p class="section-subheading light">
+				Whether you’re exploring, planning, or executing, each service has been
+				carefully crafted for real progress and real results.
+			</p>
+
+			<div class="start-here-block">
+				<h3 class="start-title">START HERE</h3>
+				<p class="start-description">
+					Before we dive into any package, we start with a complimentary
+					30–minute consultation to understand your goals, clarify where you are
+					in the process, and make sure we’re the right fit. This is where we
+					determine which package is best for you.
+				</p>
+				<a
+					href="https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true"
+					class="btn-consultation"
+				>
+					BOOK YOUR FREE CONSULTATION
+					<img src="images/mainImages/Schedule.png" alt="Schedule Icon" />
+				</a>
+			</div>
+			<div class="mobile-social-icons">
+				<a href="#"
+					><img src="images/mainImages/FacebookIcon.png" alt="Facebook"
+				/></a>
+				<a href="#"
+					><img src="images/mainImages/LinkedInIcon.png" alt="LinkedIn"
+				/></a>
+				<a href="#"
+					><img src="images/mainImages/InstagramIcon.png" alt="Instagram"
+				/></a>
+				<a
+					href="https://www.tiktok.com/@thelancermethod"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img src="images/mainImages/TikTokIcon.png" alt="TikTok" />
+				</a>
+			</div>
+		</section>
+
+		<script src="services.js"></script>
+	</body>
 </html>
