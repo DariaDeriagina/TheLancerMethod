@@ -29,7 +29,12 @@ body {
 	line-height: 1.6;
 	padding-bottom: 60px;
 	overflow-x: clip;
+
+  margin: 0;
+  padding: 0;
 }
+
+
 
 a {
 	text-decoration: none;
@@ -45,14 +50,16 @@ p {
 
 /* === SECTION HEADINGS === */
 .section-heading {
-	font-family: "Playfair Display", serif;
-	font-size: 36px;
-	font-weight: 700;
-	letter-spacing: 0.5px;
-	line-height: 1.2;
-	text-align: center;
-	margin-bottom: 8px;
+  font-family: var(--font-title); /* Playfair Display */
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: var(--heading-dark); /* dark, not pure black */
+  margin-bottom: 32px;
 }
+
 
 .section-subheading {
 	font-family: "IBM Plex Sans", sans-serif;
@@ -969,7 +976,6 @@ p {
 /* Inherit color and font for all children */
 .about-section * {
 	color: #fdfcfb;
-	font-family: var(--font-ui);
 }
 
 /* Flex container for two columns */
@@ -2125,10 +2131,10 @@ input[type="checkbox"] {
 }
 /* ===== MARK: Footer Styles ===== */
 .footer-section {
-	background-color: #0e0c0b;
-	color: #fff;
-	padding: 60px 20px 30px;
-	font-family: var(--font-ui);
+  background-color: #0e0c0b;
+  color: #fff;
+  padding: 60px 0px 0; /* removed extra 30px bottom */
+  font-family: var(--font-ui);
 }
 
 .footer-container {
@@ -2214,13 +2220,14 @@ input[type="checkbox"] {
 }
 
 .footer-bottom {
-	border-top: 1px solid #aaa;
-	text-align: center;
-	margin-top: 40px;
-	padding-top: 20px;
-	font-size: 10px !important;
-	color: #ccc;
+  border-top: 1px solid #aaa;
+  text-align: center;
+  margin-top: 40px;
+  padding: 16px 0 8px; /* reduced padding top + bottom */
+  font-size: 12px;
+  color: #ccc;
 }
+
 
 .footer-contact img.footer-icon {
 	width: 20px;
@@ -2232,6 +2239,9 @@ input[type="checkbox"] {
 .footer-bottom p {
 	font-size: 12px;
 	line-height: 1.4;
+	  padding-bottom: 0;
+		  margin: 0;
+  padding: 0;
 }
 
 /* ===== MARK: Footer Mobile ===== */
