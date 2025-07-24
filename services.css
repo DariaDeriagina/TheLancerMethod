@@ -752,3 +752,80 @@ html {
 		max-width: 620px;
 	}
 }
+/* === ADD-ONS SECTION === */
+.addons-section {
+	background-image: url("images/Services/backgroundAddsOnn.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 80px 20px;
+}
+
+.addons-inner {
+	background-color: rgba(244, 224, 211, 0.95);
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 40px 24px;
+	border: 1px solid #b08a6e;
+	border-radius: 12px;
+	text-align: center;
+}
+
+.addons-subheading {
+	font-size: 18px;
+	font-family: var(--font-body);
+	line-height: 1.6;
+	color: var(--main-bg);
+	max-width: 600px;
+	margin: 0 auto 40px;
+}
+
+.addons-content-box {
+	text-align: center;
+	margin: 0 auto;
+}
+.addons-content-box .list-check {
+	display: inline-block;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.orange {
+	color: #b06f37;
+	font-family: var(--font-ui);
+	margin-bottom: 16px;
+	text-align: center;
+}
+
+/* Call-to-action text */
+.addons-cta-subtext {
+	font-size: 16px;
+	line-height: 1.5;
+	text-align: center;
+	margin: 40px 0 20px;
+	color: #000;
+}
+.addons-link {
+	color: #000;
+	text-decoration: underline;
+	font-weight: 600;
+}
+.addons-link:hover {
+	color: #a76c4b; /* muted earthy accent tone */
+	text-decoration-color: #a76c4b;
+	text-underline-offset: 3px;
+	transition: color 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.addons-inner {
+		padding: 32px 16px;
+	}
+	.addons-subheading {
+		font-size: 16px;
+	}
+	.addons-cta-subtext {
+		font-size: 15px;
+	}
+}
