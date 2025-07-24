@@ -16,8 +16,6 @@ html {
 }
 
 * {
-	margin-bottom: 0;
-	padding-bottom: 0;
 	box-sizing: border-box;
 	font-smoothing: antialiased;
 }
@@ -30,11 +28,9 @@ body {
 	padding-bottom: 60px;
 	overflow-x: clip;
 
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
-
-
 
 a {
 	text-decoration: none;
@@ -50,16 +46,15 @@ p {
 
 /* === SECTION HEADINGS === */
 .section-heading {
-  font-family: var(--font-title); /* Playfair Display */
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 1.2;
-  letter-spacing: 0.3px;
-  text-align: center;
-  color: var(--heading-dark); /* dark, not pure black */
-  margin-bottom: 32px;
+	font-family: var(--font-title); /* Playfair Display */
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 1.2;
+	letter-spacing: 0.3px;
+	text-align: center;
+	color: var(--heading-dark); /* dark, not pure black */
+	margin-bottom: 32px;
 }
-
 
 .section-subheading {
 	font-family: "IBM Plex Sans", sans-serif;
@@ -968,7 +963,7 @@ p {
 /* Section wrapper: background image + color */
 .about-section {
 	background-color: #151410;
-	padding: 80px 40px;
+	padding: 40px 40px 80px;
 	width: 100%;
 	min-height: 100vh;
 }
@@ -990,6 +985,7 @@ p {
 /* Left column: image + quote */
 .about-visual {
 	flex: 0 0 auto; /* width determined by content */
+	position: relative;
 }
 
 /* Portrait image styling */
@@ -1007,22 +1003,42 @@ p {
 	color: #fdfcfb;
 }
 
-/* Pull-quote styling */
-.about-quote {
+.about-quote-wrapper {
+	max-width: 600px;
+	margin-left: auto;
+	padding-right: 40px;
+	text-align: right;
+	margin-bottom: 40px;
+}
+.about-quote-wrapper .desktop-only {
+	max-width: 500px;
+	text-align: right;
+	margin-left: auto;
+}
+
+.about-quote-desktop {
 	font-family: "EB Garamond", serif;
 	color: #fdfcfb;
 	font-style: italic;
-	font-size: 20px;
-	text-align: right;
-	margin: 0 0 20px auto;
-	max-width: 760px;
-}
-.quote-author {
-	font-weight: 400;
 	font-size: 18px;
-	display: block;
-	margin-top: 4px;
+	line-height: 1;
+	text-align: right;
+	margin: 0;
+	max-width: 1280px; /* ✅ Corrected: removed the minus! */
+	width: 90%;
+	margin-left: auto;
+}
+
+.quote-author-desktop {
+	font-size: 20px;
+	font-weight: 300;
 	color: #fdfcfb;
+	margin-top: 0;
+	text-align: right;
+}
+
+.mobile-only {
+	display: none;
 }
 
 /* Main title styling */
@@ -1033,6 +1049,7 @@ p {
 }
 
 .about-content .about-title {
+	margin-top: 0;
 	text-align: center;
 	font-size: 64px;
 	line-height: 1.2;
@@ -1042,6 +1059,10 @@ p {
 }
 .about-title.mobile-only {
 	display: none;
+}
+
+.about-title h2 {
+	margin-top: 0;
 }
 
 /* Subtitle styling */
@@ -1074,8 +1095,8 @@ p {
 
 /* Section titles within content */
 .about-section-title {
-	  font-family: var(--font-body); /* Inter */
-  font-weight: 500
+	font-family: var(--font-body); /* Inter */
+	font-weight: 500;
 	font-size: 20px;
 	font-weight: 600;
 	text-align: left;
@@ -1278,6 +1299,12 @@ section#about .about-card {
 }
 
 @media (max-width: 768px) {
+	.desktop-only {
+		display: none !important;
+	}
+	.mobile-only {
+		display: block !important;
+	}
 	/* Remove background image and set fallback background color */
 	.about-section {
 		background-image: none !important;
@@ -1381,6 +1408,7 @@ section#about h2.about-title {
 	font-size: 64px !important;
 }
 /* ===== MARK: SERVICES SECTION ===== */
+
 .services-section {
 	background-color: #f8eae1;
 	padding: 100px 20px;
@@ -2131,10 +2159,10 @@ input[type="checkbox"] {
 }
 /* ===== MARK: Footer Styles ===== */
 .footer-section {
-  background-color: #0e0c0b;
-  color: #fff;
-  padding: 60px 28px 0px; /* removed extra 30px bottom */
-  font-family: var(--font-ui);
+	background-color: #0e0c0b;
+	color: #fff;
+	padding: 60px 28px 0px; /* removed extra 30px bottom */
+	font-family: var(--font-ui);
 }
 
 .footer-container {
@@ -2220,14 +2248,13 @@ input[type="checkbox"] {
 }
 
 .footer-bottom {
-  border-top: 1px solid #aaa;
-  text-align: center;
-  margin-top: 40px;
-  padding: 16px 0 8px; /* reduced padding top + bottom */
-  font-size: 12px;
-  color: #ccc;
+	border-top: 1px solid #aaa;
+	text-align: center;
+	margin-top: 40px;
+	padding: 16px 0 8px; /* reduced padding top + bottom */
+	font-size: 12px;
+	color: #ccc;
 }
-
 
 .footer-contact img.footer-icon {
 	width: 20px;
@@ -2239,9 +2266,9 @@ input[type="checkbox"] {
 .footer-bottom p {
 	font-size: 12px;
 	line-height: 1.4;
-	  padding-bottom: 0;
-		  margin: 0;
-  padding: 0;
+	padding-bottom: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* ===== MARK: Footer Mobile ===== */
