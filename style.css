@@ -16,8 +16,8 @@ html {
 }
 
 * {
-	margin: 0;
-	padding: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
 	box-sizing: border-box;
 	font-smoothing: antialiased;
 }
@@ -1695,7 +1695,7 @@ section#about h2.about-title {
 }
 
 /* === Testimonial Cards === */
-/* === Testimonials Section === */
+
 .testimonials-section {
 	background-color: #151410;
 	padding: 80px 20px;
@@ -1754,7 +1754,7 @@ section#about h2.about-title {
 	break-inside: avoid;
 	transition: transform 0.3s ease;
 	box-shadow: 0 6px 24px rgba(255, 250, 240, 0.25);
-	text-align: right;
+	text-align: left;
 }
 .testimonial-card:hover {
 	transform: translateY(-4px);
@@ -1774,7 +1774,7 @@ section#about h2.about-title {
 	font-size: 16px;
 	margin-bottom: 16px;
 	line-height: 1.6;
-	text-align: right;
+	text-align: left;
 }
 .testimonial-author {
 	font-weight: bold;
@@ -2133,7 +2133,7 @@ input[type="checkbox"] {
 .footer-section {
   background-color: #0e0c0b;
   color: #fff;
-  padding: 60px 0px 0; /* removed extra 30px bottom */
+  padding: 60px 28px 0px; /* removed extra 30px bottom */
   font-family: var(--font-ui);
 }
 
