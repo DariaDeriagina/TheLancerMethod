@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Book a Consultation – The Lancer Method</title>
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+		<!-- Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- MARK: Navigation Bar -->
+		<header class="navbar">
+			<div class="navbar-inner">
+				<div class="navbar-left">
+					<a href="index.html">
+						<img
+							src="images/mainImages/logoLancer.png"
+							alt="Logo"
+							class="logo"
+						/>
+					</a>
+				</div>
+				<div class="menu-container" id="menuContainer">
+					<a href="index.html#services-overview">HOME</a>
+					<a href="index.html#about">ABOUT DENA</a>
+					<a href="./index.html#method">METHOD</a>
+					<a href="./index.html#services">SERVICES</a>
+				</div>
+				<div class="navbar-right">
+					<img
+						src="images/mainImages/navBarBurger.png"
+						alt="Menu"
+						class="burger"
+						id="burgerMenu"
+					/>
+					<div class="social-icons">
+						<a href="#"
+							><img src="images/mainImages/FacebookIcon.png" alt="Facebook"
+						/></a>
+						<a href="#"
+							><img src="images/mainImages/LinkedInIcon.png" alt="LinkedIn"
+						/></a>
+						<a href="#"
+							><img src="images/mainImages/InstagramIcon.png" alt="Instagram"
+						/></a>
+						<a
+							href="https://www.tiktok.com/@thelancermethod"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src="images/mainImages/TikTokIcon.png"
+								alt="TikTok"
+								class="icon-tiktok"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- MARK: CONTACT Section -->
+		<section id="contact" class="book-section" aria-label="Book a Consultation">
+			<div class="book-container">
+				<!-- Left Side -->
+				<div class="left-column">
+					<img
+						src="images/contactImages/ContactDena.jpg"
+						alt="Dena Lancer"
+						class="book-image"
+					/>
+					<div class="quote-bubble top-left">
+						“Why book a free 30‑min consultation?”
+					</div>
+					<div class="quote-bubble bottom-left">
+						“Because sometimes all you need is the right plan, a supportive
+						mind, and a next step that makes sense.”
+					</div>
+				</div>
+
+				<!-- Right Side -->
+				<div class="right-column">
+					<p class="small-heading">Ready To Take Action?</p>
+					<h2>
+						Book A
+						<strong class="booking-title__free">FREE</strong> Consultation
+					</h2>
+					<p class="form-subtext">
+						This is your first step toward clarity, structure, and real
+						progress.<br />
+						Pick a time that works for you — I’ll be there to help.
+					</p>
+
+					<div class="left-column mobile-visuals">
+						<img
+							src="images/contactImages/ContactDena.jpg"
+							alt="Dena Lancer"
+							class="book-image"
+						/>
+						<div class="quote-bubble top-left">
+							“Why book a free 30‑min consultation?”
+						</div>
+						<div class="quote-bubble bottom-left">
+							“Because sometimes all you need is the right plan, a supportive
+							mind, and a next step that makes sense.”
+						</div>
+					</div>
+
+					<form
+						id="bookingForm"
+						class="booking-form"
+						action="https://formspree.io/f/xpwlzral"
+						method="POST"
+					>
+						<input
+							type="hidden"
+							name="_subject"
+							value="New Consultation Request"
+						/>
+						<input
+							type="hidden"
+							name="_next"
+							value="https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true"
+						/>
+
+						<div class="input-row">
+							<div class="input-field">
+								<label for="firstName">First Name</label>
+								<input
+									id="firstName"
+									name="firstName"
+									type="text"
+									placeholder="Your first name"
+									required
+								/>
+							</div>
+							<div class="input-field">
+								<label for="lastName">Last Name</label>
+								<input
+									id="lastName"
+									name="lastName"
+									type="text"
+									placeholder="Your last name"
+									required
+								/>
+							</div>
+						</div>
+
+						<div class="input-field">
+							<label for="email">Email</label>
+							<input
+								id="email"
+								name="email"
+								type="email"
+								placeholder="you@email.com"
+								required
+							/>
+						</div>
+
+						<fieldset>
+							<legend>Do you have a business or idea in mind?</legend>
+							<label
+								><input
+									name="business"
+									type="radio"
+									value="Existing business"
+								/>
+								Yes – I have a clear idea or existing business</label
+							>
+							<label
+								><input name="business" type="radio" value="Exploring ideas" />
+								I’m exploring a few ideas</label
+							>
+							<label
+								><input name="business" type="radio" value="Skill or passion" />
+								I have a skill or passion but no idea yet</label
+							>
+							<label
+								><input
+									name="business"
+									type="radio"
+									value="Starting from scratch"
+								/>
+								I’m starting from scratch and open to guidance</label
+							>
+							<label
+								><input name="business" type="radio" value="Other" />
+								Other</label
+							>
+						</fieldset>
+
+						<fieldset>
+							<legend>
+								What kind of support are you looking for? (Choose all that
+								apply)
+							</legend>
+							<label
+								><input name="support[]" type="checkbox" value="Clarity" />
+								Clarity on what to pursue</label
+							>
+							<label
+								><input name="support[]" type="checkbox" value="Roadmap" /> A
+								business plan or structured roadmap</label
+							>
+							<label
+								><input name="support[]" type="checkbox" value="Packaging" />
+								Help packaging or presenting my offer</label
+							>
+							<label
+								><input name="support[]" type="checkbox" value="Scaling" />
+								Growth or scaling strategy</label
+							>
+							<label
+								><input
+									name="support[]"
+									type="checkbox"
+									value="Accountability"
+								/>
+								Accountability and execution support</label
+							>
+							<label
+								><input
+									name="support[]"
+									type="checkbox"
+									value="Thinking partner"
+								/>
+								Just need someone to think it through with me</label
+							>
+							<label
+								><input name="support[]" type="checkbox" value="Other" />
+								Other</label
+							>
+						</fieldset>
+
+						<fieldset>
+							<legend>How ready are you to move forward?</legend>
+							<label
+								><input
+									name="readiness"
+									type="radio"
+									value="Ready to dive in"
+								/>
+								I’m ready to dive in</label
+							>
+							<label
+								><input name="readiness" type="radio" value="Curious" /> I’m
+								curious and exploring</label
+							>
+							<label
+								><input
+									name="readiness"
+									type="radio"
+									value="Need more clarity"
+								/>
+								I need more clarity before deciding</label
+							>
+							<label
+								><input name="readiness" type="radio" value="Other" />
+								Other</label
+							>
+						</fieldset>
+
+						<div class="input-field">
+							<label for="additionalInfo"
+								>Anything else you’d like me to know before we speak?
+								(Optional)</label
+							>
+							<textarea
+								id="additionalInfo"
+								name="additionalInfo"
+								placeholder="Your message is here"
+							></textarea>
+						</div>
+
+						<button type="submit">Book Your FREE Consultation</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- ===== MARK: Footer Section ===== -->
+		<footer class="footer-section">
+			<div class="footer-container">
+				<!-- Column 1: Logo + tagline + social -->
+				<div class="footer-brand">
+					<img
+						src="images/mainImages/logoLancer.png"
+						alt="The Lancer Method Logo"
+						class="footer-logo"
+					/>
+					<p class="footer-tagline">
+						From Ideas to Execution –<br />real Progress starts here.
+					</p>
+					<!-- MARK: Social Icons -->
+					<div class="footer-socials">
+						<a
+							href="https://www.facebook.com/thelancermethod?mibextid=wwXIfr&rdid=W80q8vyflSI9xw1V&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16ieh2q3Hb%2F%3Fmibextid%3DwwXIfr#"
+							target="_blank"
+						>
+							<img src="images/mainImages/FacebookIcon.png" alt="Facebook" />
+						</a>
+						<a
+							href="https://www.linkedin.com/company/thelancermethod/"
+							target="_blank"
+						>
+							<img src="images/mainImages/LinkedInIcon.png" alt="LinkedIn" />
+						</a>
+						<a
+							href="http://instagram.com/thelancermethod/?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr#"
+							target="_blank"
+						>
+							<img src="images/mainImages/InstagramIcon.png" alt="Instagram" />
+						</a>
+						<a
+							href="https://www.tiktok.com/@thelancermethod"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src="images/mainImages/TikTokIcon.png"
+								alt="TikTok"
+								class="icon-tiktok"
+							/>
+						</a>
+					</div>
+				</div>
+
+				<!-- Column 2: Navigation - Home -->
+				<div class="footer-column">
+					<h4>Home</h4>
+					<ul>
+						<li><a href="#method">Method</a></li>
+						<li><a href="#about">About Me</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#testimonials">Testimonials</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Column 3: Services Overview -->
+				<div class="footer-column">
+					<h4>Services Overview</h4>
+					<ul>
+						<li><a href="services.html#inspire">Inspire</a></li>
+						<li><a href="services.html#plan">Plan</a></li>
+						<li><a href="services.html#execute">Execute</a></li>
+						<li>
+							<a href="services.html#additional-services"
+								>Additional Services</a
+							>
+						</li>
+						<li><a href="services.html#add-ons">Add-Ons</a></li>
+						<li><a href="services.html#process">Process</a></li>
+						<li><a href="services.html#faq">FAQ</a></li>
+					</ul>
+				</div>
+
+				<!-- Column 4: Explore + Contact -->
+				<div class="footer-column">
+					<h4>Explore</h4>
+					<ul>
+						<li><a href="#">Case Studies</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+					<div class="footer-contact-block">
+						<h4>Contact Dena</h4>
+						<p class="footer-contact">
+							<img
+								src="images/mainImages/EmailIconFooter.png"
+								alt="Email Icon"
+								class="footer-icon"
+							/>
+							<a
+								href="mailto:dena@thelancermethod.com"
+								class="footer-email-link"
+							>
+								dena@thelancermethod.com
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p>Copyright © 2025 The Lancer Method</p>
+				<p>All Rights Reserved</p>
+			</div>
+		</footer>
+	</body>
+</html>
