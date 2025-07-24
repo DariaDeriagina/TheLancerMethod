@@ -158,17 +158,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// ——————————————————————————————
-	// Formspree + Outlook redirect
+	// Formspree + Outlook redirect with alert + delay
 	// ——————————————————————————————
 	const form = document.getElementById("bookingForm");
+
 	form.addEventListener("submit", async function (e) {
 		e.preventDefault();
 
-		// collect all form data
 		const data = new FormData(form);
 
 		try {
-			// send to Formspree
 			const resp = await fetch(form.action, {
 				method: "POST",
 				body: data,
@@ -180,12 +179,12 @@ document.addEventListener("DOMContentLoaded", () => {
 				throw new Error(err.error || "Form submission failed");
 			}
 
-			// if we get here, the e‑mail was queued
+			// ✅ Show message, then go to Outlook
 			alert("Thank you! We’ve received your request.");
-
-			// immediately redirect to Outlook booking
-			window.location.href =
-				"https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true";
+			setTimeout(() => {
+				window.location.href =
+					"https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true";
+			}, 500); // 0.5 second delay
 		} catch (error) {
 			console.error(error);
 			alert("Sorry—something went wrong. Please try again later.");

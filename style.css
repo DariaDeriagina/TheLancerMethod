@@ -2114,6 +2114,78 @@ input[type="checkbox"] {
 .booking-form button:hover {
 	background: #2d2424;
 }
+/* SUCCESS SECTION STYLE */
+.form-success {
+	display: none;
+	background-color: #fff; /* White background */
+	color: #151410; /* Dark text for contrast */
+	padding: 50px 20px;
+	max-width: 600px;
+	margin: 60px auto;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+	transform: translateY(100px);
+	opacity: 0;
+	animation: slideUp 0.7s ease-out forwards;
+}
+
+/* Make visible from JS */
+.form-success.visible {
+	display: block;
+}
+
+/* SLIDE + FADE UP ANIMATION */
+@keyframes slideUp {
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* TEXT */
+.success-message {
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 30px;
+	color: #151410;
+}
+
+/* BUTTON */
+.btn-consultation {
+	display: inline-block;
+	padding: 14px 28px;
+	background: linear-gradient(to right, #a65a3a, #3b2f2f);
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: background 0.3s ease;
+}
+
+.btn-consultation:hover {
+	background: linear-gradient(to right, #3b2f2f, #a65a3a);
+}
+
+/* PULSE EFFECT */
+.pulse {
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
 /* ===== MARK: Hide Mobile Visuals on Desktop ===== */
 .mobile-visuals {
 	display: none;
