@@ -1003,7 +1003,7 @@ p {
 /* Portrait image styling */
 .about-image {
 	width: 100%;
-	max-width: 480px;
+	max-width: 420px;
 	margin-bottom: 20px;
 }
 
@@ -1032,21 +1032,28 @@ p {
 	font-family: "EB Garamond", serif;
 	color: #fdfcfb;
 	font-style: italic;
-	font-size: 18px;
 	line-height: 1;
 	text-align: right;
 	margin: 0;
 	max-width: 1280px; /* ✅ Corrected: removed the minus! */
-	width: 90%;
+	width: 68%;
 	margin-left: auto;
 }
 
 .quote-author-desktop {
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 300;
 	color: #fdfcfb;
 	margin-top: 0;
 	text-align: right;
+}
+
+.quote-text-desktop {
+	font-family: "EB Garamond", serif;
+	font-size: 16px;
+	line-height: 1.4;
+	font-style: italic;
+	color: #fdfcfb;
 }
 
 .mobile-only {
@@ -1154,7 +1161,7 @@ p {
 
 .read-more-btn {
 	display: block;
-	margin: 12px auto 0;
+	margin: 2px auto 0;
 	background: linear-gradient(90deg, #8f5e3b 0%, #fefaf7 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1318,6 +1325,7 @@ section#about .about-card {
 
 	.quote-text,
 	.quote-author-mobile {
+		font-size: 14px;
 		margin-top: 0;
 		text-align: center;
 		display: block;
