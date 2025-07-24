@@ -472,3 +472,104 @@ html {
 		padding: 0 10px;
 	}
 }
+/* === PLAN SECTION (Same layout as INSPIRE) === */
+.plan-phase-section {
+	background-color: #f4e0d3;
+	padding: 10px 40px;
+	color: var(--main-bg);
+}
+
+.plan-header {
+	text-align: center;
+	max-width: 900px;
+	margin: 0 auto 60px;
+}
+
+.plan-intro {
+	font-family: var(--font-body);
+	font-size: 18px;
+	line-height: 1.6;
+	color: var(--main-bg);
+}
+
+.plan-image {
+	flex: 0 0 380px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.plan-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.plan-quote {
+	text-align: center;
+	margin-top: 60px;
+	font-style: italic;
+	font-family: var(--font-body);
+	font-size: 16px;
+	color: var(--main-bg);
+}
+
+/* Hide mobile version by default */
+.mobile-image-only {
+	display: none;
+}
+
+/* Show desktop image by default */
+.desktop-image-only {
+	display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+	.plan-phase-section {
+		padding: 40px 20px;
+	}
+
+	.plan-header {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.plan-title {
+		font-size: 28px;
+		margin-bottom: 16px;
+	}
+
+	.plan-intro {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
+	.desktop-image-only {
+		display: none;
+	}
+
+	.mobile-image-only {
+		display: flex;
+		justify-content: center;
+		margin: 32px auto;
+		max-width: 320px;
+	}
+
+	.phase-inner {
+		display: block;
+	}
+
+	.plan-image {
+		margin: 32px auto;
+		width: 100%;
+		max-width: 320px;
+	}
+
+	.plan-quote {
+		font-size: 15px;
+		margin-top: 40px;
+		padding: 0 10px;
+	}
+}
