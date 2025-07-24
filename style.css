@@ -654,7 +654,7 @@ p {
 
 .method-section {
 	background-color: #f4e0d3;
-	padding: 80px 20px;
+	padding: 40px 20px;
 	font-family: "Poppins", sans-serif;
 	color: #1c1c1c;
 }
@@ -959,6 +959,18 @@ p {
 /* ======================================= */
 /* MARK: ABOUT SECTION STYLES                  */
 /* ======================================= */
+.about-short h3,
+.about-full h3,
+.about-short h4,
+.about-full h4 {
+	margin-bottom: 6px; /* или 8px – подбирай визуально */
+}
+
+.about-short p,
+.about-full p {
+	margin-top: 0;
+	margin-bottom: 16px; /* опционально: если нужен нижний отступ */
+}
 
 /* Section wrapper: background image + color */
 .about-section {
@@ -1070,7 +1082,7 @@ p {
 	font-family: var(--font-body);
 	text-align: left;
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: 600;
 	margin-bottom: 20px;
 	letter-spacing: 0.5px;
 }
@@ -1088,7 +1100,7 @@ p {
 	font-size: 16px;
 	line-height: 1.6;
 	max-width: 760px;
-	margin: 0 auto 20px;
+	margin: 0 auto 12px;
 	text-align: left;
 	letter-spacing: 0.5px;
 }
@@ -1096,9 +1108,8 @@ p {
 /* Section titles within content */
 .about-section-title {
 	font-family: var(--font-body); /* Inter */
-	font-weight: 500;
-	font-size: 20px;
 	font-weight: 600;
+	font-size: 20px;
 	text-align: left;
 	letter-spacing: 0.5px;
 	margin-bottom: 12px;
@@ -1199,7 +1210,7 @@ p {
 .about-card h3 {
 	font-size: 20px;
 	font-weight: 600;
-	margin-bottom: 12px;
+	margin-bottom: 0px;
 	color: var(--border-dark);
 }
 .highlight-stat {
@@ -1208,7 +1219,7 @@ p {
 	background: linear-gradient(90deg, #653416 0%, #cb692c 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	margin-bottom: 4px;
+	margin-bottom: 0px;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	display: block;
@@ -1299,11 +1310,26 @@ section#about .about-card {
 }
 
 @media (max-width: 768px) {
+	.about-quote {
+		font-style: italic;
+		text-align: center;
+		margin: 0 auto 20px;
+	}
+
+	.quote-text,
+	.quote-author-mobile {
+		margin-top: 0;
+		text-align: center;
+		display: block;
+	}
+	.quote-text {
+		margin-bottom: 10px;
+	}
 	.desktop-only {
-		display: none !important;
+		display: none;
 	}
 	.mobile-only {
-		display: block !important;
+		display: block;
 	}
 	/* Remove background image and set fallback background color */
 	.about-section {
@@ -1415,6 +1441,7 @@ section#about h2.about-title {
 	color: #1c1c1c;
 	font-family: var(--font-ui);
 	text-align: center;
+	padding-top: 40px;
 }
 
 .section-title {
@@ -1849,7 +1876,7 @@ section#about h2.about-title {
 	background: url("images/contactImages/BookACallBackground.jpg") no-repeat
 		center center;
 	background-size: cover;
-	padding: 100px 20px;
+	padding: 20px 20px;
 	font-family: var(--font-ui);
 }
 
@@ -1930,7 +1957,7 @@ section#about h2.about-title {
 /* Right Side */
 .right-column {
 	flex: 2;
-	padding: 40px;
+	padding: 20px;
 	border-radius: 12px;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
@@ -1949,6 +1976,7 @@ section#about h2.about-title {
 	font-weight: 200;
 	font-family: Playfair Display, serif;
 	color: #3b2f2f;
+	margin-top: 10px;
 	margin-bottom: 10px;
 	text-align: center;
 }
