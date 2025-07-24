@@ -472,7 +472,7 @@ html {
 		padding: 0 10px;
 	}
 }
-/* === PLAN SECTION (Same layout as INSPIRE) === */
+/* ===MARK: PLAN SECTION (Same layout as INSPIRE) === */
 .plan-phase-section {
 	background-color: #f4e0d3;
 	padding: 10px 40px;
@@ -573,7 +573,7 @@ html {
 		padding: 0 10px;
 	}
 }
-/* === EXECUTE SECTION === */
+/* === MARK:EXECUTE SECTION === */
 .execute-phase-section {
 	background-color: #f9efe8;
 	padding: 10px 40px;
@@ -671,5 +671,84 @@ html {
 		font-size: 15px;
 		margin-top: 40px;
 		padding: 0 10px;
+	}
+}
+/* === ADDITIONAL SERVICES SECTION === */
+.additional-phase-section {
+	background-color: #f4e0d3;
+	padding: 10px 40px 40px;
+
+	color: var(--main-bg);
+}
+
+.additional-header {
+	text-align: center;
+	max-width: 900px;
+	margin: 0 auto 60px;
+}
+
+.additional-intro {
+	font-family: var(--font-body);
+	font-size: 18px;
+	line-height: 1.6;
+	color: var(--main-bg);
+}
+
+.additional-image {
+	flex: 0 0 380px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.additional-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Hide mobile image by default */
+.mobile-image-only {
+	display: none;
+}
+
+.desktop-image-only {
+	display: block;
+}
+.mobile-image-only {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.additional-phase-section {
+		padding: 40px 20px;
+	}
+
+	.additional-header {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.additional-intro {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
+	.desktop-image-only {
+		display: none;
+	}
+
+	.mobile-image-only {
+		display: flex;
+		justify-content: center;
+		margin: 32px auto;
+		max-width: 320px;
+	}
+
+	.additional-image {
+		margin: 32px auto;
+		width: 80%;
+		max-width: 620px;
 	}
 }
