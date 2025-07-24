@@ -1021,3 +1021,354 @@ html {
 		margin-bottom: 20px;
 	}
 }
+/* ===== MARK: FAQ Section ===== */
+.faq-section {
+	background-color: #f9f3ed;
+	padding: 40px 20px;
+	color: #1a1917;
+	border-top: 1px solid #c4bcb3;
+}
+
+.faq-container {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.section-title {
+	text-align: center;
+	font-family: var(--font-title, "Playfair Display");
+	font-size: 36px;
+	font-weight: 500;
+	margin-bottom: 40px;
+}
+
+/* Accordion */
+.faq-item {
+	border-top: 1px solid #dcd2c8;
+}
+
+.faq-item:last-child {
+	border-bottom: 1px solid #dcd2c8;
+}
+
+.faq-question {
+	background: transparent;
+	border: none;
+	width: 100%;
+	text-align: left;
+	padding: 20px;
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	color: #1a1917;
+}
+
+.faq-item.active .faq-question {
+	color: #cb692c;
+}
+
+.faq-toggle {
+	font-size: 20px;
+	line-height: 1;
+}
+
+.faq-answer {
+	display: none;
+	padding: 0 20px 20px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #4a4a4a;
+	line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+	display: block;
+}
+
+/* CTA Button & Link */
+.faq-cta {
+	text-align: center;
+	margin-top: 60px;
+}
+
+.btn-process {
+	display: inline-block;
+	padding: 16px 32px;
+	text-transform: uppercase;
+	border: 2px solid transparent;
+	background-color: #f4e3d6;
+	border: 2px solid #a44a1f;
+	color: #1a1917;
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.btn-process:hover {
+	background-color: #e6d2c1;
+	color: #1a1917;
+}
+
+.faq-back-link {
+	font-size: 16px;
+	color: #151410;
+	text-decoration: underline;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	line-height: 1; /* ensure tight vertical alignment */
+	height: 100%; /* let flex alignment handle the center */
+	transition: opacity 0.3s ease;
+}
+
+.faq-cta-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 114px;
+	margin-top: 60px;
+	flex-wrap: wrap;
+}
+
+/* Already defined elsewhere but include if needed */
+.btn-process {
+	padding: 16px 28px;
+	border: 2px solid transparent;
+	border-radius: 0;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 14px;
+	background-color: #f9f3ed;
+	border-image: linear-gradient(to right, #653416, #cb692c);
+	border-image-slice: 1;
+	color: #151410;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-decoration: none;
+}
+
+/* Back to Services Link */
+.faq-back-link {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #3b2f2f;
+	text-decoration: none;
+	border: none;
+	background: none;
+	padding: 10px 0;
+	transition: color 0.2s ease;
+}
+
+.faq-back-link:hover {
+	color: #a94c1f;
+	text-decoration: underline;
+}
+.faq-consultation {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 16px 28px;
+	font-family: var(--font-base);
+	font-weight: 600;
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #151410;
+	background: linear-gradient(#f9f3ed, #f9f3ed) padding-box,
+		linear-gradient(90deg, #653416, #cb692c) border-box;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.faq-consultation:hover {
+	background: linear-gradient(90deg, #e6d0b3, #9e6b4d);
+
+	transform: translateY(-1px);
+}
+
+.faq-consultation img {
+	width: 20px;
+	height: 20px;
+}
+@media (max-width: 768px) {
+	.faq-section {
+		padding: 20px 20px;
+	}
+
+	.faq-cta-row {
+		display: flex; /* ✅ Switch to flex */
+		flex-direction: column; /* ✅ Stack vertically */
+		align-items: center; /* ✅ Center both items horizontally */
+		gap: 20px;
+	}
+
+	.faq-consultation {
+		/* This stays styled from desktop */
+	}
+
+	.back-to-services {
+		text-align: center;
+	}
+}
+
+/* ===== MARK: Footer Styles ===== */
+.footer-section {
+	background-color: #0e0c0b;
+	color: #fff;
+	padding: 60px 28px 0px; /* removed extra 30px bottom */
+	font-family: var(--font-ui);
+}
+
+.footer-container {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1280px;
+	margin: 0 auto;
+	gap: 60px;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.footer-logo {
+	width: 180px;
+	margin-bottom: 16px;
+}
+
+.footer-tagline {
+	color: #e6d2c2;
+	font-size: 15px;
+	margin-bottom: 24px;
+}
+
+/* ===== MARK: Footer Social Icons ===== */
+.footer-socials {
+	display: flex;
+	gap: 16px;
+	margin-top: 20px;
+}
+
+.footer-socials img {
+	width: 32px;
+	height: 32px;
+	transition: transform 0.3s ease;
+}
+
+.footer-socials a:hover img {
+	transform: scale(1.1);
+}
+
+.footer-column h4 {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+
+.footer-column ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-column li {
+	margin-bottom: 8px;
+}
+
+.footer-column a {
+	color: #dcdcdc;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.footer-column a:hover {
+	text-decoration: underline;
+}
+
+.footer-contact {
+	margin-top: 12px;
+	font-size: 15px;
+	color: #e6d2c2;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.footer-email-link {
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.footer-email-link:hover {
+	text-decoration: underline;
+}
+
+.footer-bottom {
+	border-top: 1px solid #aaa;
+	text-align: center;
+	margin-top: 40px;
+	padding: 16px 0 8px; /* reduced padding top + bottom */
+	font-size: 12px;
+	color: #ccc;
+}
+
+.footer-contact img.footer-icon {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	filter: brightness(95%);
+	color: white;
+}
+.footer-bottom p {
+	font-size: 12px;
+	line-height: 1.4;
+	padding-bottom: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* ===== MARK: Footer Mobile ===== */
+@media (max-width: 768px) {
+	.footer-container {
+		flex-direction: column;
+		align-items: center; /* 👈 CENTER the entire column group */
+		text-align: center;
+		gap: 40px;
+	}
+
+	.footer-column {
+		text-align: center;
+		align-items: center;
+	}
+
+	.footer-column ul {
+		padding: 0;
+	}
+
+	.footer-socials {
+		justify-content: center;
+	}
+
+	.footer-contact {
+		justify-content: center;
+		text-align: center;
+	}
+	.footer-contact-block {
+		padding-left: 2px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+	.footer-contact i {
+		margin-right: 4px;
+	}
+	.footer-section .footer-contact img.footer-icon {
+		width: 16px;
+		height: 16px;
+		object-fit: contain;
+		filter: brightness(95%);
+	}
+}

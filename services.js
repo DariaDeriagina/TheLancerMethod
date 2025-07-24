@@ -40,3 +40,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	fadeEls.forEach((el) => observer.observe(el));
 });
+
+//FAQ
+document.querySelectorAll(".faq-question").forEach((btn) => {
+	btn.addEventListener("click", () => {
+		const item = btn.parentElement;
+		const isOpen = item.classList.contains("active");
+
+		// Close all
+		document.querySelectorAll(".faq-item").forEach((el) => {
+			el.classList.remove("active");
+			el.querySelector(".faq-toggle").textContent = "+";
+		});
+
+		// Open current if not already open
+		if (!isOpen) {
+			item.classList.add("active");
+			item.querySelector(".faq-toggle").textContent = "✕";
+		}
+	});
+});
