@@ -1802,9 +1802,39 @@ section#about h2.about-title {
 		column-count: 2;
 	}
 }
+/* MOBILE – turn masonry into a carousel */
 @media (max-width: 768px) {
 	.testimonials-masonry {
-		column-count: 1;
+		column-count: unset; /* remove masonry */
+		display: flex;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		gap: 16px;
+		padding: 16px;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.testimonial-card {
+		flex: 0 0 90%;
+		max-width: 90%;
+		scroll-snap-align: center;
+		margin-bottom: 0;
+
+		/* NEW — center text */
+		display: flex;
+		flex-direction: column;
+		justify-content: center; /* vertical centering */
+		padding: 32px 24px; /* give breathing space */
+		text-align: center; /* optional: center text horizontally too */
+	}
+
+	.testimonial-text {
+		text-align: center;
+	}
+
+	/* Optional: hide scrollbar for cleaner look */
+	.testimonials-masonry::-webkit-scrollbar {
+		display: none;
 	}
 }
 
@@ -1845,6 +1875,13 @@ section#about h2.about-title {
 	font-size: 15px;
 	color: #b87752;
 	text-align: right;
+}
+.testimonial-privacy-note {
+	font-size: 13px;
+	font-style: italic;
+	color: #c8b8aa; /* soft beige tone that fits the site */
+	text-align: center;
+	margin-top: 24px;
 }
 
 /* === CTA Button === */
