@@ -10,12 +10,14 @@ html {
 }
 
 .case-studies-section {
-	padding: 60px 20px;
+	padding: 8px 20px 60px;
 	text-align: center;
 	background-color: #f8eae1;
 }
 
 .case-title {
+	font-family: "Playfair Display", serif;
+	font-weight: 400;
 	font-size: 36px;
 	margin-bottom: 10px;
 	color: #3b2f2f;
@@ -28,6 +30,7 @@ html {
 }
 
 .cards-grid {
+	align-items: stretch;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 30px;
@@ -37,15 +40,20 @@ html {
 }
 
 .case-card {
-	background-color: #f9e9de;
-	border: 2px solid #3b2f2f;
-	border-radius: 8px;
+	height: 100%;
+	background-color: #eedaca;
+	border: 5px solid #954c20;
 	padding: 30px 20px;
 	max-width: 320px;
 	text-align: center;
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 	cursor: pointer;
 	transition: transform 0.2s ease;
+
+	/* ✅ Flexbox */
+	display: flex;
+	flex-direction: column;
+	padding: 30px 20px 20px;
 }
 
 .case-card:hover {
@@ -53,10 +61,15 @@ html {
 }
 
 .case-card h3 {
-	font-size: 20px;
-	color: #a65a3a;
+	font-size: 36px;
+	letter-spacing: -0.2px;
+	line-height: 1.1;
+	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 10px;
+	background: linear-gradient(90deg, #653416, #cb692c);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .case-card blockquote {
@@ -64,20 +77,34 @@ html {
 	color: #3b2f2f;
 	margin: 10px 0;
 }
-
 .case-card img {
-	width: 80px;
-	margin: 20px auto;
+	width: 220px;
+	margin: 20px auto 0 auto;
+	flex-shrink: 0;
 }
 
-.btn-read {
-	background-color: #3b2f2f;
-	color: #fff;
-	padding: 10px 18px;
-	font-weight: 600;
-	border-radius: 6px;
-	border: none;
+.card-content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.case-card .btn-read {
+	background-color: #edc89d;
+	border: 5px solid #954c20;
+	font-family: "Inter", sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 12px 20px;
 	cursor: pointer;
+	transition: background-color 0.3s ease;
+
+	margin-top: auto;
+}
+
+.case-card .btn-read:hover {
+	background-color: #e3b97a;
 }
 
 .show-more-container {
@@ -88,31 +115,34 @@ html {
 }
 
 #showMoreBtn {
-	background: transparent;
+	background: none;
 	border: none;
-	color: #3b2f2f;
 	font-size: 16px;
-	font-weight: 600;
-	cursor: pointer;
+	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	transition: color 0.3s ease;
+	cursor: pointer;
+
+	/* ✅ Gradient text */
+	background: linear-gradient(90deg, #653416, #cb692c);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 #showMoreBtn:hover {
-	color: #a65a3a;
+	opacity: 0.8;
 }
 
 .hidden-card {
 	display: none;
-	opacity: 0;
-	transition: opacity 0.6s ease;
 }
-
 .hidden-card.revealed {
 	display: block;
-	opacity: 1;
 }
+
+/* ======================================= */
+/* ✅ MODAL OVERLAY & CONTAINER */
+/* ======================================= */
 
 .modal-overlay {
 	position: fixed;
@@ -121,20 +151,198 @@ html {
 	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.7);
-	display: none;
+	display: none; /* hidden until JS opens it */
 	justify-content: center;
 	align-items: center;
 	z-index: 9999;
+
+	/* ✅ Allow scrolling if modal content is taller than the screen */
+	overflow-y: auto;
+	padding: 20px; /* space around modal for breathing room */
 }
 
 .modal-content {
-	background-color: #fdfcfb; /* matches your site */
+	background-color: #ebd3c0;
 	color: #3b2f2f;
-	padding: 40px;
-	max-width: 600px;
+	padding: 40px 20px;
+	max-width: 680px;
 	width: 100%;
 	border-radius: 10px;
 	position: relative;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+	/* ✅ Prevent modal from overflowing the viewport height */
+	max-height: 90vh;
+
+	/* ✅ Scroll inside modal if content is too long */
+	overflow-y: auto;
+}
+
+/* ✅ Keep the close button visible when scrolling */
+.modal-close {
+	position: sticky;
+	top: 10px;
+	right: 20px;
+	float: right;
+	font-size: 24px;
+	cursor: pointer;
+	z-index: 10;
+
+	/* ✅ Light background so the X is readable */
+	background: rgba(235, 211, 192, 0.9);
+	border-radius: 50%;
+	padding: 5px 10px;
+}
+
+/* ======================================= */
+/* ✅ MODAL TITLE */
+/* ======================================= */
+
+.modal-content h3 {
+	text-align: center;
+	font-size: 36px;
+	font-weight: 700;
+	letter-spacing: -0.5px; /* ✅ tighter spacing */
+	line-height: 1.1;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+
+	/* ✅ gradient title */
+	background: linear-gradient(90deg, #653416, #cb692c);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* ======================================= */
+/* ✅ PARAGRAPHS & TEXT ELEMENTS */
+/* ======================================= */
+
+/* ✅ general paragraph style */
+.modal-content p,
+.modal-content ul li {
+	font-family: "Inter", sans-serif;
+	font-size: 20px;
+	line-height: 1.2;
+	color: #3b2f2f;
+}
+
+/* ✅ first paragraph after title */
+.modal-content p.modal-text {
+	text-align: left;
+	font-weight: 400;
+	margin: 12px 0 18px 0;
+}
+
+/* ✅ Client Type line */
+.modal-content p.client-type {
+	font-weight: 600;
+	font-style: italic;
+	margin-bottom: 12px;
+	margin-top: 0;
+	padding-bottom: 20px;
+	white-space: nowrap; /* ✅ keeps on one line */
+}
+.client-type .client-part-one,
+.client-type .client-part-two {
+	display: inline;
+}
+
+/* ✅ “What we did:” label */
+.modal-content p.what-we-did {
+	font-weight: 600;
+	margin: 6px 0;
+	text-align: left;
+	display: inline-block;
+	width: 100%;
+}
+
+/* ======================================= */
+/* ✅ BULLET LIST */
+/* ======================================= */
+
+.modal-content ul {
+	list-style: disc; /* ✅ bullet points ON */
+	padding-left: 40px;
+	line-height: 1.2;
+	margin: 8px 0 16px 0;
+	display: inline-block;
+	text-align: left;
+}
+
+.modal-content ul li {
+	margin-bottom: 10px;
+	line-height: 1.2;
+	text-align: left;
+}
+
+/* ======================================= */
+/* ✅ OUTCOME LINE WITH TICK ICON */
+/* ======================================= */
+
+.modal-content p.outcome {
+	font-weight: 600;
+	margin-top: 16px;
+	padding-left: 32px; /* ✅ space for tick */
+	position: relative;
+	text-align: left;
+	display: inline-block;
+}
+
+.modal-content p.outcome::before {
+	content: "";
+	background: url("images/caseStudy/Tick Box.png") no-repeat center;
+	background-size: 22px;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 0;
+	top: 2px;
+}
+
+/* ======================================= */
+/* ✅ BUTTON STYLES */
+/* ======================================= */
+
+/* ✅ NEW CONTAINER FOR THE BUTTON */
+.modal-button-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+/* ✅ BUTTON STYLES */
+.modal-content .btn.primary {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 8px;
+	padding: 14px 42px;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	border: 4px solid #954c20;
+	background: linear-gradient(to right, #b87752 2%, #fdfbec 58%);
+	color: #000;
+	transition: transform 0.3s ease, box-shadow 0.3s ease,
+		background-position 0.4s ease;
+	background-size: 200% auto;
+	background-position: left center;
+	white-space: nowrap;
+}
+
+.modal-content .btn.primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	background-position: right center;
+}
+
+/* ✅ button icon sizing */
+.modal-content .btn.primary img {
+	width: 18px;
+	height: 18px;
+	position: relative;
+	top: -1px;
 }
 
 .modal-close {
@@ -155,41 +363,98 @@ html {
 	color: #000; /* Black */
 }
 
-.cta-below-cards a {
-	display: inline-block;
-	margin-top: 16px;
-	background-color: #3b2f2f;
-	color: #fff; /* White text on button */
-	padding: 14px 26px;
-	font-weight: 600;
-	border-radius: 6px;
-	transition: background 0.3s ease;
-	text-decoration: none;
-}
-
-.cta-below-cards a:hover {
-	background-color: #2d2424;
-}
-
-.hidden-card {
-	display: none;
-	opacity: 0;
-	transition: opacity 0.5s ease;
-}
-
-.hidden-card.revealed {
-	display: block;
-	opacity: 1;
-}
-
 @media (max-width: 992px) {
 	.cards-grid {
 		grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablet */
 	}
 }
 
+/* ✅ TABLET (iPad) FIX — Applies to devices between 601px and 992px */
+@media (min-width: 601px) and (max-width: 1366px) {
+	.mobile-button .btn.primary {
+		width: 100%;
+	}
+}
+
 @media (max-width: 600px) {
 	.cards-grid {
 		grid-template-columns: 1fr; /* 1 card per row on mobile */
+	}
+
+	.modal-content {
+		max-width: 90%; /* ✅ shrink modal for mobile */
+		padding: 20px;
+		font-size: 18px;
+	}
+
+	.modal-content h3 {
+		font-size: 28px; /* ✅ slightly smaller title */
+	}
+
+	.modal-content p,
+	.modal-content ul li {
+		font-size: 18px;
+		line-height: 1.3;
+	}
+
+	.modal-content p.client-type {
+		white-space: nowrap; /* ✅ stays one line */
+		font-size: 16px;
+		font-weight: 600;
+		font-style: italic;
+	}
+
+	.client-type .client-line-one {
+		display: inline; /* остаётся в одной строке */
+	}
+	.client-type .client-line-two {
+		display: block; /* переносим вторую часть на новую строку */
+	}
+
+	.modal-content .btn.primary {
+		flex-direction: column; /* ✅ stacks text/icon */
+		text-align: center;
+		white-space: normal; /* ✅ allows wrap */
+		line-height: 1.3;
+		width: 100%;
+		max-width: 280px;
+		margin: 0 auto; /* ✅ centers button */
+		padding: 12px;
+		font-size: 18px;
+	}
+
+	.modal-content .btn.primary img {
+		width: 16px;
+		height: 16px;
+	}
+	/* ✅ ClientType */
+	.mobile-client .client-type {
+		font-size: 16px;
+		white-space: normal;
+		text-align: center;
+		line-height: 1.3;
+	}
+
+	/* ✅ Button */
+	.mobile-button .btn.primary {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		white-space: normal;
+		line-height: 1.3;
+		max-width: 280px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 12px 10px;
+		font-size: 18px;
+		gap: 8px;
+	}
+
+	.mobile-button .btn.primary img {
+		width: 22px;
+		height: 22px;
+		margin-top: -4px;
+		margin-right: 18px;
 	}
 }
