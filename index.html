@@ -92,11 +92,12 @@
 				<!-- Navigation (desktop & mobile toggled) -->
 				<div class="menu-container" id="menuContainer">
 					<a href="#home">HOME</a>
-					<a href="#method">METHOD</a>
+			
 					<a href="#about">ABOUT ME</a>
 					<a href="#services">SERVICES</a>
 					<a href="#testimonials">TESTIMONIALS</a>
-					<a href="#contact">CONTACT</a>
+				<a href="services.html#process">PROCESS</a>
+        		<a href="caseStudy.html#contact">SUCCESS STORIES</a>
 				</div>
 
 				<!-- Right: burger + socials -->
@@ -495,7 +496,7 @@
 
     <div class="services-grid">
       <!-- INSPIRE -->
-      <div class="service-card border-gold fade-up">
+      <div class="service-card border-copper fade-up">
         <img src="images/servicesImages/LampLancer.png" alt="Light bulb icon" class="service-icon">
         <h3>INSPIRE</h3>
         <p>Let’s clarify your vision and uncover your best ideas.</p>
@@ -503,7 +504,7 @@
       </div>
 
       <!-- PLAN -->
-      <div class="service-card border-silver fade-up">
+      <div class="service-card border-copper fade-up">
         <img src="images/servicesImages/MapLancer.png" alt="Map icon" class="service-icon">
         <h3>PLAN</h3>
         <p>We map it out, refine it, and create a path forward.</p>
@@ -528,7 +529,7 @@
       <div class="cta-block">
         <p class="cta-title">Need something different?</p>
         <p>Explore additional services built around where you are.</p>
-    <a href="./services.html" class="link-style dark link-lowered">VIEW DETAILS →</a>
+    <a href="./services.html#addons" class="link-style dark link-lowered">VIEW DETAILS →</a>
 
 
       </div>
@@ -630,237 +631,6 @@ Dena's imagination and creativity are off the charts!”</p>
 </section>
 
 
-<!-- MARK: CONTACT Section -->
-<section id="contact" class="book-section" aria-label="Book a Consultation">
-  <div class="book-container">
-    <!-- Left Side: Image + Quotes -->
-    <div class="left-column">
-      <img
-        src="images/contactImages/ContactDena.jpg"
-        alt="Dena Lancer"
-        class="book-image"
-      />
-      <div class="quote-bubble top-left">
-        “Why book a free 30‑min consultation?”
-      </div>
-      <div class="quote-bubble bottom-left">
-        “Because sometimes all you need is the right plan, a supportive mind, and a next step that makes sense.”
-      </div>
-    </div>
-
-    <!-- Right Side: Form -->
-    <div class="right-column">
-      <p class="small-heading">Ready To Take Action?</p>
-      <h2>
-        Book A <strong class="booking-title__free">FREE</strong> Consultation
-      </h2>
-      <p class="form-subtext">
-        This is your first step toward clarity, structure, and real progress.<br />
-        Pick a time that works for you — I’ll be there to help.
-      </p>
-
-      <!-- MARK: Mobile Visuals (Only shown on mobile) -->
-      <div class="left-column mobile-visuals">
-        <img
-          src="images/contactImages/ContactDena.jpg"
-          alt="Dena Lancer"
-          class="book-image"
-        />
-        <div class="quote-bubble top-left">
-          “Why book a free 30‑min consultation?”
-        </div>
-        <div class="quote-bubble bottom-left">
-          “Because sometimes all you need is the right plan, a supportive mind, and a next step that makes sense.”
-        </div>
-      </div>
-
-      <form
-        id="bookingForm"
-        class="booking-form"
-        action="https://formspree.io/f/xpwlzral"
-        method="POST"
-      >
-        <!-- Email subject -->
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Consultation Request"
-        />
-        <!-- Redirect to booking page after submit -->
-        <input
-          type="hidden"
-          name="_next"
-          value="https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true"
-        />
-
-        <div class="input-row">
-  <div class="input-field">
-    <label for="firstName">First Name</label>
-    <input id="firstName" name="firstName" type="text" placeholder="Your first name" required />
-  </div>
-  <div class="input-field">
-    <label for="lastName">Last Name</label>
-    <input id="lastName" name="lastName" type="text" placeholder="Your last name" required />
-  </div>
-</div>
-
-      <div class="input-field">
-  <label for="email">Email</label>
-  <input id="email" name="email" type="email" placeholder="you@email.com" required />
-</div>
-
-
-        <fieldset>
-          <legend>Do you have a business or idea in mind?</legend>
-          <label>
-            <input
-              name="business"
-              type="radio"
-              value="Existing business"
-            />
-            Yes – I have a clear idea or existing business
-          </label>
-          <label>
-            <input
-              name="business"
-              type="radio"
-              value="Exploring ideas"
-            />
-            I’m exploring a few ideas
-          </label>
-          <label>
-            <input
-              name="business"
-              type="radio"
-              value="Skill or passion"
-            />
-            I have a skill or passion but no idea yet
-          </label>
-          <label>
-            <input
-              name="business"
-              type="radio"
-              value="Starting from scratch"
-            />
-            I’m starting from scratch and open to guidance
-          </label>
-           <label>
-            <input
-              name="business"
-              type="radio"
-              value="Starting from scratch"
-            />
-            Other
-          </label>
-        </fieldset>
-
-        <fieldset>
-          <legend>What kind of support are you looking for? (Choose all that apply)</legend>
-          <label>
-            <input name="support[]" type="checkbox" value="Clarity" />
-            Clarity on what to pursue
-          </label>
-          <label>
-            <input
-              name="support[]"
-              type="checkbox"
-              value="Roadmap"
-            />
-            A business plan or structured roadmap
-          </label>
-          <label>
-            <input
-              name="support[]"
-              type="checkbox"
-              value="Packaging"
-            />
-            Help packaging or presenting my offer
-          </label>
-          <label>
-            <input
-              name="support[]"
-              type="checkbox"
-              value="Scaling"
-            />
-            Growth or scaling strategy
-          </label>
-          <label>
-            <input
-              name="support[]"
-              type="checkbox"
-              value="Accountability"
-            />
-            Accountability and execution support
-          </label>
-          <label>
-            <input
-              name="support[]"
-              type="checkbox"
-              value="Thinking partner"
-            />
-            Just need someone to think it through with me
-          </label>
-           <label>
-            <input
-              name="support[]"
-              type="checkbox"
-              value="Thinking partner"
-            />
-           Other
-          </label>
-        </fieldset>
-
-        <fieldset>
-          <legend>How ready are you to move forward?</legend>
-          <label>
-            <input
-              name="readiness"
-              type="radio"
-              value="Ready to dive in"
-            />
-            I’m ready to dive in
-          </label>
-          <label>
-            <input
-              name="readiness"
-              type="radio"
-              value="Curious"
-            />
-            I’m curious and exploring
-          </label>
-          <label>
-            <input
-              name="readiness"
-              type="radio"
-              value="Need more clarity"
-            />
-            I need more clarity before deciding
-          </label>
-            <label>
-            <input
-              name="readiness"
-              type="radio"
-              value="Need more clarity"
-            />
-           Other
-          </label>
-        </fieldset>
-
-       <div class="input-field">
-  <label for="additionalInfo">Anything else you’d like me to know before we speak? (Optional)</label>
-  <textarea
-    id="additionalInfo"
-    name="additionalInfo"
-    placeholder="Your message is here"
-  ></textarea>
-</div>
-
-
-        <button type="submit">Book Your FREE Consultation</button>
-      </form>
-    </div>
-  </div>
-</section>
 
 
 <!-- ===== MARK: Footer Section ===== -->
