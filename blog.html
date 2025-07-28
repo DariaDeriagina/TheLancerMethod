@@ -4,88 +4,285 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Dena Blog – The Lancer Method</title>
+
+		<!-- Blog-specific and site-wide styles -->
 		<link rel="stylesheet" href="blog.css" />
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- Fonts -->
 		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;600&display=swap"
 			rel="stylesheet"
 		/>
+
+		<!-- Favicons -->
+		<link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="images/favicon/apple-touch-icon.png"
+		/>
+		<link rel="manifest" href="images/favicon/site.webmanifest" />
 	</head>
-	<body>
-		<section class="blog-header">
-			<h1>Blog</h1>
-			<div class="author-block">
-				<img
-					src="images/blog/DenaBlogImage.png"
-					alt="Dena Lancer"
-					class="author-img"
-				/>
-				<div class="author-info">
-					<h2>Dena Lancer</h2>
-					<p>Founder of The Lancer Method | Strategist</p>
-					<p>
-						Dena is a strategic advisor and creative partner...<br />
-						With over 12 years of experience, she blends intuitive insight with
-						sleeves-up execution...
+
+	<body class="blog-page">
+		<!-- =====MARK: NAVBAR ===== -->
+		<header
+			class="navbar navbar-dark"
+			role="banner"
+			aria-label="Main Navigation"
+		>
+			<div class="navbar-inner">
+				<!-- Logo -->
+				<div class="navbar-left">
+					<a href="index.html">
+						<img
+							src="images/mainImages/logoLancer.png"
+							alt="Logo"
+							class="logo"
+						/>
+					</a>
+				</div>
+
+				<!-- Navigation links -->
+				<div class="menu-container" id="menuContainer">
+					<a href="index.html#home">HOME</a>
+					<a href="index.html#about">ABOUT ME</a>
+					<a href="index.html#services">SERVICES</a>
+					<a href="index.html#testimonials">TESTIMONIALS</a>
+					<a href="services.html#process">PROCESS</a>
+					<a href="caseStudy.html#contact">SUCCESS STORIES</a>
+				</div>
+
+				<!-- Burger + socials -->
+				<div class="navbar-right">
+					<img
+						src="images/mainImages/navBarBurger.png"
+						alt="Menu"
+						class="burger"
+						id="burgerMenu"
+					/>
+					<div class="social-icons">
+						<a href="https://www.facebook.com/thelancermethod" target="_blank">
+							<img src="images/mainImages/FacebookIcon.png" alt="Facebook" />
+						</a>
+						<a
+							href="https://www.linkedin.com/company/thelancermethod/"
+							target="_blank"
+						>
+							<img src="images/mainImages/LinkedInIcon.png" alt="LinkedIn" />
+						</a>
+						<a href="http://instagram.com/thelancermethod" target="_blank">
+							<img src="images/mainImages/InstagramIcon.png" alt="Instagram" />
+						</a>
+						<a href="https://www.tiktok.com/@thelancermethod" target="_blank">
+							<img
+								src="images/mainImages/TikTokIcon.png"
+								alt="TikTok"
+								class="icon-tiktok"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- ===== MARK: BLOG CONTENT WRAPPER ===== -->
+		<main class="blog-content">
+			<!-- BLOG HEADER -->
+			<section class="blog-header">
+				<h1>Blog</h1>
+				<div class="header-line"></div>
+				<div class="author-block">
+					<img
+						src="images/blog/DenaBlogImage.png"
+						alt="Dena Lancer"
+						class="author-img"
+					/>
+					<div class="author-info">
+						<h2>Dena Lancer</h2>
+						<p class="author-title">
+							Founder of The Lancer Method | Strategist
+						</p>
+						<!-- Mobile version -->
+						<p class="author-title-mobile">
+							Founder of The Lancer Method<br />Strategist
+						</p>
+					</div>
+				</div>
+				<p class="author-desc">
+					Dena Lancer is a strategic advisor and creative partner with a passion
+					for clarity, structure, and helping people build what matters. With
+					over 12 years of experience in enterprise strategy and business
+					development, Dena has worked with clients across industries to turn
+					complex ideas into focused, actionable plans. She blends intuitive
+					insight with sleeves-up execution, supporting founders, creatives, and
+					business leaders as they move from uncertainty to real progress.
+				</p>
+			</section>
+
+			<!-- BLOG POSTS -->
+			<section class="blog-posts">
+				<h3>Latest Posts</h3>
+				<div class="blog-grid">
+					<!-- BLOG CARD -->
+					<div class="blog-card">
+						<img src="images/blog/BlogImage1.png" alt="Post Image" />
+						<div class="post-content">
+							<span class="post-category plan">Plan</span>
+							<h4>
+								HOW TO TURN A VAGUE IDEA INTO A BOLD OFFER PEOPLE WANT TO BUY
+							</h4>
+							<p class="post-date">August 20, 2024</p>
+						</div>
+					</div>
+
+					<!-- Duplicate more blog cards as needed -->
+					<div class="blog-card">
+						<img src="images/blog/BlogImage1.png" alt="Post Image" />
+						<div class="post-content">
+							<span class="post-category execute">Execute</span>
+							<h4>
+								HOW TO TURN A VAGUE IDEA INTO A BOLD OFFER PEOPLE WANT TO BUY
+							</h4>
+							<p class="post-date">August 20, 2024</p>
+						</div>
+					</div>
+
+					<div class="blog-card">
+						<img src="images/blog/BlogImage1.png" alt="Post Image" />
+						<div class="post-content">
+							<span class="post-category inspire">Inspire</span>
+							<h4>
+								HOW TO TURN A VAGUE IDEA INTO A BOLD OFFER PEOPLE WANT TO BUY
+							</h4>
+							<p class="post-date">August 20, 2024</p>
+						</div>
+					</div>
+
+					<div class="blog-card">
+						<img src="images/blog/BlogImage1.png" alt="Post Image" />
+						<div class="post-content">
+							<span class="post-category plan">Plan</span>
+							<h4>
+								HOW TO TURN A VAGUE IDEA INTO A BOLD OFFER PEOPLE WANT TO BUY
+							</h4>
+							<p class="post-date">August 20, 2024</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CALL TO ACTION -->
+			<div class="blog-cta">
+				<a href="services.html" class="explore-link"
+					>Explore The Lancer Method →</a
+				>
+				<p>Inspired? Ready To Explore Your Own Path?</p>
+				<a
+					class="btn-consultation method-btn method-btn-primary"
+					href="https://outlook.office.com/book/TheLancerMethod1@thelancermethod.com/?ismsaljsauthenabled=true"
+				>
+					BOOK YOUR FREE CONSULTATION
+					<img src="images/mainImages/Schedule.png" alt="Schedule Icon" />
+				</a>
+			</div>
+		</main>
+
+		<!-- ===== FOOTER ===== -->
+		<footer class="footer-section">
+			<div class="footer-container">
+				<!-- Column 1: Logo + tagline + social -->
+				<div class="footer-brand">
+					<img
+						src="images/mainImages/logoLancer.png"
+						alt="The Lancer Method Logo"
+						class="footer-logo"
+					/>
+					<p class="footer-tagline">
+						From Ideas to Execution –<br />real Progress starts here.
 					</p>
+					<div class="footer-socials">
+						<a href="https://www.facebook.com/thelancermethod" target="_blank"
+							><img src="images/mainImages/FacebookIcon.png" alt="Facebook"
+						/></a>
+						<a
+							href="https://www.linkedin.com/company/thelancermethod/"
+							target="_blank"
+							><img src="images/mainImages/LinkedInIcon.png" alt="LinkedIn"
+						/></a>
+						<a href="http://instagram.com/thelancermethod" target="_blank"
+							><img src="images/mainImages/InstagramIcon.png" alt="Instagram"
+						/></a>
+						<a href="https://www.tiktok.com/@thelancermethod" target="_blank"
+							><img
+								src="images/mainImages/TikTokIcon.png"
+								alt="TikTok"
+								class="icon-tiktok"
+						/></a>
+					</div>
+				</div>
+
+				<!-- Column 2 -->
+				<div class="footer-column">
+					<h4>Home</h4>
+					<ul>
+						<li><a href="#method">Method</a></li>
+						<li><a href="#about">About Me</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#testimonials">Testimonials</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Column 3 -->
+				<div class="footer-column">
+					<h4>Services Overview</h4>
+					<ul>
+						<li><a href="services.html#inspire">Inspire</a></li>
+						<li><a href="services.html#plan">Plan</a></li>
+						<li><a href="services.html#execute">Execute</a></li>
+						<li>
+							<a href="services.html#additional-services"
+								>Additional Services</a
+							>
+						</li>
+						<li><a href="services.html#add-ons">Add-Ons</a></li>
+						<li><a href="services.html#process">Process</a></li>
+						<li><a href="services.html#faq">FAQ</a></li>
+					</ul>
+				</div>
+
+				<!-- Column 4 -->
+				<div class="footer-column">
+					<h4>Explore</h4>
+					<ul>
+						<li><a href="caseStudy.html">Case Studies</a></li>
+						<li><a href="blog.html">Blog</a></li>
+					</ul>
+					<div class="footer-contact-block">
+						<h4>Contact Dena</h4>
+						<p class="footer-contact">
+							<img
+								src="images/mainImages/EmailIconFooter.png"
+								alt="Email Icon"
+								class="footer-icon"
+							/>
+							<a
+								href="mailto:dena@thelancermethod.com"
+								class="footer-email-link"
+								>dena@thelancermethod.com</a
+							>
+						</p>
+					</div>
 				</div>
 			</div>
-		</section>
 
-		<section class="blog-posts">
-			<h3>Latest Post</h3>
-			<div class="blog-grid">
-				<!-- Blog Card -->
-				<div class="blog-card">
-					<img src="images/blog/BlogImage1.png" alt="Post Image" />
-					<div class="post-content">
-						<span class="post-category">Plan</span>
-						<h4>
-							HOW TO TURN A VAGUE IDEA INTO A BOLD OFFER PEOPLE WANT TO BUY
-						</h4>
-						<p class="post-date">August 20, 2024</p>
-					</div>
-				</div>
-
-				<!-- Duplicate as needed -->
-				<div class="blog-card">
-					<img src="images/blog/BlogImage1.png" alt="Post Image" />
-					<div class="post-content">
-						<span class="post-category">Plan</span>
-						<h4>
-							HOW TO TURN A VAGUE IDEA INTO A BOLD OFFER PEOPLE WANT TO BUY
-						</h4>
-						<p class="post-date">August 20, 2024</p>
-					</div>
-				</div>
-
-				<div class="blog-card">
-					<img src="images/blog/BlogImage1.png" alt="Post Image" />
-					<div class="post-content">
-						<span class="post-category">Plan</span>
-						<h4>
-							HOW TO TURN A VAGUE IDEA INTO A BOLD OFFER PEOPLE WANT TO BUY
-						</h4>
-						<p class="post-date">August 20, 2024</p>
-					</div>
-				</div>
-
-				<div class="blog-card">
-					<img src="images/blog/BlogImage1.png" alt="Post Image" />
-					<div class="post-content">
-						<span class="post-category">Plan</span>
-						<h4>
-							HOW TO TURN A VAGUE IDEA INTO A BOLD OFFER PEOPLE WANT TO BUY
-						</h4>
-						<p class="post-date">August 20, 2024</p>
-					</div>
-				</div>
+			<div class="footer-bottom">
+				<p>Copyright © 2025 The Lancer Method</p>
+				<p>All Rights Reserved</p>
 			</div>
-		</section>
-
-		<div class="blog-cta">
-			<p>Inspired? Ready To Explore Your Own Path?</p>
-			<a href="contact.html" class="btn-read">BOOK YOUR FREE CONSULTATION</a>
-		</div>
+		</footer>
 
 		<script src="blog.js"></script>
 	</body>

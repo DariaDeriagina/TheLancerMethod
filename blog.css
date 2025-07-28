@@ -1,27 +1,64 @@
-body {
+/* =================== BLOG PAGE BASE =================== */
+body.blog-page {
+	background-color: #f8eae1; /* Beige blog background */
 	font-family: "Inter", sans-serif;
-	background-color: #f8eae1;
-	color: #3b2f2f;
 	margin: 0;
 	padding: 0;
+	color: #3b2f2f; /* Default text color for blog */
 }
 
+/* Only color blog content, NOT navbar/footer */
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6,
+.blog-content p,
+.blog-content a,
+.blog-content li,
+.blog-content span,
+.blog-content strong,
+.blog-content b {
+	color: #3b2f2f;
+}
+/* ==== MARK: NAVBAR DARK MODE (BLOG & OTHER LIGHT PAGES) ==== */
+.navbar-dark a,
+.navbar-dark .menu-container a,
+.navbar-dark .social-icons img {
+	color: #fff !important;
+}
+
+.navbar-dark .menu-container a:hover {
+	color: #f4e0d3; /* мягкий бежевый hover, чтобы был читаемый */
+}
+
+/* =================== MARK: BLOG HEADER =================== */
 .blog-header {
 	text-align: center;
-	padding: 60px 20px 40px;
+	padding: 0px 20px;
 }
 
 .blog-header h1 {
 	font-family: "Playfair Display", serif;
-	font-size: 40px;
-	margin-bottom: 30px;
+	font-size: 48px;
+	font-weight: 500;
+	margin-bottom: 10px;
 }
 
+.header-line {
+	width: 1200px;
+	height: 2px;
+	background-color: #3b2f2f;
+	margin: 0 auto 30px auto;
+}
+/* ===== AUTHOR BLOCK ===== */
 .author-block {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
-	gap: 16px;
+	justify-content: center;
+	gap: 20px;
 	max-width: 800px;
 	margin: 0 auto;
 }
@@ -30,22 +67,41 @@ body {
 	width: 120px;
 	height: 120px;
 	border-radius: 50%;
-	border: 4px solid #a65a3a;
-	object-fit: cover;
 }
-
 .author-info h2 {
-	margin: 10px 0 4px;
-	font-size: 22px;
-	font-weight: 600;
+	margin: 0;
+	font-family: "Playfair Display", serif;
+	font-size: 32px;
+	font-weight: 500;
+	text-align: center;
 }
 
-.author-info p {
-	margin: 4px 0;
+.author-info .author-title {
+	margin: 6px 0 0 0;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: "Inter", sans-serif;
+	text-align: left;
+	color: #696a75;
+}
+.author-title-mobile {
+	display: none;
+	font-size: 15px;
+	font-weight: 400;
+	text-align: center;
+	font-family: "Inter", sans-serif;
+	color: #3b2f2f;
+	line-height: 1.4;
+}
+.author-desc {
+	max-width: 1200px;
+	margin: 20px auto 0 auto;
 	font-size: 15px;
 	line-height: 1.6;
+	text-align: center;
 }
 
+/* =================== MARK: BLOG POSTS =================== */
 .blog-posts {
 	padding: 40px 20px;
 	max-width: 1200px;
@@ -53,15 +109,16 @@ body {
 }
 
 .blog-posts h3 {
+	font-family: "Playfair Display", serif;
 	font-size: 24px;
 	margin-bottom: 24px;
 	text-align: left;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .blog-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-template-columns: repeat(2, 1fr);
 	gap: 30px;
 }
 
@@ -70,6 +127,12 @@ body {
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .blog-card img {
@@ -85,10 +148,26 @@ body {
 .post-category {
 	font-size: 12px;
 	font-weight: bold;
-	color: #6a4d2c;
 	text-transform: uppercase;
-	display: block;
+	padding: 4px 10px;
+	border-radius: 6px;
+	display: inline-block;
 	margin-bottom: 8px;
+}
+.post-category.plan {
+	background-color: rgba(0, 102, 255, 0.15); /* легкий синий фон */
+	color: #0066ff; /* синий текст */
+	box-shadow: 0 0 10px rgba(0, 102, 255, 0.4); /* “свечение” вокруг */
+}
+.post-category.execute {
+	background-color: rgba(0, 180, 75, 0.15);
+	color: #00b44b;
+	box-shadow: 0 0 10px rgba(0, 180, 75, 0.4);
+}
+.post-category.inspire {
+	background-color: rgba(255, 165, 0, 0.15);
+	color: #ffa500;
+	box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
 }
 
 .blog-card h4 {
@@ -99,20 +178,40 @@ body {
 
 .post-date {
 	font-size: 14px;
-	color: #6a4d2c;
+	color: #97989f;
+	text-align: left;
 }
 
+/* =================== MARK: CALL TO ACTION =================== */
 .blog-cta {
-	margin: 60px auto;
+	margin: 20px auto;
 	text-align: center;
+	margin-bottom: 40px;
 }
 
 .blog-cta p {
 	font-size: 18px;
 	margin-bottom: 16px;
-	color: #3b2f2f;
+}
+/* Gradient text link above CTA */
+.explore-link {
+	font-weight: 600;
+	font-size: 16px;
+	text-decoration: none;
+	background: linear-gradient(90deg, #a65a3a 0%, #c2834f 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	display: block; /* allows alignment */
+	text-align: right; /* pushes it to the right side */
+	margin-right: 60px;
+	margin-bottom: 12px;
+	transition: opacity 0.3s ease;
 }
 
+.explore-link:hover {
+	opacity: 0.7;
+}
 .btn-read {
 	background-color: #3b2f2f;
 	color: #fff;
@@ -125,4 +224,75 @@ body {
 
 .btn-read:hover {
 	background-color: #2d2424;
+}
+/* =================== MARK: MOBILE=================== */
+/* 📱 Mobile adjustments */
+@media (max-width: 768px) {
+	.author-block {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.author-info h2 {
+		font-size: 24px;
+		text-align: center;
+	}
+
+	.author-title {
+		display: none;
+	}
+
+	.author-title-mobile {
+		display: block;
+		max-width: 420px;
+		margin: 6px auto 0 auto;
+		font-size: 16px;
+		line-height: 1.4;
+		text-align: center;
+	}
+	.author-desc {
+		text-align: left;
+		padding: 0 20px;
+	}
+	/* Adjust CTA block padding and spacing on mobile */
+	.blog-cta {
+		margin: 10px auto;
+		padding: 0 16px;
+		align-items: center;
+	}
+
+	/* Make the paragraph smaller and more compact */
+	.blog-cta p {
+		font-size: 16px;
+		line-height: 1.4;
+		margin-bottom: 12px;
+	}
+
+	/* Style the consultation button for mobile */
+	.btn-consultation {
+		width: 100%;
+		max-width: 320px;
+		padding: 14px 18px;
+		font-size: 15px;
+		border-radius: 8px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px; /* spacing between text and icon */
+		margin-bottom: 40px;
+	}
+
+	/* Adjust the schedule icon alignment on mobile */
+	.btn-consultation img {
+		width: 18px;
+		height: 18px;
+		margin-left: 0px;
+		position: relative;
+		top: 0px;
+	}
+	.blog-grid {
+		grid-template-columns: 1fr; /* stack as single blocks */
+		gap: 24px; /* slightly smaller gap for mobile */
+	}
 }
