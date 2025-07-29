@@ -109,39 +109,6 @@ html {
 	transform: translateY(0);
 }
 
-@media (max-width: 768px) {
-	.burger {
-		display: block;
-	}
-
-	.menu-container {
-		display: none;
-		flex-direction: column;
-		align-items: center;
-		position: absolute;
-		top: 75px;
-		left: 20px;
-		right: 20px;
-		background-color: var(--main-bg);
-		border-top: 2px solid var(--accent);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-		z-index: 999;
-		padding: 16px 0;
-	}
-
-	.menu-container.active {
-		display: flex;
-	}
-
-	.menu-container a {
-		margin: 8px 0;
-		font-size: 14px;
-	}
-
-	.social-icons {
-		display: none;
-	}
-}
 /* =============================== */
 /* MARK: Responsive Services */
 /* =============================== */
