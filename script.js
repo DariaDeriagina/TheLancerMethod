@@ -4,8 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	const menuContainer = document.getElementById("menuContainer");
 
 	if (burger && menuContainer) {
+		console.log("✅ Burger menu initialized!");
+
+		// ✅ Toggle menu on burger click
 		burger.addEventListener("click", () => {
 			menuContainer.classList.toggle("active");
+			console.log(
+				"🍔 Menu toggled:",
+				menuContainer.classList.contains("active")
+			);
 		});
 
 		// ✅ Close menu when mobile nav link is clicked
@@ -13,12 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			link.addEventListener("click", () => {
 				if (window.innerWidth <= 768) {
 					menuContainer.classList.remove("active");
+					console.log("🔗 Menu closed after link click");
 				}
 			});
 		});
 
 		// ✅ Auto-close menu on scroll (MOBILE ONLY)
-		window.addEventListener("scroll", () => {
+		document.addEventListener("scroll", () => {
 			if (
 				window.innerWidth <= 768 &&
 				menuContainer.classList.contains("active")
@@ -27,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
 				console.log("📱 Menu closed on scroll");
 			}
 		});
+	} else {
+		console.error("❌ Burger or menuContainer not found");
 	}
 
 	// === Typewriter Effect ===
