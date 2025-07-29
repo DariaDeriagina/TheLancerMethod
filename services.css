@@ -18,65 +18,7 @@ html {
 	scroll-padding-top: 87px;
 }
 
-/* === MARK: NAVBAR === */
-.navbar {
-	padding: 0 40px;
-	border-bottom: 2px solid var(--accent);
-	background-color: var(--main-bg);
-	position: sticky;
-	top: 0;
-	z-index: 999;
-}
-
-.navbar-inner {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 87px;
-}
-
-.logo {
-	height: 52px;
-}
-
-/* Menu */
-.menu-container {
-	display: flex;
-	gap: 24px;
-	border: 2px solid var(--accent);
-	border-radius: 8px;
-	padding: 4px 36px;
-}
-
-.menu-container a {
-	font-family: var(--font-body);
-	font-size: 16px;
-	color: var(--text-light);
-	text-decoration: none;
-	font-weight: 500;
-}
-
-.menu-container a:hover {
-	color: var(--accent);
-}
-
-/* Social Icons */
-.social-icons {
-	display: flex;
-	gap: 8px;
-}
-
-.social-icons img {
-	width: 28px;
-	height: 28px;
-}
-.social-icons img:hover {
-	transform: scale(1.1);
-	filter: brightness(1.2);
-	transition: all 0.3s ease;
-	cursor: pointer;
-}
-
+/
 /* === MARK: Services Overview Section === */
 
 .services-overview-section {
