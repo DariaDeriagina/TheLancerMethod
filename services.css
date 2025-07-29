@@ -108,15 +108,6 @@ html {
 	opacity: 1;
 	transform: translateY(0);
 }
-/* =============================== */
-/* MARK: Responsive Navbar Styles */
-/* =============================== */
-.burger {
-	display: none;
-	width: 28px;
-	height: 28px;
-	cursor: pointer;
-}
 
 @media (max-width: 768px) {
 	.burger {

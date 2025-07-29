@@ -197,6 +197,20 @@ body.blog-page {
 	color: #97989f;
 	text-align: left;
 }
+.blog-ending {
+	margin: 15px auto 5px; /* ✅ Pulls it closer to the checklist */
+	text-align: center;
+	max-width: 700px;
+	padding: 5px 0; /* ✅ No heavy padding now */
+}
+
+.blog-ending .ending-line {
+	font-family: "Playfair Display", serif;
+	font-size: 20px;
+	color: #3b2f2f;
+	font-weight: 600;
+	margin: 4px 0; /* ✅ Slim, equal spacing between lines */
+}
 
 /* =================== MARK: CALL TO ACTION =================== */
 .blog-cta {
