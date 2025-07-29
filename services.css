@@ -338,7 +338,7 @@ html {
 
 	.phase-image {
 		margin: 32px auto;
-		width: 100%;
+		width: 60%;
 		max-width: 320px;
 	}
 
@@ -403,7 +403,7 @@ html {
 }
 
 .plan-image img {
-	width: 100%;
+	width: 60%;
 	height: auto;
 	display: block;
 }
@@ -504,7 +504,7 @@ html {
 }
 
 .execute-image img {
-	width: 100%;
+	width: 60%;
 	height: auto;
 	display: block;
 }

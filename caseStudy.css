@@ -99,7 +99,8 @@ html {
 	padding: 12px 20px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
-
+	color: #3b2f2f;
+	-webkit-appearance: none;
 	margin-top: auto;
 }
 

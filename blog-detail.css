@@ -247,6 +247,12 @@ body.blog-page {
 	font-size: 20px;
 	font-weight: bold;
 }
+.blog-cta a.btn-consultation {
+	margin: 0 auto;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
 
 /* ================= MOBILE ADJUSTMENTS ================= */
 @media (max-width: 768px) {

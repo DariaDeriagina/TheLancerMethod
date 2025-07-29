@@ -765,7 +765,7 @@ p {
 .highlight-text {
 	text-align: center;
 	margin: 40px 0;
-	line-height: 1;
+	line-height: 1.5;
 }
 
 .highlight-text p {
