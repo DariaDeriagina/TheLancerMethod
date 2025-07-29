@@ -110,11 +110,13 @@ p {
 
 /* Desktop menu */
 .menu-container {
+	z-index: 10000;
 	border: 2px solid var(--accent);
 	border-radius: 8px;
 	padding: 4px 36px;
 	display: flex;
-	gap: 24px;
+	align-items: center;
+	gap: 16px;
 }
 
 .menu-container a {
@@ -124,9 +126,31 @@ p {
 	position: relative;
 }
 
+/* SERVICES */
+.dropdown-services > a {
+	padding-right: 2px; /* tighten breathing room */
+	margin-right: -1px; /* pull text slightly left */
+}
+
+/* SUCCESS STORIES */
+.dropdown-stories > a {
+	padding-right: 2px;
+	margin-right: -1px;
+}
+
+.dropdown-blog > a {
+	padding-right: 0px; /* trims extra padding */
+	margin-right: 0px; /* pulls dropdown text closer */
+}
+
 .menu-container a:hover {
 	color: var(--accent);
 	transition: 0.3s ease;
+}
+
+.menu-container.active {
+	max-height: 500px; /* big enough for all links */
+	opacity: 1;
 }
 
 /* Social icons (desktop) */
@@ -158,6 +182,7 @@ p {
 /* ===== MARK: HERO SECTION (unchanged) ===== */
 
 .hero-section {
+	margin-top: 80px;
 	position: relative;
 	padding: 27px 40px 60px;
 	position: relative;
@@ -1918,6 +1943,7 @@ section#about h2.about-title {
 
 /** MARK: CONTACT Section**/
 .book-section {
+	margin-top: 80px;
 	background: url("images/contactImages/BookACallBackground.jpg") no-repeat
 		center center;
 	background-size: cover;
@@ -2386,4 +2412,114 @@ input[type="checkbox"] {
 		object-fit: contain;
 		filter: brightness(95%);
 	}
+}
+/* === DROPDOWN MENU STYLING === */
+.dropdown {
+	position: relative;
+}
+
+.dropdown > a {
+	cursor: pointer;
+	text-transform: uppercase; /* ✅ Title case to uppercase */
+	font-family: var(--font-ui);
+	font-weight: 500;
+	font-size: 16px;
+}
+
+/* 🔽 Dropdown box */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: var(--main-bg);
+	border: 2px solid var(--accent);
+	border-radius: 8px;
+	min-width: 180px;
+	z-index: 999;
+	flex-direction: column;
+	overflow: hidden;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔗 Links inside dropdown */
+.dropdown-content a {
+	padding: 12px 20px;
+	display: block;
+	font-size: 14px;
+	font-family: var(--font-ui);
+	font-weight: 500;
+	text-transform: uppercase;
+	color: var(--text-light);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:last-child {
+	border-bottom: none;
+}
+
+/* ✨ Hover effect for dropdown links */
+.dropdown-content a:hover {
+	background-color: rgba(235, 211, 192, 0.1);
+	color: var(--accent);
+}
+
+/* 🔽 Hover shows dropdown (desktop only) */
+.dropdown:hover .dropdown-content {
+	display: flex;
+}
+
+/* ✅ MOBILE: dropdown links stay stacked but no box shadow */
+@media (max-width: 768px) {
+	.dropdown-content {
+		position: static;
+		background: none;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	.dropdown-content a {
+		padding: 10px 0;
+		border: none;
+		font-size: 14px;
+	}
+}
+
+/* ✅ Social Icons Styling */
+.social-icons {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-left: 16px;
+}
+
+.social-icons img {
+	width: 28px;
+	height: 28px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.social-icons img:hover {
+	transform: scale(1.1);
+	filter: brightness(1.2);
+}
+/* ===== MOBILE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+	.social-icons {
+		display: none;
+	}
+}
+/* ===== NAVIGATION BAR (STICKY FIXED) ===== */
+.navbar {
+	position: fixed; /* ✅ stays at top no matter what */
+	top: 0; /* ✅ stick to very top of viewport */
+	left: 0; /* ✅ make sure it stretches full width */
+	width: 100%; /* ✅ full width navbar */
+	z-index: 9999; /* ✅ above all elements */
+	background-color: var(--main-bg);
+	border-bottom: 2px solid var(--accent);
+	padding: 0 40px;
 }

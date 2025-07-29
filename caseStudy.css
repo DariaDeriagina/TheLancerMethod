@@ -10,7 +10,7 @@ html {
 }
 
 .case-studies-section {
-	padding: 8px 20px 60px;
+	padding: 80px 20px 60px;
 	text-align: center;
 	background-color: #f8eae1;
 }
@@ -457,4 +457,59 @@ html {
 		margin-top: -4px;
 		margin-right: 18px;
 	}
+}
+/* ✅ SEE TESTIMONIALS CTA BLOCK */
+.see-testimonials-cta {
+	margin-top: 40px;
+	background: #f8eae1;
+	text-align: center;
+	padding: 60px 20px;
+	border-top: 2px solid #d6a52d;
+	border-bottom: 2px solid #d6a52d;
+}
+
+/* Fade-up animation */
+.see-testimonials-cta.fade-up {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.8s ease-out;
+}
+.see-testimonials-cta.fade-up.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Заголовок */
+.see-testimonials-cta h3 {
+	font-family: var(--font-title);
+	font-size: 28px;
+	margin-bottom: 12px;
+	color: #3b2f2f;
+}
+
+/* Подзаголовок */
+.see-testimonials-cta p {
+	font-family: var(--font-body);
+	font-size: 18px;
+	margin-bottom: 24px;
+	color: #3b2f2f;
+}
+
+/* ✅ Button style aligned with BOOK YOUR FREE CONSULTATION */
+.see-testimonials-cta .cta-btn.primary {
+	background: linear-gradient(to right, #b87752, #fdfbec);
+	border: 4px solid #954c20;
+	color: #3b2f2f;
+	font-family: var(--font-ui);
+	font-weight: 600; /* ✅ то же, что у главной кнопки */
+	padding: 12px 28px;
+	font-size: 16px;
+	letter-spacing: 0.3px;
+	transition: all 0.3s ease;
+}
+
+/* Hover */
+.see-testimonials-cta .cta-btn.primary:hover {
+	background: linear-gradient(to right, #c78a67, #fef4e6);
+	transform: scale(1.02);
 }

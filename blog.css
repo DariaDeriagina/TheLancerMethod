@@ -1,10 +1,15 @@
 /* =================== BLOG PAGE BASE =================== */
+
 body.blog-page {
 	background-color: #f8eae1; /* Beige blog background */
 	font-family: "Inter", sans-serif;
 	margin: 0;
 	padding: 0;
 	color: #3b2f2f; /* Default text color for blog */
+}
+.blog-page main {
+	margin-top: 120px;
+	/* pushes blog content down */
 }
 
 /* Only color blog content, NOT navbar/footer */
@@ -23,6 +28,17 @@ body.blog-page {
 	color: #3b2f2f;
 }
 /* ==== MARK: NAVBAR DARK MODE (BLOG & OTHER LIGHT PAGES) ==== */
+
+/* ✅ Force white navbar text on blog page */
+
+.blog-page .navbar a {
+	color: #fff !important;
+}
+
+.blog-page .navbar a:hover {
+	color: #f4e0d3 !important; /* beige hover color */
+}
+
 .navbar-dark a,
 .navbar-dark .menu-container a,
 .navbar-dark .social-icons img {

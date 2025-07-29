@@ -7,26 +7,26 @@ document.addEventListener("DOMContentLoaded", () => {
 		burger.addEventListener("click", () => {
 			menuContainer.classList.toggle("active");
 		});
-	}
 
-	// Auto-close menu on scroll (mobile only)
-	window.addEventListener("scroll", () => {
-		if (
-			window.innerWidth <= 768 &&
-			menuContainer.classList.contains("active")
-		) {
-			menuContainer.classList.remove("active");
-		}
-	});
-
-	// Close menu when mobile nav link is clicked
-	document.querySelectorAll(".menu-container a").forEach((link) => {
-		link.addEventListener("click", () => {
-			if (window.innerWidth <= 768) {
+		// Auto-close menu on scroll (mobile only)
+		window.addEventListener("scroll", () => {
+			if (
+				window.innerWidth <= 768 &&
+				menuContainer.classList.contains("active")
+			) {
 				menuContainer.classList.remove("active");
 			}
 		});
-	});
+
+		// Close menu when mobile nav link is clicked
+		document.querySelectorAll(".menu-container a").forEach((link) => {
+			link.addEventListener("click", () => {
+				if (window.innerWidth <= 768) {
+					menuContainer.classList.remove("active");
+				}
+			});
+		});
+	}
 
 	// === Typewriter Effect ===
 	const typingElement = document.getElementById("typing");
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	// === Fade-Up Scroll Animation (Intersection Observer) ===
+	// === Fade-Up Scroll Animation ===
 	const fadeEls = document.querySelectorAll(".fade-up");
 
 	if (fadeEls.length > 0) {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						entry.target.classList.add("visible");
-						observer.unobserve(entry.target); // stop observing once shown
+						observer.unobserve(entry.target);
 					}
 				});
 			},

@@ -80,8 +80,13 @@ html {
 /* === MARK: Services Overview Section === */
 
 .services-overview-section {
-	padding: 10px 20px 48px;
+	padding: 120px 20px 48px;
 	text-align: center;
+}
+
+.services-overview-section .section-heading,
+.services-overview-section .section-subheading {
+	color: #ffffff !important; /* make text white */
 }
 
 .section-heading.light {
@@ -211,6 +216,7 @@ html {
 @media (max-width: 768px) {
 	.services-overview-section {
 		padding: 20px 20px 48px;
+		padding-top: 120px;
 	}
 
 	.services-overview-section .section-heading {
@@ -219,15 +225,12 @@ html {
 
 	/* Make sure the button is single-line */
 	.btn-consultation {
-		width: auto;
-		max-width: 90%;
-		font-size: 15px;
-		white-space: nowrap;
-		padding: 14px 24px;
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		gap: 12px;
+		display: block;
+		width: 90%; /* don’t stretch edge to edge */
+		max-width: 360px; /* keep button from becoming too wide */
+		margin: 0 auto 24px; /* center it + spacing below */
+		padding-left: 20px; /* ✅ add left padding */
+		padding-right: 20px;
 	}
 
 	.btn-consultation img {
@@ -879,14 +882,22 @@ html {
 	margin-right: 12px; /* reduce space between number and title */
 	vertical-align: top; /* align it with text top */
 }
-.gradient-text {
+.process-step .step-number {
+	font-size: 48px;
+	font-weight: 700;
+}
+.process-step .gradient-text {
 	background: linear-gradient(90deg, #653416, #cb692c);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-size: 32px;
-	font-weight: 700;
+
+	font-size: 32px; /* Force larger size */
+	font-weight: 700; /* Force bold weight */
 	display: inline-block;
 	font-family: var(--font-title);
+
+	letter-spacing: -1.5px; /* Pull letters closer */
+	line-height: 1.05; /* Tight line height */
 }
 
 .step-title {
@@ -929,7 +940,7 @@ html {
 	width: 440px;
 }
 .arrow3 {
-	top: 505px;
+	top: 536px;
 	left: 460px;
 	width: 340px;
 	transform: rotate(-11deg); /* adjust the degree as needed */
@@ -971,7 +982,32 @@ html {
 		gap: 18px;
 		width: 100%;
 	}
+	/* 📱 Shrink both number + title */
+	.process-step .step-number {
+		font-size: 32px; /* smaller number */
+		margin-right: 8px; /* keep number close to title */
+	}
 
+	.process-step .gradient-text {
+		font-size: 22px; /* smaller text for mobile */
+		letter-spacing: -0.5px; /* slightly looser so it’s readable */
+		line-height: 1.2;
+	}
+
+	/* 🏗 Optional: make the whole step box narrower */
+	.process-step {
+		width: 85%;
+		padding: 18px 20px;
+		text-align: center;
+	}
+
+	/* Center number + title on mobile */
+	.step-title {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	.arrow-desktop {
 		display: none;
 	}
@@ -984,7 +1020,7 @@ html {
 
 	/* Individual arrows */
 	.arrow-mobile-1 {
-		width: 90px;
+		width: 100px;
 		top: 0px;
 		left: 0;
 	}
