@@ -8,23 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
 			menuContainer.classList.toggle("active");
 		});
 
-		// Auto-close menu on scroll (mobile only)
-		window.addEventListener("scroll", () => {
-			if (
-				window.innerWidth <= 768 &&
-				menuContainer.classList.contains("active")
-			) {
-				menuContainer.classList.remove("active");
-			}
-		});
-
-		// Close menu when mobile nav link is clicked
+		// ✅ Close menu when mobile nav link is clicked
 		document.querySelectorAll(".menu-container a").forEach((link) => {
 			link.addEventListener("click", () => {
 				if (window.innerWidth <= 768) {
 					menuContainer.classList.remove("active");
 				}
 			});
+		});
+
+		// ✅ Auto-close menu on scroll (MOBILE ONLY)
+		window.addEventListener("scroll", () => {
+			if (
+				window.innerWidth <= 768 &&
+				menuContainer.classList.contains("active")
+			) {
+				menuContainer.classList.remove("active");
+				console.log("📱 Menu closed on scroll");
+			}
 		});
 	}
 
