@@ -1855,6 +1855,7 @@ section#about h2.about-title {
 
 	.testimonial-text {
 		text-align: center;
+		font-weight: 400;
 	}
 
 	/* Optional: hide scrollbar for cleaner look */
