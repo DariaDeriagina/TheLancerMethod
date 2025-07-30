@@ -4,17 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✅ Canonical URL (prevents duplicate content issues) -->
+  <!-- ✅ Canonical URL -->
   <link rel="canonical" href="https://thelancermethod.com/" />
 
-<!-- ✅ Preload the full Google Fonts set -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;300;200;100;500;600;700&family=Inter:wght@200;400;500&family=Poppins:wght@500;400;300;200;100;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <!-- ✅ Theme Color for mobile browsers -->
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
 
-<!-- ✅ Fallback for browsers with JS disabled -->
-<noscript>
+  <!-- ✅ Fonts (Preload main family) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;300;200;100;500;600;700&family=Inter:wght@200;400;500&family=Poppins:wght@500;400;300;200;100;700&display=swap" rel="stylesheet">
-</noscript>
 
+  <!-- ✅ Preload Key Images -->
+  <link rel="preload" href="images/mainImages/LeftSidePic.png" as="image">
+  <link rel="preload" href="images/mainImages/logoLancer.png" as="image">
 
   <!-- ✅ Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -22,28 +25,28 @@
   <!-- ✅ SEO Meta Tags -->
   <title>The Lancer Method – Strategic Coaching That Moves</title>
   <meta name="description" content="The Lancer Method helps entrepreneurs and leaders turn ideas into action with clarity, structure, and sleeves-up execution. Book your free consultation today.">
-<meta name="theme-color" content="#F4E0D3">
-<meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Dena Lancer">
+  <meta name="copyright" content="© 2025 The Lancer Method">
 
   <!-- ✅ Social Sharing (Open Graph) -->
   <meta property="og:title" content="The Lancer Method – Strategic Coaching That Moves">
   <meta property="og:description" content="This isn’t coaching. It’s sleeves-up, done-with-you strategy that actually moves.">
   <meta property="og:image" content="https://thelancermethod.com/images/mainImages/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://thelancermethod.com">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
 
-  <!-- ✅ Social Sharing (Twitter) -->
+  <!-- ✅ Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Lancer Method – Strategic Coaching That Moves">
   <meta name="twitter:description" content="Build what matters with clarity, structure, and a tactical partnership.">
   <meta name="twitter:image" content="https://thelancermethod.com/images/mainImages/og-image.jpg">
+  <meta name="twitter:image:alt" content="The Lancer Method branding image for social sharing">
 
-  <!-- ✅ Language & Author -->
-  <meta name="language" content="en">
-  <meta name="author" content="Dena Lancer">
-
-  <!-- ✅ Structured Data (for Google Knowledge Panel) -->
+  <!-- ✅ Structured Data (Organization + Person) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,19 +54,30 @@
     "name": "The Lancer Method",
     "url": "https://thelancermethod.com",
     "logo": "https://thelancermethod.com/images/mainImages/logoLancer.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Dena Lancer",
+      "jobTitle": "Founder & Strategic Coach",
+      "url": "https://thelancermethod.com/about",
+      "image": "https://thelancermethod.com/images/aboutImages/DenaAbout.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/denalancer/",
+        "https://instagram.com/thelancermethod"
+      ]
+    },
     "sameAs": [
       "https://www.facebook.com/thelancermethod",
       "https://instagram.com/thelancermethod",
       "https://www.linkedin.com/company/thelancermethod/",
       "https://www.tiktok.com/@thelancermethod"
     ],
-    "contactPoint": {
+    "contactPoint": [{
       "@type": "ContactPoint",
       "email": "dena@thelancermethod.com",
       "contactType": "customer service",
-"areaServed": ["CA", "US"],
-      "availableLanguage": "English"
-    }
+      "areaServed": ["US", "CA"],
+      "availableLanguage": ["English"]
+    }]
   }
   </script>
 
@@ -85,17 +99,11 @@
     gtag('config', 'G-XQ46P6ZSXY');
   </script>
 </head>
-
-	<body>
+<body>
     <header>
   <!-- HEADER PLACEHOLDER -->
 <div id="header-placeholder"></div>
-
-
-
-
-				
-		</header>
+</header>
 
 		<!-- MARK: Hero Section -->
 		<section  id="home" class="hero-section" role="region" aria-label="Hero Section">
@@ -107,9 +115,6 @@
 					<img src="images/mainImages/RightSidePic.png" alt="Stairs" />
 				</div>
 			<div class="hero-layout">
-				
-				
-
 				<div class="hero-text fade-up">
 					<div class="typing-text-container">
 						<p class="tagline"><span id="typing"></span></p>
@@ -290,7 +295,6 @@
         class="about-image"
       />
 		</div>
-
    <!-- Right column: quote + content -->
     <div class="about-content">
       <!-- Pull-quote moved to top of right column -->
@@ -480,7 +484,6 @@
         <a href="./services.html#execute" class="btn-outline">VIEW EXECUTE DETAILS</a>
       </div>
     </div>
-
     <div class="services-cta fade-up">
       <div class="cta-block">
         <p class="cta-title">Not sure where to start?</p>
@@ -491,8 +494,6 @@
         <p class="cta-title">Need something different?</p>
         <p>Explore additional services built around where you are.</p>
     <a href="./services.html#addons" class="link-style dark link-lowered">VIEW DETAILS →</a>
-
-
       </div>
     </div>
   </div>
@@ -506,7 +507,6 @@
     Curious how these results happen?
     <a href="#method" class="link-style-light">Explore <em>The Lancer Method</em> →</a>
   </p>
-
   <div class="testimonials-masonry fade-up">
     <div class="testimonial-card dark">
       <p class="testimonial-text">“I had no clue what I wanted to do after high school. I felt super lost. Dena helped me figure out what I’m good at, choose a major, stay on top of deadlines, write my personal essay—pretty much everything. Without her, I would’ve been all over the place. I’m way more confident now about what I want to do.”</p>
@@ -585,15 +585,10 @@ Dena's imagination and creativity are off the charts!”</p>
   <div class="testimonial-privacy-note">
   * To protect client privacy, testimonials are shared without photos and with partial names only.
 </div>
-
   <div class="cta-center">
     <a href="caseStudy.html#contact" class="cta-btn primary">CLIENTS’ SUCCESS STORIES </a>
   </div>
 </section>
-
-
-
-
 <div id="footer-placeholder"></div>
 <script src="load-footer.js"></script>
 <script src="script.js"></script>
