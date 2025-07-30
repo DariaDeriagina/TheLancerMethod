@@ -2263,6 +2263,7 @@ input[type="checkbox"] {
 	color: #fff;
 	padding: 60px 28px 0px; /* removed extra 30px bottom */
 	font-family: var(--font-ui);
+	padding-bottom: 20px;
 }
 
 .footer-container {
@@ -2373,6 +2374,9 @@ input[type="checkbox"] {
 
 /* ===== MARK: Footer Mobile ===== */
 @media (max-width: 768px) {
+	.footer-section {
+		padding-bottom: 20px;
+	}
 	.footer-container {
 		flex-direction: column;
 		align-items: center; /* 👈 CENTER the entire column group */
