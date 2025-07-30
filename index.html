@@ -7,11 +7,14 @@
   <!-- ✅ Canonical URL (prevents duplicate content issues) -->
   <link rel="canonical" href="https://thelancermethod.com/" />
 
-  <!-- ✅ Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;300;200;100;500;600;700&family=Inter:wght@200;400;500&family=Poppins:wght@500;400;300;200;100;700&display=swap"
-    rel="stylesheet"
-  />
+<!-- ✅ Preload the full Google Fonts set -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;300;200;100;500;600;700&family=Inter:wght@200;400;500&family=Poppins:wght@500;400;300;200;100;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<!-- ✅ Fallback for browsers with JS disabled -->
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;300;200;100;500;600;700&family=Inter:wght@200;400;500&family=Poppins:wght@500;400;300;200;100;700&display=swap" rel="stylesheet">
+</noscript>
+
 
   <!-- ✅ Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -19,8 +22,8 @@
   <!-- ✅ SEO Meta Tags -->
   <title>The Lancer Method – Strategic Coaching That Moves</title>
   <meta name="description" content="The Lancer Method helps entrepreneurs and leaders turn ideas into action with clarity, structure, and sleeves-up execution. Book your free consultation today.">
-  <meta name="keywords" content="strategic coaching, business clarity, execution-first, leadership consulting, The Lancer Method, Dena Lancer">
-  <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#F4E0D3">
+<meta name="robots" content="index, follow">
 
   <!-- ✅ Social Sharing (Open Graph) -->
   <meta property="og:title" content="The Lancer Method – Strategic Coaching That Moves">
@@ -58,7 +61,7 @@
       "@type": "ContactPoint",
       "email": "dena@thelancermethod.com",
       "contactType": "customer service",
-      "areaServed": "CA",
+"areaServed": ["CA", "US"],
       "availableLanguage": "English"
     }
   }
@@ -223,22 +226,22 @@
 
 				<ul class="method-list">
 					<li>
-						<img src="images/methodImages/LoopMethod.png" alt="Loop Icon" />
+						<img src="images/methodImages/LoopMethod.png" alt="Loop arrow icon representing continuous progress and execution" />
 						It’s part creative strategy, part intuitive insight, part tactical
 						execution—with the kind of momentum most people only wish they had
 						behind them.
 					</li>
 					<li>
-						<img src="images/methodImages/LoopMethod.png" alt="Loop Icon" />
+						<img src="images/methodImages/LoopMethod.png" alt="Loop arrow icon representing continuous progress and execution" />
 						We start exactly where you are—idea-stuck, mid-pivot, or
 						launch-ready—and we build forward, together.
 					</li>
 					<li>
-						<img src="images/methodImages/LoopMethod.png" alt="Loop Icon" />
+						<img src="images/methodImages/LoopMethod.png" alt="Loop arrow icon representing continuous progress and execution" />
 						This isn’t just about what to do.
 					</li>
 					<li>
-						<img src="images/methodImages/LoopMethod.png" alt="Loop Icon" />
+						<img src="images/methodImages/LoopMethod.png" alt="Loop arrow icon representing continuous progress and execution" />
 						It’s how to actually do it—and keep doing it—until it’s done.
 					</li>
 				</ul>
@@ -331,7 +334,7 @@
           <li>
             <img
               src="images/aboutImages/LampLancer.png"
-              alt=""
+              alt="Lamp icon representing bright ideas and inspiration"
               class="list-icon"
             />
             The vision behind the idea
@@ -339,7 +342,7 @@
           <li>
             <img
               src="images/aboutImages/LampLancer.png"
-              alt=""
+              alt="Lamp icon representing bright ideas and inspiration"
               class="list-icon"
             />
             The energy beneath the overthinking
@@ -347,7 +350,7 @@
           <li>
             <img
               src="images/aboutImages/LampLancer.png"
-              alt="Lancer Lamp"
+              alt="Lamp icon representing bright ideas and inspiration"
               class="list-icon"
             />
             The moment someone finally sees what’s next—and feels ready to act
@@ -446,7 +449,7 @@
   </div>
 </section>
 
-<!-- ===== MARK: SERVICES SECTION ===== -->
+<!-- ===== MARK: SERVICES SECTION ===== --> 
 <section id="services" class="services-section" aria-label="Services">
   <div class="container">
     <h2 class="section-heading fade-up">Services</h2>
@@ -455,26 +458,26 @@
     <div class="services-grid">
       <!-- INSPIRE -->
       <div class="service-card border-copper fade-up">
-        <img src="images/servicesImages/LampLancer.png" alt="Light bulb icon" class="service-icon">
-        <h3>INSPIRE</h3>
-        <p>Let’s clarify your vision and uncover your best ideas.</p>
-        <a href="./services.html#inspire" class="btn-outline">VIEW DETAILS</a>
+        <img src="images/servicesImages/LampLancer.png" alt="Inspire service icon – light bulb" class="service-icon">
+        <h3  itemprop="name">INSPIRE</h3>
+        <p itemprop="description">Let’s clarify your vision and uncover your best ideas.</p>
+        <a href="./services.html#inspire" class="btn-outline">VIEW INSPIRE DETAILS</a>
       </div>
 
       <!-- PLAN -->
       <div class="service-card border-copper fade-up">
-        <img src="images/servicesImages/MapLancer.png" alt="Map icon" class="service-icon">
+        <img src="images/servicesImages/MapLancer.png" alt="Plan service icon – map graphic" class="service-icon">
         <h3>PLAN</h3>
         <p>We map it out, refine it, and create a path forward.</p>
-        <a href="./services.html#plan" class="btn-outline">VIEW DETAILS</a>
+        <a href="./services.html#plan" class="btn-outline">VIEW PLAN DETAILS</a>
       </div>
 
       <!-- EXECUTE -->
       <div class="service-card border-copper fade-up">
-        <img src="images/servicesImages/CheckPointLancer.png" alt="Checklist icon" class="service-icon">
+        <img src="images/servicesImages/CheckPointLancer.png" alt="Checklist icon symbolizing the EXECUTE phase of The Lancer Method" class="service-icon">
         <h3>EXECUTE</h3>
         <p>We turn your plan into action and build it with you step-by-step.</p>
-        <a href="./services.html#execute" class="btn-outline">VIEW DETAILS</a>
+        <a href="./services.html#execute" class="btn-outline">VIEW EXECUTE DETAILS</a>
       </div>
     </div>
 

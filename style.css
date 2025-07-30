@@ -966,7 +966,7 @@ p {
 		text-align: center;
 		width: 100%;
 		font-size: 16px;
-		border-radius: 4px;
+
 		transition: background 0.3s ease;
 	}
 
@@ -1476,7 +1476,17 @@ section#about h2.about-title {
 	text-align: center;
 	padding-top: 40px;
 }
+/* Services Section Headings & Subtitle */
+.services-section .section-heading {
+	margin-bottom: 0.3rem;
+	line-height: 1.2;
+}
 
+.services-section .section-subtitle {
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	line-height: 1.4;
+}
 .section-title {
 	font-size: 48px;
 	font-weight: 400;
@@ -1484,10 +1494,8 @@ section#about h2.about-title {
 	font-family: "Playfair Display", serif;
 }
 
-.section-subtitle {
-	font-size: 18px;
-	color: #1c1c1c;
-	margin-bottom: 60px;
+.services-section p {
+	line-height: 1.3; /* tighter than default */
 }
 
 .services-grid {
@@ -1511,6 +1519,10 @@ section#about h2.about-title {
 	transform: translateY(-2px);
 	box-shadow: 6px 3px 14px rgba(249, 239, 232, 0.45);
 }
+.service-card a.btn-outline {
+	margin-top: 0.3rem; /* small breathing room after <p> */
+	display: inline-block;
+}
 
 .service-card h3 {
 	font-family: "Playfair Display", serif;
@@ -1518,11 +1530,14 @@ section#about h2.about-title {
 	font-weight: 500;
 	margin-top: 0px;
 	letter-spacing: 0.1px;
+	margin-bottom: 0.3rem;
+	line-height: 1.2;
 }
 
 .service-card p {
 	font-family: "Poppins", sans-serif;
 	font-size: 15px;
+	margin-bottom: 12px;
 	margin-top: 0;
 	margin-bottom: 20px;
 }
@@ -1530,6 +1545,32 @@ section#about h2.about-title {
 .service-icon {
 	height: 180px;
 	object-fit: contain;
+}
+/* ✅ Final Spacing Tweaks for Services Section */
+.services-section .section-heading {
+	margin-bottom: 0.3rem;
+	line-height: 1.2;
+}
+
+.services-section .section-subtitle {
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	line-height: 1.4;
+}
+
+.service-card h3 {
+	margin-bottom: 0.3rem;
+	line-height: 1.2;
+}
+
+.service-card p {
+	line-height: 1.3;
+	margin-bottom: 12px; /* tighter spacing before button */
+}
+
+.service-card a.btn-outline {
+	margin-top: 0.3rem;
+	display: inline-block;
 }
 
 .border-gold {
@@ -1546,6 +1587,7 @@ section#about h2.about-title {
 
 #services .btn-outline {
 	display: inline-block;
+	margin-top: 0.6rem;
 	padding: 12px 24px;
 	font-weight: bold;
 	font-size: 14px;
@@ -1707,6 +1749,7 @@ section#about h2.about-title {
 
 	.btn-outline,
 	.btn-solid {
+		border-radius: 0;
 		font-size: 14px;
 		padding: 10px 18px;
 	}
